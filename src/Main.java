@@ -56,10 +56,6 @@ public class Main {
                 new FileInputStream(filename));
         BufferedReader br = new BufferedReader(reader);
         String line = " ";
-        File writename = new File(pathname+"-out.ged");
-        writename.createNewFile();
-        BufferedWriter outs = new BufferedWriter(new FileWriter(writename));
-
         //add something to save tags
         individual person = null;
         Family family = null;
@@ -80,11 +76,19 @@ public class Main {
             else Tag = temp[1];
 
             // LS: add to object
-            tags[Integer.parseInt(temp[0])] = Tag;//add tag
-            StringBuffer content = new StringBuffer();
-            for(String s : temp){
-                if(!s.equals(Tag) && !s.equals(temp[0]))
-                    content.append(s + " ");
+            switch (temp[0]){
+                case "0":
+                    tags[0]=Tag;
+                case "1":
+                    tags[1]=Tag;
+                case "2":
+                    tags[2]=Tag;
+                    default:
+            }
+            StringBuffer content=new StringBuffer();
+            for(String s:temp){
+                if(!s.equals(Tag)&&!s.equals(temp[0]))
+                    content.append(s+" ");
             }
             switch (temp[0]){
                 case "0":
