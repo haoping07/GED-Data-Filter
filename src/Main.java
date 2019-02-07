@@ -68,7 +68,6 @@ public class Main {
             else Tag=temp[1];
 
             // LS: add to object
-            tags[Integer.parseInt(temp[0])]=Tag;//add tag
             switch (temp[0]){
                 case "0":
                     tags[0]=Tag;
