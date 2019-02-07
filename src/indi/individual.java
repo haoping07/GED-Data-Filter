@@ -17,7 +17,7 @@ public class individual {
 		isdead = false;
 	}
 	
-	public void update(int level , String tag , String content) {
+	public void update(String tag , String content) {
 		switch(tag.toUpperCase()) {
 		    case "NAME":
 		    	this.name = content;
