@@ -43,8 +43,12 @@ public class Family {
                 this.divoDate = content;
                 this.isDivored = true;
                 break;
+
+                default;
         }
     }
+
+    //private boolean checkDate()
 
 
     public static void main(String[] args){
