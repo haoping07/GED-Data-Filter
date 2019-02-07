@@ -5,5 +5,17 @@ public class individual {
 		// TODO Auto-generated method stub
 
 	}
-
+	
+	public individual(String id) {
+		
+	}
+	
+	public
+		String id;
+		String name;
+		String sex;
+		String Birthday;
+		String Deathday;
+		String[] children;
+		String[] spouse;
 }
