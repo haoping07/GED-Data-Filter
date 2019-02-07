@@ -54,12 +54,14 @@ public class individual {
 		    	if(checkdate(content , this.Deathday)) {
 		    		this.Birthday = content;
 		    	}
+		    	this.calage();
 			break;
 			
 		    case "DEAT":
 		    	if(checkdate(this.Birthday , content)) {
 		    		updatedeath(content);
 		    	}
+		    	this.calage();
 			break;
 			
 		    case "CHIL":
@@ -72,7 +74,7 @@ public class individual {
 			
 			default:
 		}
-		this.calage();
+		
 	}
 	
 	private void calage(){
