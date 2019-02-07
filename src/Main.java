@@ -25,6 +25,9 @@ public class Main {
         BufferedWriter outs = new BufferedWriter(new FileWriter(writename));
 
         //add something to save tags
+        List<individual> allPeople=new ArrayList<individual>();
+        individual person;
+        String[] tags=new String[3];
         while (line != null) {
             line = br.readLine();
             if(line==null) break;
@@ -39,9 +42,36 @@ public class Main {
             if(temp[temp.length-1].equals("INDI")||temp[temp.length-1].equals("FAM"))
                 Tag=temp[temp.length-1];
             else Tag=temp[1];
-            
+
             // LS: add to object
-            
+            tags[Integer.parseInt(temp[0])]=Tag;//add tag
+            StringBuffer content=new StringBuffer();
+            for(String s:temp){
+                if(!s.equals(Tag)&&!s.equals(temp[0]))
+                    content.append(s+" ");
+            }
+            switch (temp[0]){
+                case "0":
+                    if(Tag.equals("INDI")){
+                        if(person!=null) allPeople.add(person);
+                        person=new individual(content);
+                    }
+                    break;
+                case "1":
+                    if(!tags[0].equals("INDI")) break;
+                    if(!Tag.equals("BIRT")&&!Tag.equals("DEAT"))
+                        update(Tag,content);
+                    break;
+                case "2":
+                    if(!tags[0].equals("INDI")) break;
+                    if (tags[1].equals("BIRT") || tags[1].equals("DEAT")) {
+                        update(tags[1],content);
+                    }
+                    break;
+                    default:
+                        break;
+            }
+
             out.append("<-- "+temp[0]+"|"+Tag+"|"+valid+"|");
             for(String s:temp){
                 if(!s.equals(Tag)&&!s.equals(temp[0]))
@@ -52,11 +82,11 @@ public class Main {
         outs.flush();
         outs.close();
     }
-    
+
     public static boolean isValidTag(String[] words){
         return  isValidNormal(words[0],words[1])||isValidSpecial(words[0],words[words.length-1]);
     }
-    
+
     public static boolean isValidNormal(String Level,String Tag){
         String[] legalTags;
         switch (Level){
