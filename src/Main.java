@@ -14,7 +14,7 @@ import fam.Family;
 public class Main {
 	
 	public static ArrayList<individual> allPeople = new ArrayList<individual>();
-	public static ArrayList<Family> allFanilies = new ArrayList<Family>();
+	public static ArrayList<Family> allFamilies = new ArrayList<Family>();
 	
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
@@ -33,6 +33,7 @@ public class Main {
 
         //add something to save tags
         individual person = null;
+        Family family = null;
         String[] tags=new String[3];
         while (line != null) {
             line = br.readLine();
@@ -62,17 +63,35 @@ public class Main {
                         if(person!=null) allPeople.add(person);
                         person=new individual(content.toString());
                     }
+
+                    else if(Tag.equals("FAM"))
+                        if(family!=null) allFamilies.add(family);
+                        family=new Family(content.toString());
                     break;
                 case "1":
-                    if(!tags[0].equals("INDI")) break;
-                    if(!Tag.equals("BIRT")&&!Tag.equals("DEAT"))
-                    	person.update(Tag,content.toString());
+                    if(tags[0].equals("INDI")) {
+                        if(!Tag.equals("BIRT")&&!Tag.equals("DEAT"))
+                            person.update(Tag,content.toString());
+                    }
+
+                    else if(tags[0].equals("FAM")){
+                        if(!Tag.equals("MARR")&&!Tag.equals("DIV"))
+                            person.update(Tag,content.toString());
+                    }
                     break;
                 case "2":
-                    if(!tags[0].equals("INDI")) break;
-                    if (tags[1].equals("BIRT") || tags[1].equals("DEAT")) {
-                    	person.update(tags[1],content.toString());
+                    if(tags[0].equals("INDI")){
+                        if (tags[1].equals("BIRT") || tags[1].equals("DEAT")) {
+                            family.update(tags[1],content.toString());
+                        }
                     }
+
+                    else if(tags[0].equals("FAM")){
+                        if (tags[1].equals("MARR") || tags[1].equals("DIV")) {
+                            family.update(tags[1],content.toString());
+                        }
+                    }
+
                     break;
                     default:
                         break;
@@ -85,6 +104,8 @@ public class Main {
             }
             outs.write(out+"\r\n");
         }
+        allPeople.add(person);
+        allFamilies.add(family);
         outs.flush();
         outs.close();
     }
