@@ -18,7 +18,6 @@ public class Main {
 	
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
-        Testing("proj02test.ged");
     }
     
     public static void Testing(String pathname)throws IOException{
@@ -27,10 +26,6 @@ public class Main {
                 new FileInputStream(filename));
         BufferedReader br = new BufferedReader(reader);
         String line = " ";
-        File writename = new File(pathname+"-out.ged");
-        writename.createNewFile();
-        BufferedWriter outs = new BufferedWriter(new FileWriter(writename));
-
         //add something to save tags
         individual person = null;
         Family family = null;
@@ -38,8 +33,6 @@ public class Main {
         while (line != null) {
             line = br.readLine();
             if(line==null) break;
-            String in="--> "+line;
-            outs.write(in+"\r\n");
 
             String[] temp=line.split(" ");
             String valid,Tag;
@@ -52,6 +45,10 @@ public class Main {
 
             // LS: add to object
             tags[Integer.parseInt(temp[0])]=Tag;//add tag
+            switch (temp[0]){
+                case "0":
+                    tags[0]=Tag;
+            }
             StringBuffer content=new StringBuffer();
             for(String s:temp){
                 if(!s.equals(Tag)&&!s.equals(temp[0]))
@@ -96,18 +93,9 @@ public class Main {
                     default:
                         break;
             }
-
-            out.append("<-- "+temp[0]+"|"+Tag+"|"+valid+"|");
-            for(String s:temp){
-                if(!s.equals(Tag)&&!s.equals(temp[0]))
-                    out.append(s+" ");
-            }
-            outs.write(out+"\r\n");
         }
         allPeople.add(person);
         allFamilies.add(family);
-        outs.flush();
-        outs.close();
     }
 
     public static boolean isValidTag(String[] words){
