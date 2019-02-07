@@ -19,27 +19,33 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
         //Testing("proj02test.ged");
+        
+        
         //LS: test script of individual
-        /*for(int i = 0; i < allPeople.size(); i++) {   
-            System.out.print(allPeople.get(i).age +" | ");
-            System.out.print(allPeople.get(i).Birthday+" | "); //missing
-            System.out.print(allPeople.get(i).Deathday+" | "); //missing
-            System.out.print(allPeople.get(i).id+" | ");
-            System.out.print(allPeople.get(i).isdead+" | ");
-            System.out.print(allPeople.get(i).name+" | ");
+        System.out.println("individual");
+        System.out.println("age|Birt|Dith|id|isdead|name|sex");
+        for(int i = 0; i < allPeople.size() ; i++) {   
+            System.out.print(allPeople.get(i).age + " | ");
+            System.out.print(allPeople.get(i).Birthday + " | "); 
+            System.out.print(allPeople.get(i).Deathday + " | ");
+            System.out.print(allPeople.get(i).id + " | ");
+            System.out.print(allPeople.get(i).isdead +" | ");
+            System.out.print(allPeople.get(i).name +" | ");
             System.out.print(allPeople.get(i).sex);
             System.out.println(" ");
-        }  */
+        }
         
         //LS: test script of family
-        for(int i = 0; i < allFamilies.size(); i++) {
+        System.out.println("family");
+        System.out.println("div|fid|husb|isdiv|marrdate|wife|children");
+        for(int i = 0; i < allFamilies.size() ; i++) {
         	System.out.print(allFamilies.get(i).divoDate +" | "); //missing
         	System.out.print(allFamilies.get(i).familyID +" | ");
-        	System.out.print(allFamilies.get(i).husband +" | "); //missing
+        	System.out.print(allFamilies.get(i).husband +" | "); 
         	System.out.print(allFamilies.get(i).isDivored +" | ");
         	System.out.print(allFamilies.get(i).marrDate +" | ");
-        	System.out.print(allFamilies.get(i).wife +" | "); //missing
-        	System.out.print(allFamilies.get(i).children +" | "); //missing
+        	System.out.print(allFamilies.get(i).wife +" | ");
+        	System.out.print(allFamilies.get(i).children +" | ");
         	System.out.println(" "); 
         }
     }
@@ -57,61 +63,61 @@ public class Main {
         //add something to save tags
         individual person = null;
         Family family = null;
-        String[] tags=new String[3];
+        String[] tags = new String[3];
         while (line != null) {
             line = br.readLine();
-            if(line==null) break;
-            String in="--> "+line;
+            if(line == null) break;
+            String in = "--> " + line;
             outs.write(in+"\r\n");
 
-            String[] temp=line.split(" ");
-            String valid,Tag;
-            if(isValidTag(temp)) valid="Y";
-            else valid="N";
-            StringBuffer out=new StringBuffer();
-            if(temp[temp.length-1].equals("INDI")||temp[temp.length-1].equals("FAM"))
-                Tag=temp[temp.length-1];
-            else Tag=temp[1];
+            String[] temp = line.split(" ");
+            String valid , Tag;
+            if(isValidTag(temp)) valid = "Y";
+            else valid = "N";
+            StringBuffer out = new StringBuffer();
+            if(temp[temp.length-1].equals("INDI") || temp[temp.length-1].equals("FAM"))
+                Tag = temp[temp.length-1];
+            else Tag = temp[1];
 
             // LS: add to object
-            tags[Integer.parseInt(temp[0])]=Tag;//add tag
-            StringBuffer content=new StringBuffer();
-            for(String s:temp){
-                if(!s.equals(Tag)&&!s.equals(temp[0]))
-                    content.append(s+" ");
+            tags[Integer.parseInt(temp[0])] = Tag;//add tag
+            StringBuffer content = new StringBuffer();
+            for(String s : temp){
+                if(!s.equals(Tag) && !s.equals(temp[0]))
+                    content.append(s + " ");
             }
             switch (temp[0]){
                 case "0":
                     if(Tag.equals("INDI")){
-                        if(person!=null) allPeople.add(person);
-                        person=new individual(content.toString());
+                        if(person != null) allPeople.add(person);
+                        person = new individual(content.toString());
                     }
 
                     else if(Tag.equals("FAM"))
-                        if(family!=null) allFamilies.add(family);
-                        family=new Family(content.toString());
+                        if(family != null) allFamilies.add(family);
+                        family = new Family(content.toString());
                     break;
                 case "1":
                     if(tags[0].equals("INDI")) {
-                        if(!Tag.equals("BIRT")&&!Tag.equals("DEAT"))
-                            person.update(Tag,content.toString());
+                        if(!Tag.equals("BIRT") && !Tag.equals("DEAT"))
+                            person.update(Tag , content.toString());
                     }
 
                     else if(tags[0].equals("FAM")){
-                        if(!Tag.equals("MARR")&&!Tag.equals("DIV"))
-                            person.update(Tag,content.toString());
+                        if(!Tag.equals("MARR") && !Tag.equals("DIV"))
+                        	family.update(Tag , content.toString());
                     }
                     break;
                 case "2":
                     if(tags[0].equals("INDI")){
                         if (tags[1].equals("BIRT") || tags[1].equals("DEAT")) {
-                            family.update(tags[1],content.toString());
+                        	person.update(tags[1] , content.toString());
                         }
                     }
 
                     else if(tags[0].equals("FAM")){
                         if (tags[1].equals("MARR") || tags[1].equals("DIV")) {
-                            family.update(tags[1],content.toString());
+                            family.update(tags[1] , content.toString());
                         }
                     }
 
@@ -120,37 +126,38 @@ public class Main {
                         break;
             }
 
-            out.append("<-- "+temp[0]+"|"+Tag+"|"+valid+"|");
-            for(String s:temp){
-                if(!s.equals(Tag)&&!s.equals(temp[0]))
-                    out.append(s+" ");
+            out.append("<-- " + temp[0] + "|" + Tag + "|"+valid + "|");
+            for(String s : temp){
+                if(!s.equals(Tag) && !s.equals(temp[0]))
+                    out.append(s + " ");
             }
-            outs.write(out+"\r\n");
+            outs.write(out + "\r\n");
         }
         allPeople.add(person);
         allFamilies.add(family);
         outs.flush();
         outs.close();
+        br.close();
     }
 
     public static boolean isValidTag(String[] words){
-        return  isValidNormal(words[0],words[1])||isValidSpecial(words[0],words[words.length-1]);
+        return  isValidNormal(words[0],words[1]) || isValidSpecial(words[0],words[words.length-1]);
     }
 
-    public static boolean isValidNormal(String Level,String Tag){
+    public static boolean isValidNormal(String Level , String Tag){
         String[] legalTags;
         switch (Level){
             case "0":
-                String[] temp0={"HEAD","TRLR","NOTE"};
-                legalTags=temp0;
+                String[] temp0 = {"HEAD","TRLR","NOTE"};
+                legalTags = temp0;
                 break;
             case "1":
-                String[] temp1={"NAME","SEX","BIRT","DEAT","FAMC","FAMS","MARR","HUSB","WIFE","CHIL","DIV"};
-                legalTags=temp1;
+                String[] temp1 = {"NAME","SEX","BIRT","DEAT","FAMC","FAMS","MARR","HUSB","WIFE","CHIL","DIV"};
+                legalTags = temp1;
                 break;
             case "2":
-                String[] temp2={"DATE"};
-                legalTags=temp2;
+                String[] temp2 = {"DATE"};
+                legalTags = temp2;
                 break;
                 default: return false;
         }
@@ -160,9 +167,9 @@ public class Main {
         return false;
     }
 
-    public static boolean isValidSpecial(String Level,String Tag){
+    public static boolean isValidSpecial(String Level , String Tag){
         if(!Level.equals("0")) return false;
-        if(Tag.equals("INDI")||Tag.equals("FAM")) return true;
+        if(Tag.equals("INDI") || Tag.equals("FAM")) return true;
         return false;
     }
 }
