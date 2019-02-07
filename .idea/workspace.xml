@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b08597-fe50-4f02-b48a-68ba9bb12999" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fam/Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fam/Family.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="476">
+              <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,33 +27,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/indi/individual.java">
+        <entry file="file://$PROJECT_DIR$/src/fam/Family.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+            <state relative-caret-position="371">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyFamily.ged-out.ged">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/indi/individual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="17" />
+            <state relative-caret-position="474">
+              <caret line="82" column="55" lean-forward="true" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2382#2383#0" expanded="true" />
+                <element signature="e#2400#2401#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>chil</find>
-      <find>spou</find>
-      <find>SPOU</find>
-      <find>CHIL</find>
-      <find>INDI</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,16 +59,16 @@
       <list>
         <option value="$PROJECT_DIR$/src/individual.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/indi/individual.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Family.java" />
+        <option value="$PROJECT_DIR$/src/fam/Family.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="497" />
+    <option name="y" value="114" />
+    <option name="width" value="1052" />
+    <option name="height" value="712" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -81,27 +76,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cs555teamproj2019spring" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="cs555teamproj2019spring" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="cs555teamproj2019spring" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -118,7 +92,34 @@
               <item name="cs555teamproj2019spring" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="cs555teamproj2019spring" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="fam" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cs555teamproj2019spring" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="cs555teamproj2019spring" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="indi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cs555teamproj2019spring" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="cs555teamproj2019spring" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="cs555teamproj2019spring" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -181,19 +182,18 @@
       <workItem from="1549293072949" duration="9275000" />
       <workItem from="1549562648459" duration="357000" />
       <workItem from="1549564618524" duration="240000" />
-      <workItem from="1549569588298" duration="4000" />
-      <workItem from="1549569674958" duration="3155000" />
+      <workItem from="1549568435357" duration="4142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13031000" />
+    <option name="totallyTimeSpent" value="14014000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="497" y="114" width="1052" height="712" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12734585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23366337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -210,7 +210,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067025" side_tool="true" weight="0.32741934" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
@@ -229,26 +229,52 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MyFamily.ged-out.ged">
+    <entry file="file://$PROJECT_DIR$/src/individual.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="17" />
+        <state relative-caret-position="90">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/indi/individual.java">
+    <entry file="file://$PROJECT_DIR$/src/MyFamily.ged-out.ged">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        <state relative-caret-position="219">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Family.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="476">
+          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fam/Family.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/indi/individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="82" column="55" lean-forward="true" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2382#2383#0" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="true" />
           </folding>
         </state>
       </provider>
