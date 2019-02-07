@@ -72,6 +72,11 @@ public class Main {
             switch (temp[0]){
                 case "0":
                     tags[0]=Tag;
+                case "1":
+                    tags[1]=Tag;
+                case "2":
+                    tags[2]=Tag;
+                    default:
             }
             StringBuffer content=new StringBuffer();
             for(String s:temp){
