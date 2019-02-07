@@ -27,6 +27,10 @@ public class Main {
         //add something to save tags
         List<individual> allPeople=new ArrayList<individual>();
         individual person;
+
+        List<Family> allFamiles=new ArrayList<Family>();
+        Family family;
+
         String[] tags=new String[3];
         while (line != null) {
             line = br.readLine();
