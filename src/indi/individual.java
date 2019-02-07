@@ -88,10 +88,10 @@ public class individual {
 		String[] nowyear = now.split("-");
 		if(this.isdead) {
 			String[] ddate = this.Deathday.split(" ");
-			this.age = stoi(ddate[2]) - stoi(bdate[2]);
+			this.age = stoi(ddate[2]) - stoi(bdate[bdate.length-1]);
 		}
 		else {
-			this.age = stoi(nowyear[0]) - stoi(bdate[2]);
+			this.age = stoi(nowyear[0]) - stoi(bdate[bdate.length-1]);
 		}
 		
 	}
