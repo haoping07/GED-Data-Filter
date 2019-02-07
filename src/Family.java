@@ -1,12 +1,13 @@
+import java.util.ArrayList;
+
 public class Family {
 
-    public:
-    String familyID;
-    String INDI_husband;
-    String INDI_wife;
-    ArrayList<String> INDI_child;
-    String marrDate;
-    String divoDate;
+	public String familyID;
+	public String INDI_husband;
+	public String INDI_wife;
+	public ArrayList<String> INDI_child;
+	public String marrDate;
+	public String divoDate;
 
     public Family(String ID){
         familyID = ID;
