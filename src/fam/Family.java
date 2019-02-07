@@ -1,3 +1,4 @@
+package fam;
 import java.util.ArrayList;
 
 public class Family {
@@ -21,7 +22,7 @@ public class Family {
     }
 
     public void update(int level, String tag, String content){
-        switch(tag.toUppercase()){
+        switch(tag.toUpperCase()){
             case "HUSB":
                 this.husband = content;
                 break;

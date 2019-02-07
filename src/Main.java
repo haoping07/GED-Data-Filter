@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import indi.individual;
-
+import fam.Family;
 
 public class Main {
     public static void main(String[] args) throws IOException {
