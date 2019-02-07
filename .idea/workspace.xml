@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b08597-fe50-4f02-b48a-68ba9bb12999" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
->>>>>>> d4e211b281ea7a582d2c95e701ef51ea0b028a2b
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,13 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state relative-caret-position="1065">
               <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-=======
-            <state relative-caret-position="38">
-              <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
->>>>>>> d4e211b281ea7a582d2c95e701ef51ea0b028a2b
             </state>
           </provider>
         </entry>
@@ -68,19 +57,11 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="671" />
     <option name="y" value="114" />
     <option name="width" value="1052" />
     <option name="height" value="712" />
-=======
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
->>>>>>> d4e211b281ea7a582d2c95e701ef51ea0b028a2b
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -89,7 +70,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-<<<<<<< HEAD
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -106,20 +86,12 @@
           <select />
         </subPane>
       </pane>
-=======
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
->>>>>>> d4e211b281ea7a582d2c95e701ef51ea0b028a2b
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549565297553" />
-=======
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549564327846" />
->>>>>>> d4e211b281ea7a582d2c95e701ef51ea0b028a2b
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -169,31 +141,17 @@
       <updated>1549293068449</updated>
       <workItem from="1549293072949" duration="9275000" />
       <workItem from="1549562648459" duration="357000" />
-<<<<<<< HEAD
       <workItem from="1549564618524" duration="240000" />
-=======
-      <workItem from="1549563434481" duration="886000" />
->>>>>>> d4e211b281ea7a582d2c95e701ef51ea0b028a2b
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
     <option name="totallyTimeSpent" value="9872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="971" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22954823" />
-=======
-    <option name="totallyTimeSpent" value="10518000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22989276" />
->>>>>>> d4e211b281ea7a582d2c95e701ef51ea0b028a2b
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -231,13 +189,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="1065">
           <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-=======
-        <state relative-caret-position="38">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
->>>>>>> d4e211b281ea7a582d2c95e701ef51ea0b028a2b
         </state>
       </provider>
     </entry>
