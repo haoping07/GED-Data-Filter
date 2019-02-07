@@ -44,7 +44,7 @@ public class Family {
                 this.isDivored = true;
                 break;
 
-                default;
+            default:
         }
     }
 
