@@ -2,6 +2,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        System.out.println("Song XU");
         Testing("MyFamily.ged");
         Testing("proj02test.ged");
     }
