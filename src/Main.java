@@ -1,9 +1,6 @@
-import java.awt.List;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -63,8 +60,6 @@ public class Main {
         while (line != null) {
             line = br.readLine();
             if(line == null) break;
-            String in = "--> " + line;
-            outs.write(in+"\r\n");
 
             String[] temp = line.split(" ");
             String valid , Tag;
@@ -135,12 +130,11 @@ public class Main {
                 if(!s.equals(Tag) && !s.equals(temp[0]))
                     out.append(s + " ");
             }
-            outs.write(out + "\r\n");
+
         }
         allPeople.add(person);
         allFamilies.add(family);
-        outs.flush();
-        outs.close();
+
         br.close();
     }
 
