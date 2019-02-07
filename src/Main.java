@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
         Testing("proj02test.ged");
+        System.out.print("Shih-Hao");
     }
 
     public static void Testing(String pathname)throws IOException{
@@ -39,9 +40,11 @@ public class Main {
         outs.flush();
         outs.close();
     }
+    
     public static boolean isValidTag(String[] words){
         return  isValidNormal(words[0],words[1])||isValidSpecial(words[0],words[words.length-1]);
     }
+    
     public static boolean isValidNormal(String Level,String Tag){
         String[] legalTags;
         switch (Level){
