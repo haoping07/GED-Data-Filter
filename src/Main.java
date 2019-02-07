@@ -1,3 +1,4 @@
+import java.awt.List;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -5,15 +6,21 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 import indi.individual;
 import fam.Family;
 
 public class Main {
+	
+	public static ArrayList<individual> allPeople = new ArrayList<individual>();
+	public static ArrayList<Family> allFanilies = new ArrayList<Family>();
+	
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
         Testing("proj02test.ged");
     }
-
+    
     public static void Testing(String pathname)throws IOException{
         File filename = new File(pathname);
         InputStreamReader reader = new InputStreamReader(
@@ -25,8 +32,7 @@ public class Main {
         BufferedWriter outs = new BufferedWriter(new FileWriter(writename));
 
         //add something to save tags
-        List<individual> allPeople=new ArrayList<individual>();
-        individual person;
+        individual person = null;
         String[] tags=new String[3];
         while (line != null) {
             line = br.readLine();
@@ -54,18 +60,18 @@ public class Main {
                 case "0":
                     if(Tag.equals("INDI")){
                         if(person!=null) allPeople.add(person);
-                        person=new individual(content);
+                        person=new individual(content.toString());
                     }
                     break;
                 case "1":
                     if(!tags[0].equals("INDI")) break;
                     if(!Tag.equals("BIRT")&&!Tag.equals("DEAT"))
-                        update(Tag,content);
+                    	person.update(Tag,content.toString());
                     break;
                 case "2":
                     if(!tags[0].equals("INDI")) break;
                     if (tags[1].equals("BIRT") || tags[1].equals("DEAT")) {
-                        update(tags[1],content);
+                    	person.update(tags[1],content.toString());
                     }
                     break;
                     default:
