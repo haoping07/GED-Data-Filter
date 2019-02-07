@@ -2,6 +2,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
+        System.out.println("Song XU");
         Testing("MyFamily.ged");
         Testing("proj02test.ged");
     }
@@ -29,6 +30,9 @@ public class Main {
             if(temp[temp.length-1].equals("INDI")||temp[temp.length-1].equals("FAM"))
                 Tag=temp[temp.length-1];
             else Tag=temp[1];
+            
+            // LS: add to object
+            
             out.append("<-- "+temp[0]+"|"+Tag+"|"+valid+"|");
             for(String s:temp){
                 if(!s.equals(Tag)&&!s.equals(temp[0]))
@@ -39,9 +43,11 @@ public class Main {
         outs.flush();
         outs.close();
     }
+    
     public static boolean isValidTag(String[] words){
         return  isValidNormal(words[0],words[1])||isValidSpecial(words[0],words[words.length-1]);
     }
+    
     public static boolean isValidNormal(String Level,String Tag){
         String[] legalTags;
         switch (Level){
