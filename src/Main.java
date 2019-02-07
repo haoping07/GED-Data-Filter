@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
         Testing("proj02test.ged");
-        System.out.print("Shih-Hao");
     }
 
     public static void Testing(String pathname)throws IOException{
@@ -30,6 +29,9 @@ public class Main {
             if(temp[temp.length-1].equals("INDI")||temp[temp.length-1].equals("FAM"))
                 Tag=temp[temp.length-1];
             else Tag=temp[1];
+            
+            // LS: add to object
+            
             out.append("<-- "+temp[0]+"|"+Tag+"|"+valid+"|");
             for(String s:temp){
                 if(!s.equals(Tag)&&!s.equals(temp[0]))
