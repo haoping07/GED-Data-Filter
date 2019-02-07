@@ -41,10 +41,16 @@ public class individual {
 			break;
 			
 		    case "SEX":
+		    	if(this.sex != "") {
+		    		break;
+		    	}
 		    	this.sex = content;
 			break;
 			
 		    case "BIRT":
+		    	if(this.Birthday != "") {
+		    		break;
+		    	}
 		    	if(checkdate(content , this.Deathday)) {
 		    		this.Birthday = content;
 		    	}
