@@ -16,6 +16,8 @@ public class Main {
         File writename = new File(pathname+"-out.ged");
         writename.createNewFile();
         BufferedWriter outs = new BufferedWriter(new FileWriter(writename));
+
+        //add something to save tags
         while (line != null) {
             line = br.readLine();
             if(line==null) break;
