@@ -3,7 +3,7 @@ public class individual {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		individual i = new individual("asas");
 	}
 	
 	public individual(String id) {
@@ -17,7 +17,9 @@ public class individual {
 		isdead = false;
 	}
 	
-	
+	public void update(String tag , String content) {
+		
+	}
 	
 	public String id;
 	public String name;
