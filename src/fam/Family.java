@@ -21,7 +21,7 @@ public class Family {
         isDivored = false;
     }
 
-    public void update(int level, String tag, String content){
+    public void update(String tag, String content){
         switch(tag.toUpperCase()){
             case "HUSB":
                 this.husband = content;
