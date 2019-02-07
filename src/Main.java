@@ -18,7 +18,30 @@ public class Main {
 	
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
-        Testing("proj02test.ged");
+        //Testing("proj02test.ged");
+        //LS: test script of individual
+        /*for(int i = 0; i < allPeople.size(); i++) {   
+            System.out.print(allPeople.get(i).age +" | ");
+            System.out.print(allPeople.get(i).Birthday+" | "); //missing
+            System.out.print(allPeople.get(i).Deathday+" | "); //missing
+            System.out.print(allPeople.get(i).id+" | ");
+            System.out.print(allPeople.get(i).isdead+" | ");
+            System.out.print(allPeople.get(i).name+" | ");
+            System.out.print(allPeople.get(i).sex);
+            System.out.println(" ");
+        }  */
+        
+        //LS: test script of family
+        for(int i = 0; i < allFamilies.size(); i++) {
+        	System.out.print(allFamilies.get(i).divoDate +" | "); //missing
+        	System.out.print(allFamilies.get(i).familyID +" | ");
+        	System.out.print(allFamilies.get(i).husband +" | "); //missing
+        	System.out.print(allFamilies.get(i).isDivored +" | ");
+        	System.out.print(allFamilies.get(i).marrDate +" | ");
+        	System.out.print(allFamilies.get(i).wife +" | "); //missing
+        	System.out.print(allFamilies.get(i).children +" | "); //missing
+        	System.out.println(" "); 
+        }
     }
     
     public static void Testing(String pathname)throws IOException{
