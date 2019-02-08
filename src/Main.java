@@ -38,7 +38,7 @@ public class Main {
         System.out.println("family");
         System.out.println("div|fid|husb|isdiv|marrdate|wife|children");
         for(int i = 0 ; i < allFamilies.size() ; i++) {
-        	System.out.print(allFamilies.get(i).divoDate + " | "); //missing
+        	System.out.print(allFamilies.get(i).divoDate + " | ");
         	System.out.print(allFamilies.get(i).familyID + " | ");
         	System.out.print(allFamilies.get(i).husband + " | "); 
         	System.out.print(allFamilies.get(i).isDivored + " | ");
@@ -96,10 +96,12 @@ public class Main {
                         if(person != null) allPeople.add(person);
                         person = new individual(content.toString());
                     }
-
-                    else if(Tag.equals("FAM"))
+                    
+                    //LS: missing {} after else if here 
+                    else if(Tag.equals("FAM")) {
                         if(family != null) allFamilies.add(family);
                         family = new Family(content.toString());
+                    }
                     break;
                 case "1":
                     if(tags[0].equals("INDI")) {
@@ -129,7 +131,6 @@ public class Main {
                 default:
                    break;
             }
-
             out.append("<-- " + temp[0] + "|" + Tag + "|"+valid + "|");
             for(String s : temp){
                 if(!s.equals(Tag) && !s.equals(temp[0]))
@@ -179,15 +180,20 @@ public class Main {
     
     public static void updatemerrage(ArrayList<individual> people , ArrayList<Family> families) {
     	String hus,wif,chi;
-    	for(int x = 1 ; x <= 3 ; x++) {
+    	int hid,wid,cid;
+    	for(int x = 0 ; x < families.size() ; x++) {
     		hus = families.get(x).husband;
     		wif = families.get(x).wife;
     		for(int y = 0 ; y < families.get(x).children.size() ; y++) {
     			chi = families.get(x).children.get(y);
-        		people.get(searchbyId(people,chi)).update("CHIL", families.get(x).familyID);
+    			cid = searchbyId(people,chi);
+    			if(cid == -1) continue;
+        		people.get(cid).update("CHIL", families.get(x).familyID);
     		}
-    		people.get(searchbyId(people,hus)).update("SPOU" , families.get(x).familyID);
-    		people.get(searchbyId(people,wif)).update("SPOU" , families.get(x).familyID);
+    		hid = searchbyId(people,hus);
+    		if(hid != -1)people.get(hid).update("SPOU" , families.get(x).familyID);
+    		wid = searchbyId(people,wif);
+    		if(wid != -1)people.get(wid).update("SPOU" , families.get(x).familyID);
     	}
     }
     
@@ -199,6 +205,6 @@ public class Main {
     		}
     	}
     	
-    	return 0;
+    	return -1;
     }
 }
