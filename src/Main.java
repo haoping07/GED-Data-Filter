@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-
 import indi.individual;
 import fam.Family;
 
@@ -15,12 +14,13 @@ public class Main {
 	
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
+        updatemerrage(allPeople , allFamilies);
         //Testing("proj02test.ged");
         
         
         //LS: test script of individual
         System.out.println("individual");
-        System.out.println("age|Birt|Dith|id|isdead|name|sex");
+        System.out.println("age|Birt|Dith|id|isdead|name|sex|spouse|children");
         for(int i = 0 ; i < allPeople.size() ; i++) {   
             System.out.print(allPeople.get(i).age + " | ");
             System.out.print(allPeople.get(i).Birthday + " | "); 
@@ -28,7 +28,9 @@ public class Main {
             System.out.print(allPeople.get(i).id + " | ");
             System.out.print(allPeople.get(i).isdead +" | ");
             System.out.print(allPeople.get(i).name +" | ");
-            System.out.print(allPeople.get(i).sex);
+            System.out.print(allPeople.get(i).sex +" | ");
+            System.out.print(allPeople.get(i).spouse +" | ");
+            System.out.print(allPeople.get(i).children);
             System.out.println(" ");
         }
         
@@ -173,5 +175,30 @@ public class Main {
         if(!Level.equals("0")) return false;
         if(Tag.equals("INDI") || Tag.equals("FAM")) return true;
         return false;
+    }
+    
+    public static void updatemerrage(ArrayList<individual> people , ArrayList<Family> families) {
+    	String hus,wif,chi;
+    	for(int x = 1 ; x <= 3 ; x++) {
+    		hus = families.get(x).husband;
+    		wif = families.get(x).wife;
+    		for(int y = 0 ; y < families.get(x).children.size() ; y++) {
+    			chi = families.get(x).children.get(y);
+        		people.get(searchbyId(people,chi)).update("CHIL", families.get(x).familyID);
+    		}
+    		people.get(searchbyId(people,hus)).update("SPOU" , families.get(x).familyID);
+    		people.get(searchbyId(people,wif)).update("SPOU" , families.get(x).familyID);
+    	}
+    }
+    
+    public static int searchbyId(ArrayList<individual> people , String target) {
+    	for(int x = 0 ; x < people.size() ; x++) {
+
+    		if(target.equals(people.get(x).id)) {    		
+    			return x;
+    		}
+    	}
+    	
+    	return 0;
     }
 }
