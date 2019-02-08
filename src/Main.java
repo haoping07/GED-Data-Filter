@@ -21,7 +21,7 @@ public class Main {
         //LS: test script of individual
         System.out.println("individual");
         System.out.println("age|Birt|Dith|id|isdead|name|sex");
-        for(int i = 0; i < allPeople.size() ; i++) {   
+        for(int i = 0 ; i < allPeople.size() ; i++) {   
             System.out.print(allPeople.get(i).age + " | ");
             System.out.print(allPeople.get(i).Birthday + " | "); 
             System.out.print(allPeople.get(i).Deathday + " | ");
@@ -35,22 +35,21 @@ public class Main {
         //LS: test script of family
         System.out.println("family");
         System.out.println("div|fid|husb|isdiv|marrdate|wife|children");
-        for(int i = 0; i < allFamilies.size() ; i++) {
-        	System.out.print(allFamilies.get(i).divoDate +" | "); //missing
-        	System.out.print(allFamilies.get(i).familyID +" | ");
-        	System.out.print(allFamilies.get(i).husband +" | "); 
-        	System.out.print(allFamilies.get(i).isDivored +" | ");
-        	System.out.print(allFamilies.get(i).marrDate +" | ");
-        	System.out.print(allFamilies.get(i).wife +" | ");
-        	System.out.print(allFamilies.get(i).children +" | ");
+        for(int i = 0 ; i < allFamilies.size() ; i++) {
+        	System.out.print(allFamilies.get(i).divoDate + " | "); //missing
+        	System.out.print(allFamilies.get(i).familyID + " | ");
+        	System.out.print(allFamilies.get(i).husband + " | "); 
+        	System.out.print(allFamilies.get(i).isDivored + " | ");
+        	System.out.print(allFamilies.get(i).marrDate + " | ");
+        	System.out.print(allFamilies.get(i).wife + " | ");
+        	System.out.print(allFamilies.get(i).children + " | ");
         	System.out.println(" "); 
         }
     }
     
     public static void Testing(String pathname)throws IOException{
         File filename = new File(pathname);
-        InputStreamReader reader = new InputStreamReader(
-                new FileInputStream(filename));
+        InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
         BufferedReader br = new BufferedReader(reader);
         String line = " ";
         //add something to save tags
@@ -73,17 +72,21 @@ public class Main {
             // LS: add to object
             switch (temp[0]){
                 case "0":
-                    tags[0]=Tag;
+                    tags[0] = Tag;
+                    break;
                 case "1":
-                    tags[1]=Tag;
+                    tags[1] = Tag;
+                    break;
                 case "2":
-                    tags[2]=Tag;
-                    default:
+                    tags[2] = Tag;
+                    break;
+                default:
+                	break;
             }
-            StringBuffer content=new StringBuffer();
+            StringBuffer content = new StringBuffer();
             for(String s:temp){
-                if(!s.equals(Tag)&&!s.equals(temp[0]))
-                    content.append(s+" ");
+                if(!s.equals(Tag) && !s.equals(temp[0]))
+                    content.append(s + " ");
             }
             switch (temp[0]){
                 case "0":
@@ -121,8 +124,8 @@ public class Main {
                     }
 
                     break;
-                    default:
-                        break;
+                default:
+                   break;
             }
 
             out.append("<-- " + temp[0] + "|" + Tag + "|"+valid + "|");
@@ -157,9 +160,10 @@ public class Main {
                 String[] temp2 = {"DATE"};
                 legalTags = temp2;
                 break;
-                default: return false;
+            default: 
+                return false;
         }
-        for(String s: legalTags){
+        for(String s : legalTags){
             if(s.equals(Tag)) return true;
         }
         return false;
