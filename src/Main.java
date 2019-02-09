@@ -191,15 +191,14 @@ public class Main {
         		people.get(cid).update("CHIL", families.get(x).familyID);
     		}
     		hid = searchbyId(people,hus);
-    		if(hid != -1)people.get(hid).update("SPOU" , families.get(x).familyID);
+    		if(hid != -1) people.get(hid).update("SPOU" , families.get(x).familyID);
     		wid = searchbyId(people,wif);
-    		if(wid != -1)people.get(wid).update("SPOU" , families.get(x).familyID);
+    		if(wid != -1) people.get(wid).update("SPOU" , families.get(x).familyID);
     	}
     }
     
     public static int searchbyId(ArrayList<individual> people , String target) {
     	for(int x = 0 ; x < people.size() ; x++) {
-
     		if(target.equals(people.get(x).id)) {    		
     			return x;
     		}
