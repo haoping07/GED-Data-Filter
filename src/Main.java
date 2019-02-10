@@ -49,8 +49,7 @@ public class Main {
         }
         */
 
-        System.out.println("INDI");
-        String[] titles = { 
+        String[] indiTitle = { 
         		"ID", 
         		"Name", 
         		"Gender", 
@@ -61,7 +60,7 @@ public class Main {
         		"Child",
         		"Spouse"};
         
-        Object[][] data = new String[allPeople.size()][9];
+        Object[][] indiData = new String[allPeople.size()][9];
         
         for(int i = 0 ; i < allPeople.size() ; i++) { 
             data[i][0] = allPeople.get(i).id;
@@ -74,11 +73,11 @@ public class Main {
         	data[i][7] = allPeople.get(i).children.toString();
         	data[i][8] = allPeople.get(i).spouse.toString();
         }
+        System.out.println("Individuals");
+        TextTable indiTable = new TextTable(indiTitle, indiData); 
+        indiTable.printTable();
 
-        TextTable dataTable = new TextTable(titles, data); 
-        dataTable.printTable();
-        
-        String[] FAMTitle = { 
+        String[] famTitle = { 
         		"ID", 
         		"Married", 
         		"Divorced", 
@@ -88,8 +87,9 @@ public class Main {
         		"Wife Name",
         		"Children"};
         
-        Object[][] FAMdata = new String[allFamilies.size()][7];
+        Object[][] famData = new String[allFamilies.size()][7];
         System.out.println("Family");
+
         for(int i = 0 ; i < allFamilies.size() ; i++) { 
             data[i][0] = allFamilies.get(i).familyID;
             data[i][1] = allFamilies.get(i).marrDate;
@@ -101,9 +101,11 @@ public class Main {
         	data[i][6] = allFamilies.get(i).wife;
         	data[i][7] = allFamilies.get(i).children.toString();
         }
-
-        TextTable dataTableFAM = new TextTable(FAMTitle, FAMdata); 
-        dataTableFAM.printTable();
+        
+        System.out.println();
+        System.out.println("Families");
+        TextTable famTable = new TextTable(famTitle, famData); 
+        famTable.printTable();
     }
     
     public static void Testing(String pathname)throws IOException{
