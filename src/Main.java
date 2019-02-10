@@ -89,17 +89,18 @@ public class Main {
         		"Children"};
         
         Object[][] famData = new String[allFamilies.size()][8];
-        System.out.println("Family");
 
         for(int i = 0 ; i < allFamilies.size() ; i++) { 
             famData[i][0] = allFamilies.get(i).familyID;
             famData[i][1] = allFamilies.get(i).marrDate;
             //data[i][3] = Boolean.toString(allFamilies.get(i).isDivored);
         	famData[i][2] = allFamilies.get(i).divoDate;
-            //Husband ID?
-        	famData[i][4] = allFamilies.get(i).husband;
-            //Wife ID?
-        	famData[i][6] = allFamilies.get(i).wife;
+        	famData[i][3] = allFamilies.get(i).husband;
+            //----Husband Name?----
+            //...
+        	famData[i][5] = allFamilies.get(i).wife;
+            //----Wife Name?----
+            //...
         	famData[i][7] = allFamilies.get(i).children.toString();
         }
         
