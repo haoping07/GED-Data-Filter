@@ -88,7 +88,7 @@ public class Main {
         		"Wife Name",
         		"Children"};
         
-        Object[][] famData = new String[allFamilies.size()][7];
+        Object[][] famData = new String[allFamilies.size()][8];
         System.out.println("Family");
 
         for(int i = 0 ; i < allFamilies.size() ; i++) { 
@@ -103,7 +103,7 @@ public class Main {
         	famData[i][7] = allFamilies.get(i).children.toString();
         }
         
-        System.out.println();
+        System.out.println("\n");
         System.out.println("Families");
         TextTable famTable = new TextTable(famTitle, famData); 
         famTable.printTable();
