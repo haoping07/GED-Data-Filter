@@ -51,55 +51,55 @@ public class Main {
 
         System.out.println("INDI");
         String[] titles = { 
-        		"Age", 
-        		"Birt", 
-        		"Dith", 
-        		"id", 
-        		"isdead",
-        		"name",
-        		"sex",
-        		"spouse",
-        		"children"};
+        		"ID", 
+        		"Name", 
+        		"Gender", 
+        		"Birthday", 
+        		"Age",
+        		"Alive",
+        		"Death",
+        		"Child",
+        		"Spouse"};
         
         Object[][] data = new String[allPeople.size()][9];
         
         for(int i = 0 ; i < allPeople.size() ; i++) { 
-        	data[i][0] = Integer.toString(allPeople.get(i).age);
-        	data[i][1] = allPeople.get(i).Birthday;
-        	if (allPeople.get(i).Deathday == "") data[i][2] = "NA";
-        	else data[i][2] = allPeople.get(i).Deathday;
-        	data[i][3] = allPeople.get(i).id;
-        	data[i][4] = Boolean.toString(allPeople.get(i).isdead);
-        	data[i][5] = allPeople.get(i).name;
-        	data[i][6] = allPeople.get(i).sex;
-        	data[i][7] = allPeople.get(i).spouse.toString();
-        	data[i][8] = allPeople.get(i).children.toString();
+            data[i][0] = allPeople.get(i).id;
+            data[i][1] = allPeople.get(i).name;
+            data[i][2] = allPeople.get(i).sex;
+            data[i][3] = allPeople.get(i).Birthday;
+        	data[i][4] = Integer.toString(allPeople.get(i).age);
+        	data[i][5] = Boolean.toString(allPeople.get(i).isdead);
+        	data[i][6] = allPeople.get(i).Deathday;
+        	data[i][7] = allPeople.get(i).children.toString();
+        	data[i][8] = allPeople.get(i).spouse.toString();
         }
 
         TextTable dataTable = new TextTable(titles, data); 
         dataTable.printTable();
         
         String[] FAMTitle = { 
-        		"div", 
-        		"fid", 
-        		"husb", 
-        		"isdiv", 
-        		"isdead",
-        		"marrdate",
-        		"sex",
-        		"wife",
-        		"children"};
+        		"ID", 
+        		"Married", 
+        		"Divorced", 
+        		"Husband ID", 
+        		"Husband Name",
+        		"Wife ID",
+        		"Wife Name",
+        		"Children"};
         
         Object[][] FAMdata = new String[allFamilies.size()][7];
         System.out.println("Family");
         for(int i = 0 ; i < allFamilies.size() ; i++) { 
-        	data[i][0] = allFamilies.get(i).divoDate;
-        	data[i][1] = allFamilies.get(i).familyID;
-        	data[i][2] = allFamilies.get(i).husband;
-        	data[i][3] = Boolean.toString(allFamilies.get(i).isDivored);
-        	data[i][4] = allFamilies.get(i).marrDate;
-        	data[i][5] = allFamilies.get(i).wife;
-        	data[i][6] = allFamilies.get(i).children.toString();
+            data[i][0] = allFamilies.get(i).familyID;
+            data[i][1] = allFamilies.get(i).marrDate;
+            //data[i][3] = Boolean.toString(allFamilies.get(i).isDivored);
+        	data[i][2] = allFamilies.get(i).divoDate;
+            //Husband ID?
+        	data[i][4] = allFamilies.get(i).husband;
+            //Wife ID?
+        	data[i][6] = allFamilies.get(i).wife;
+        	data[i][7] = allFamilies.get(i).children.toString();
         }
 
         TextTable dataTableFAM = new TextTable(FAMTitle, FAMdata); 
