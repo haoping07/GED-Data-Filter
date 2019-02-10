@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import indi.individual;
 import fam.Family;
+import dnl.utils.text.table.*;
 
 public class Main {
 	
