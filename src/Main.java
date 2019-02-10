@@ -64,15 +64,15 @@ public class Main {
         Object[][] indiData = new String[allPeople.size()][9];
         
         for(int i = 0 ; i < allPeople.size() ; i++) { 
-            data[i][0] = allPeople.get(i).id;
-            data[i][1] = allPeople.get(i).name;
-            data[i][2] = allPeople.get(i).sex;
-            data[i][3] = allPeople.get(i).Birthday;
-        	data[i][4] = Integer.toString(allPeople.get(i).age);
-        	data[i][5] = Boolean.toString(allPeople.get(i).isdead);
-        	data[i][6] = allPeople.get(i).Deathday;
-        	data[i][7] = allPeople.get(i).children.toString();
-        	data[i][8] = allPeople.get(i).spouse.toString();
+            indiData[i][0] = allPeople.get(i).id;
+            indiData[i][1] = allPeople.get(i).name;
+            indiData[i][2] = allPeople.get(i).sex;
+            indiData[i][3] = allPeople.get(i).Birthday;
+        	indiData[i][4] = Integer.toString(allPeople.get(i).age);
+        	indiData[i][5] = Boolean.toString(allPeople.get(i).isdead);
+        	indiData[i][6] = allPeople.get(i).Deathday;
+        	indiData[i][7] = allPeople.get(i).children.toString();
+        	indiData[i][8] = allPeople.get(i).spouse.toString();
         }
         System.out.println("Individuals");
         TextTable indiTable = new TextTable(indiTitle, indiData); 
@@ -92,15 +92,15 @@ public class Main {
         System.out.println("Family");
 
         for(int i = 0 ; i < allFamilies.size() ; i++) { 
-            data[i][0] = allFamilies.get(i).familyID;
-            data[i][1] = allFamilies.get(i).marrDate;
+            famData[i][0] = allFamilies.get(i).familyID;
+            famData[i][1] = allFamilies.get(i).marrDate;
             //data[i][3] = Boolean.toString(allFamilies.get(i).isDivored);
-        	data[i][2] = allFamilies.get(i).divoDate;
+        	famData[i][2] = allFamilies.get(i).divoDate;
             //Husband ID?
-        	data[i][4] = allFamilies.get(i).husband;
+        	famData[i][4] = allFamilies.get(i).husband;
             //Wife ID?
-        	data[i][6] = allFamilies.get(i).wife;
-        	data[i][7] = allFamilies.get(i).children.toString();
+        	famData[i][6] = allFamilies.get(i).wife;
+        	famData[i][7] = allFamilies.get(i).children.toString();
         }
         
         System.out.println();
