@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import indi.individual;
 import fam.Family;
@@ -82,7 +83,10 @@ public class Main {
         	}
         }
         System.out.println("Individuals");
-        TextTable indiTable = new TextTable(indiTitle, indiData); 
+        TextTable indiTable = new TextTable(indiTitle, indiData);
+        PrintStream writeTable = new PrintStream(new File("Table.txt"));
+        writeTable.append("Individuals").append("\n");
+        indiTable.printTable(writeTable, 0);
         indiTable.printTable();
 
         String[] famTitle = { 
@@ -117,6 +121,8 @@ public class Main {
         System.out.println("\n");
         System.out.println("Families");
         TextTable famTable = new TextTable(famTitle, famData); 
+        writeTable.append("\n").append("Families").append("\n");
+        famTable.printTable(writeTable, 0);
         famTable.printTable();
     }
     
