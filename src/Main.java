@@ -86,6 +86,7 @@ public class Main {
         TextTable indiTable = new TextTable(indiTitle, indiData);
         PrintStream writeTable = new PrintStream(new File("Table.txt"));
         writeTable.append("Individuals").append("\n");
+        indiTable.setSort(0); 
         indiTable.printTable(writeTable, 0);
         indiTable.printTable();
 
@@ -122,6 +123,7 @@ public class Main {
         System.out.println("Families");
         TextTable famTable = new TextTable(famTitle, famData); 
         writeTable.append("\n").append("Families").append("\n");
+        famTable.setSort(0); 
         famTable.printTable(writeTable, 0);
         famTable.printTable();
     }
