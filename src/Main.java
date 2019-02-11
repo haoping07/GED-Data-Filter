@@ -96,11 +96,9 @@ public class Main {
             //data[i][3] = Boolean.toString(allFamilies.get(i).isDivored);
         	famData[i][2] = allFamilies.get(i).divoDate;
         	famData[i][3] = allFamilies.get(i).husband;
-            //----Husband Name?----
-            //...
+        	famData[i][4] = allPeople.get(searchbyId(allPeople , allFamilies.get(i).husband)).name;
         	famData[i][5] = allFamilies.get(i).wife;
-            //----Wife Name?----
-            //...
+        	famData[i][6] = allPeople.get(searchbyId(allPeople , allFamilies.get(i).wife)).name;
         	famData[i][7] = allFamilies.get(i).children.toString();
         }
         
