@@ -74,6 +74,12 @@ public class Main {
         	indiData[i][6] = allPeople.get(i).Deathday;
         	indiData[i][7] = allPeople.get(i).children.toString();
         	indiData[i][8] = allPeople.get(i).spouse.toString();
+        	
+        	for (int j = 0; j < 9; j++) {
+        		if (indiData[i][j] == "") {
+        			indiData[i][j] = "NA";
+        		}
+        	}
         }
         System.out.println("Individuals");
         TextTable indiTable = new TextTable(indiTitle, indiData); 
@@ -94,13 +100,18 @@ public class Main {
         for(int i = 0 ; i < allFamilies.size() ; i++) { 
             famData[i][0] = allFamilies.get(i).familyID;
             famData[i][1] = allFamilies.get(i).marrDate;
-            //data[i][3] = Boolean.toString(allFamilies.get(i).isDivored);
         	famData[i][2] = allFamilies.get(i).divoDate;
         	famData[i][3] = allFamilies.get(i).husband;
         	famData[i][4] = allPeople.get(searchbyId(allPeople , allFamilies.get(i).husband)).name;
         	famData[i][5] = allFamilies.get(i).wife;
         	famData[i][6] = allPeople.get(searchbyId(allPeople , allFamilies.get(i).wife)).name;
         	famData[i][7] = allFamilies.get(i).children.toString();
+        	
+        	for (int j = 0; j < 8; j++) {
+        		if (famData[i][j] == "") {
+        			famData[i][j] = "NA";
+        		}
+        	}
         }
         
         System.out.println("\n");
