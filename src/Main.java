@@ -70,7 +70,7 @@ public class Main {
             indiData[i][2] = allPeople.get(i).sex;
             indiData[i][3] = allPeople.get(i).Birthday;
         	indiData[i][4] = Integer.toString(allPeople.get(i).age);
-        	indiData[i][5] = Boolean.toString(allPeople.get(i).isdead);
+        	indiData[i][5] = Boolean.toString(!allPeople.get(i).isdead);
         	indiData[i][6] = allPeople.get(i).Deathday;
         	indiData[i][7] = allPeople.get(i).children.toString();
         	indiData[i][8] = allPeople.get(i).spouse.toString();
