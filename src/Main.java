@@ -134,9 +134,7 @@ public class Main {
             if(line == null) break;
 
             String[] temp = line.split(" ");
-            String valid , Tag;
-            if(isValidTag(temp)) valid = "Y";
-            else valid = "N";
+            String Tag;
             StringBuffer out = new StringBuffer();
             if(temp[temp.length-1].equals("INDI") || temp[temp.length-1].equals("FAM"))
                 Tag = temp[temp.length-1];
@@ -157,12 +155,6 @@ public class Main {
                 	break;
             }
             StringBuffer content = new StringBuffer();
-            /*boolean count = false;
-            for(String s:temp){
-                if(!s.equals(Tag) && !s.equals(temp[0]) && !count) {
-                	content.append(s + " ");
-                }  
-            }*/
             if(Tag.equals("INDI") || Tag.equals("FAM")) {
             	for(int x = 1 ; x < temp.length-1 ; x++) {
             		content.append(temp[x] + " ");
@@ -216,11 +208,7 @@ public class Main {
                 default:
                    break;
             }
-            out.append("<-- " + temp[0] + "|" + Tag + "|"+valid + "|");
-            for(String s : temp){
-                if(!s.equals(Tag) && !s.equals(temp[0]))
-                    out.append(s + " ");
-            }
+
 
         }
         allPeople.add(person);
@@ -229,9 +217,6 @@ public class Main {
         br.close();
     }
 
-    public static boolean isValidTag(String[] words){
-        return  isValidNormal(words[0],words[1]) || isValidSpecial(words[0],words[words.length-1]);
-    }
 
     public static boolean isValidNormal(String Level , String Tag){
         String[] legalTags;
