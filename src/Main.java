@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.Console;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -145,10 +146,24 @@ public class Main {
                 	break;
             }
             StringBuffer content = new StringBuffer();
+            /*boolean count = false;
             for(String s:temp){
-                if(!s.equals(Tag) && !s.equals(temp[0]))
-                    content.append(s + " ");
+                if(!s.equals(Tag) && !s.equals(temp[0]) && !count) {
+                	content.append(s + " ");
+                }  
+            }*/
+            if(Tag.equals("INDI") || Tag.equals("FAM")) {
+            	for(int x = 1 ; x < temp.length-1 ; x++) {
+            		content.append(temp[x] + " ");
+            	}
             }
+            else {
+            	for(int x = 2 ; x < temp.length ; x++) {
+            		content.append(temp[x] + " ");
+            	}
+            }
+
+            
             switch (temp[0]){
                 case "0":
                     if(Tag.equals("INDI")){
@@ -263,6 +278,6 @@ public class Main {
     		}
     	}
     	
-    	return -1;
+    	return 0;
     }
 }
