@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.Console;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -153,7 +152,6 @@ public class Main {
 
             String[] temp = line.split(" ");
             String Tag;
-            StringBuffer out = new StringBuffer();
             if(temp[temp.length-1].equals("INDI") || temp[temp.length-1].equals("FAM"))
                 Tag = temp[temp.length-1];
             else Tag = temp[1];
@@ -233,37 +231,6 @@ public class Main {
         allFamilies.add(family);
 
         br.close();
-    }
-
-
-    public static boolean isValidNormal(String Level , String Tag){
-        String[] legalTags;
-        switch (Level){
-            case "0":
-                String[] temp0 = {"HEAD","TRLR","NOTE"};
-                legalTags = temp0;
-                break;
-            case "1":
-                String[] temp1 = {"NAME","SEX","BIRT","DEAT","FAMC","FAMS","MARR","HUSB","WIFE","CHIL","DIV"};
-                legalTags = temp1;
-                break;
-            case "2":
-                String[] temp2 = {"DATE"};
-                legalTags = temp2;
-                break;
-            default: 
-                return false;
-        }
-        for(String s : legalTags){
-            if(s.equals(Tag)) return true;
-        }
-        return false;
-    }
-
-    public static boolean isValidSpecial(String Level , String Tag){
-        if(!Level.equals("0")) return false;
-        if(Tag.equals("INDI") || Tag.equals("FAM")) return true;
-        return false;
     }
     
     public static void updatemerrage(ArrayList<individual> people , ArrayList<Family> families) {
