@@ -60,6 +60,7 @@ public class checkdate_US01 {
 	}
 	
 	public static int stoi(String input) {
+		// should check the ASCII number ranging from ("0" to "9");
 		int out = 0;
 		for(int x = 0 ; x < input.length() ; x++) {
 			out = (out*10)+((int)input.charAt(x)-48);
