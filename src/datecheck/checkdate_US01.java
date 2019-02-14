@@ -59,8 +59,6 @@ public class checkdate_US01 {
 		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
 		int pre = inarridx(month , premonth);
 		int aft = inarridx(month , aftmonth);
-		System.out.println("pre"+pre);
-		System.out.println("aft:"+aft);
 		if(pre == -1 || aft == -1) return false;
 		else {
 			if(aft > pre) return false;
