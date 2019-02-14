@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import indi.individual;
 import fam.Family;
 import dnl.utils.text.table.*;
+import datecheck.*;
 
 public class Main {
 	
@@ -223,8 +224,8 @@ public class Main {
     }
     
     public static void updatemerrage(ArrayList<individual> people , ArrayList<Family> families) {
-    	String hus,wif,chi;
-    	int hid,wid,cid;
+    	String hus,wif,chi;  // this is actually ID of hus,wif,chi
+    	int hid,wid,cid; // id is the index of h or w or c in the people
     	for(int x = 0 ; x < families.size() ; x++) {
     		hus = families.get(x).husband;
     		wif = families.get(x).wife;
@@ -238,6 +239,26 @@ public class Main {
     		if(hid != -1) people.get(hid).update("SPOU" , families.get(x).familyID);
     		wid = searchbyId(people,wif);
     		if(wid != -1) people.get(wid).update("SPOU" , families.get(x).familyID);
+    	}
+    	
+    	
+    }
+    
+    // check marriage before death
+    public static void checkMarBefDeath(ArrayList<individual> people , ArrayList<Family> families) {
+    	String hus,wif; // husID and wifeID
+    	int hIndex,wIndex;
+    	for(int x = 0 ; x < families.size() ; x++) {
+    		hus = families.get(x).husband;
+    		wif = families.get(x).wife;
+    		hIndex = searchbyId(people,hus);
+    		wIndex = searchbyId(people,wif);
+    		if(!US05.marriage_before_death(families.get(x).marrDate,people.get(hIndex).Deathday)) {
+    			System.out.println(families.get(x).familyID + " : " + "husband marriage date is before than his death");
+    		}
+    		if(!US05.marriage_before_death(families.get(x).marrDate,people.get(wIndex).Deathday)) {
+    			System.out.println(families.get(x).familyID + " : " + "wife marriage date is before than her death");
+    		}
     	}
     }
     
