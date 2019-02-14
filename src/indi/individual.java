@@ -56,6 +56,9 @@ public class individual {
 		    	if(this.Birthday != "") {
 		    		break;
 		    	}
+		    	if(checkdate1(content)) {
+		    		System.out.println("Birthday can not after current date");
+		    	}
 		    	if(checkdate(content , this.Deathday)) {
 		    		this.Birthday = content;
 		    	}
@@ -98,7 +101,7 @@ public class individual {
 		else {
 			this.age = stoi(nowyear[0]) - stoi(bdate[bdate.length-1]);
 		}
-		if(Checkage()) {
+		if(!Checkage()) {
 			System.out.println("Age is larger then 150!");
 		}
 	}
