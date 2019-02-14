@@ -20,7 +20,7 @@ public class US04 {
 	
 	public static void main(String[] args) {
 		US04 us = new US04();
-		boolean res = us.marrige_before_divorce("19 JAN 1998","20 MAR 1996");
+		boolean res = us.marrige_before_divorce("19 JAN 1988","20 MAR 1996");
 		if(res) {
 			System.out.println("true");
 		}
