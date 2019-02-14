@@ -23,14 +23,14 @@ public class US04 {
 	}
 	
 	public static void main(String[] args) {
-		US04 us = new US04();
-		boolean res = us.marriage_before_divorce("19 JAN 1988","20 MAR 1996");
-		if(res) {
-			System.out.println("true");
-		}
-		else {
-			System.out.println("wrong");
-		}
+		System.out.println(marriage_before_divorce("28 JAN 2019","28 JAN 2019"));
+		System.out.println(marriage_before_divorce("17 JAN 2019","28 JAN 2019"));
+		System.out.println(marriage_before_divorce("28 JAN 2019","28 FEB 2019"));
+		System.out.println(marriage_before_divorce("28 JAN 2018","28 JAN 2019"));
+		System.out.println(marriage_before_divorce("28 JAN 2019","18 JAN 2019"));
+		System.out.println(marriage_before_divorce("28 FEB 2019","28 JAN 2019"));
+		System.out.println(marriage_before_divorce("28 JAN 2019","28 JAN 2018"));
+		
 	}
 
 }
