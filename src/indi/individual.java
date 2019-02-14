@@ -2,6 +2,7 @@ package indi;
 import java.time.LocalDate;
 //import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import datecheck.checkdate_US01;
 
 public class individual {
 
@@ -21,6 +22,9 @@ public class individual {
 		System.out.println(i.age);
 		i.update("DEAT", "2 SEP 2020");
 		System.out.println(i.age);*/
+		
+		//LS: Test method of US01
+		//System.out.println(checkdate1("13 FEB 2019"));
 	}
 	
 	public individual(String id) {
@@ -106,6 +110,14 @@ public class individual {
 
 	protected boolean checkdate(String date1 , String date2) {
 		return true;
+	}
+	
+	protected static boolean checkdate1(String date) {
+		checkdate_US01 c1 = new checkdate_US01();
+		if(c1.checkdate_us01(date)) {
+			return true;
+		}
+		else return false;
 	}
 	
 	private void updatedeath(String date) {
