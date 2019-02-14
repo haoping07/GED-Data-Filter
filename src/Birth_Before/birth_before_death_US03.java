@@ -1,6 +1,8 @@
 //Author: Song Xu
 package birth_before;
 
+import datecheck.checkdate_US01.java;
+
 public class birth_before_death_US03 {
     public boolean birth_before_death(String birth_date,String death_date){
         String[] brith=birth_date.split(" ");

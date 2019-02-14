@@ -82,7 +82,7 @@ public class individual {
 		
 	}
 	
-	private void calage(){
+	public void calage(){
 		if(Birthday == "") {
 			age = 0;
 			return;
@@ -98,9 +98,17 @@ public class individual {
 		else {
 			this.age = stoi(nowyear[0]) - stoi(bdate[bdate.length-1]);
 		}
-		
+		if(Checkage()) {
+			System.out.println("Age is larger then 150!");
+		}
 	}
-	private int stoi(String input) {
+	
+	public boolean Checkage() {
+		if(this.age > 150) return false;
+		else return true;
+	}
+	
+	public int stoi(String input) {
 		int out = 0;
 		for(int x = 0 ; x < input.length() ; x++) {
 			out = (out*10)+((int)input.charAt(x)-48);
@@ -108,11 +116,11 @@ public class individual {
 		return out;
 	}
 
-	protected boolean checkdate(String date1 , String date2) {
+	public boolean checkdate(String date1 , String date2) {
 		return true;
 	}
 	
-	protected static boolean checkdate1(String date) {
+	public static boolean checkdate1(String date) {
 		checkdate_US01 c1 = new checkdate_US01();
 		if(c1.checkdate_us01(date)) {
 			return true;
@@ -120,7 +128,7 @@ public class individual {
 		else return false;
 	}
 	
-	private void updatedeath(String date) {
+	public void updatedeath(String date) {
 		this.isdead = true;
 		this.Deathday = date;
 	}

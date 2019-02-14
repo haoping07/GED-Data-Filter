@@ -1,3 +1,4 @@
+//Lo Shih Hao
 package datecheck;
 
 import java.time.LocalDate;
@@ -38,12 +39,12 @@ public class checkdate_US01 {
 		
 	}
 	
-	private static boolean checkday(String nowday , String inday){
+	public static boolean checkday(String nowday , String inday){
 		if(stoi(inday) > stoi(nowday)) return false;
 		else return true;
 	}
 	
-	private static boolean checkmonth(String nowmonth , String inmonth){
+	public static boolean checkmonth(String nowmonth , String inmonth){
 		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
 		int in = inarridx(month , inmonth);
 		//System.out.println("in"+in);
@@ -53,12 +54,12 @@ public class checkdate_US01 {
 		else return true;
 	}
 	
-	private static boolean checkyear(String nowyear , String inyear){
+	public static boolean checkyear(String nowyear , String inyear){
 		if(stoi(inyear) > stoi(nowyear)) return false;
 		else return true;
 	}
 	
-	private static int stoi(String input) {
+	public static int stoi(String input) {
 		int out = 0;
 		for(int x = 0 ; x < input.length() ; x++) {
 			out = (out*10)+((int)input.charAt(x)-48);
@@ -66,7 +67,7 @@ public class checkdate_US01 {
 		return out;
 	}
 	
-	private static int inarridx(String[] arr , String value) {
+	public static int inarridx(String[] arr , String value) {
 		for(int x = 0 ; x < arr.length ; x++) {
 			if(arr[x].equals(value)) return x;
 		}
