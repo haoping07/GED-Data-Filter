@@ -1,9 +1,7 @@
 //Author: Song Xu
-package Birth_Before;
+package datecheck;
 
-import datecheck.checkdate_US01;
-
-public class birth_before_death_US03 {
+public class US03 {
 	public static void main(String[] args) {
 		System.out.println(birth_before_death("28 JAN 2019","28 JAN 2019"));
 		System.out.println(birth_before_death("17 JAN 2019","28 JAN 2019"));
