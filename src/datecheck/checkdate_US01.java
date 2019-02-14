@@ -9,6 +9,7 @@ public class checkdate_US01 {
 		// TODO Auto-generated method stub
 		LocalDate localDate = LocalDate.now();
 		String now = localDate.toString();
+		System.out.println(checkmonth("JAN","FEB"));
 		//System.out.println(now);
 		//System.out.println(checkdate_us01("13 MAR 2019"));
 	}
@@ -29,7 +30,7 @@ public class checkdate_US01 {
 		//System.out.println("d:"+checkday(nowdate[2] , indate[0]));
 		
 		if(checkyear(nowdate[0] , indate[2])) {
-			if(checkmonth(nowdate[1] , indate[1])) {
+			if(checkmonth2(nowdate[1] , indate[1])) {
 				if(checkday(nowdate[2] , indate[0])) {
 					return true;
 				}
@@ -44,7 +45,7 @@ public class checkdate_US01 {
 		else return true;
 	}
 	
-	public static boolean checkmonth(String nowmonth , String inmonth){
+	public static boolean checkmonth2(String nowmonth , String inmonth){
 		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
 		int in = inarridx(month , inmonth);
 		//System.out.println("in"+in);
@@ -52,6 +53,19 @@ public class checkdate_US01 {
 		if(in == -1) return false;
 		if(in > stoi(nowmonth)) return false;
 		else return true;
+	}
+	
+	public static boolean checkmonth(String premonth , String aftmonth){
+		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
+		int pre = inarridx(month , premonth);
+		int aft = inarridx(month , aftmonth);
+		System.out.println("pre"+pre);
+		System.out.println("aft:"+aft);
+		if(pre == -1 || aft == -1) return false;
+		else {
+			if(aft > pre) return false;
+			else return true;
+		}
 	}
 	
 	public static boolean checkyear(String nowyear , String inyear){
