@@ -63,23 +63,16 @@ public class Main {
         		"Spouse"};
         
         Object[][] indiData = new String[allPeople.size()][9];
-        
-        for(int i = 0 ; i < allPeople.size() ; i++) { 
-        	String test = "";
-        	int tmp;
-        	for (int k = 2; k < allPeople.get(i).id.length() - 2; k++) {
-        		test += allPeople.get(i).id.charAt(k);
-        	}
-        	tmp = Integer.valueOf(test) - 1;
-            indiData[tmp][0] = allPeople.get(i).id;
-            indiData[tmp][1] = allPeople.get(i).name;
-            indiData[tmp][2] = allPeople.get(i).sex;
-            indiData[tmp][3] = allPeople.get(i).Birthday;
-        	indiData[tmp][4] = Integer.toString(allPeople.get(i).age);
-        	indiData[tmp][5] = Boolean.toString(!allPeople.get(i).isdead);
-        	indiData[tmp][6] = allPeople.get(i).Deathday;
-        	indiData[tmp][7] = allPeople.get(i).children.toString();
-        	indiData[tmp][8] = allPeople.get(i).spouse.toString();
+        	for (int i = 0; i < allPeople.size(); i++) {
+            indiData[i][0] = allPeople.get(i).id;
+            indiData[i][1] = allPeople.get(i).name;
+            indiData[i][2] = allPeople.get(i).sex;
+            indiData[i][3] = allPeople.get(i).Birthday;
+        	indiData[i][4] = Integer.toString(allPeople.get(i).age);
+        	indiData[i][5] = Boolean.toString(!allPeople.get(i).isdead);
+        	indiData[i][6] = allPeople.get(i).Deathday;
+        	indiData[i][7] = allPeople.get(i).children.toString();
+        	indiData[i][8] = allPeople.get(i).spouse.toString();
         	
         	for (int j = 0; j < 9; j++) {
         		if (indiData[i][j] == "") {
@@ -91,6 +84,7 @@ public class Main {
         TextTable indiTable = new TextTable(indiTitle, indiData);
         PrintStream writeTable = new PrintStream(new File("Table.txt"));
         writeTable.append("Individuals").append("\n");
+        indiTable.setSort(0); 
         indiTable.printTable(writeTable, 0);
         indiTable.printTable();
 
@@ -105,22 +99,15 @@ public class Main {
         		"Children"};
         
         Object[][] famData = new String[allFamilies.size()][8];
-
-        for(int i = 0 ; i < allFamilies.size() ; i++) { 
-        	String test = "";
-        	int tmp;
-        	for (int k = 2; k < allFamilies.get(i).familyID.length() - 2; k++) {
-        		test += allFamilies.get(i).familyID.charAt(k);
-        	}
-        	tmp = Integer.valueOf(test) - 1;
-            famData[tmp][0] = allFamilies.get(i).familyID;
-            famData[tmp][1] = allFamilies.get(i).marrDate;
-        	famData[tmp][2] = allFamilies.get(i).divoDate;
-        	famData[tmp][3] = allFamilies.get(i).husband;
-        	famData[tmp][4] = allPeople.get(searchbyId(allPeople , allFamilies.get(i).husband)).name;
-        	famData[tmp][5] = allFamilies.get(i).wife;
-        	famData[tmp][6] = allPeople.get(searchbyId(allPeople , allFamilies.get(i).wife)).name;
-        	famData[tmp][7] = allFamilies.get(i).children.toString();
+        	for (int i = 0; i < allFamilies.size(); i++) {
+            famData[i][0] = allFamilies.get(i).familyID;
+            famData[i][1] = allFamilies.get(i).marrDate;
+        	famData[i][2] = allFamilies.get(i).divoDate;
+        	famData[i][3] = allFamilies.get(i).husband;
+        	famData[i][4] = allPeople.get(searchbyId(allPeople , allFamilies.get(i).husband)).name;
+        	famData[i][5] = allFamilies.get(i).wife;
+        	famData[i][6] = allPeople.get(searchbyId(allPeople , allFamilies.get(i).wife)).name;
+        	famData[i][7] = allFamilies.get(i).children.toString();
         	
         	for (int j = 0; j < 8; j++) {
         		if (famData[i][j] == "") {
@@ -133,6 +120,7 @@ public class Main {
         System.out.println("Families");
         TextTable famTable = new TextTable(famTitle, famData); 
         writeTable.append("\n").append("Families").append("\n");
+        famTable.setSort(0); 
         famTable.printTable(writeTable, 0);
         famTable.printTable();
     }
