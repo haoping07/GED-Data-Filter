@@ -15,5 +15,16 @@ public class US05 {
         }
             return false;
 	}
+	
+	public static void main(String[] args) {
+		US05 us = new US05();
+		boolean res = us.marrige_before_divorce("19 JAN 1998","20 MAR 1996");
+		if(res) {
+			System.out.println("true");
+		}
+		else {
+			System.out.println("wrong");
+		}
+	}
 
 }
