@@ -19,6 +19,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Testing("MyFamily.ged");
         updatemerrage(allPeople , allFamilies);
+        checkMarBefDeath(allPeople, allFamilies);
         //Testing("proj02test.ged");
         
         /*
