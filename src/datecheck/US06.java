@@ -1,4 +1,4 @@
-//Hao-Ping Lin
+//Hao-Ping Lin (LH)
 package datecheck;
 
 public class US06 {
@@ -15,4 +15,10 @@ public class US06 {
         }
        return false;
     }
+	
+	public static void main(String[] args) {
+		US06 test = new US06();
+		boolean testFlag = test.divorce_before_death("1 JAN 1991","1 JAN 2000");
+		System.out.println(testFlag);
+	}
 }
