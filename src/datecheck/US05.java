@@ -2,8 +2,12 @@
 package datecheck;
 
 public class US05 {
-	public boolean marrige_before_divorce(String marrigeDate, String deathDate){
-		String[] md=marrigeDate.split(" ");
+	public US05() {
+		System.out.println("create!");
+	}
+	
+	public static boolean marriage_before_death(String marriageDate, String deathDate){
+		String[] md=marriageDate.split(" ");
         String[] dd=deathDate.split(" ");
         
         if(checkdate_US01.checkyear(dd[2] , md[2])) {
@@ -17,14 +21,13 @@ public class US05 {
 	}
 	
 	public static void main(String[] args) {
-		US05 us = new US05();
-		boolean res = us.marrige_before_divorce("19 JAN 1998","20 MAR 1996");
-		if(res) {
-			System.out.println("true");
-		}
-		else {
-			System.out.println("wrong");
-		}
+		System.out.println(marriage_before_death("28 JAN 2019","28 JAN 2019"));
+		System.out.println(marriage_before_death("17 JAN 2019","28 JAN 2019"));
+		System.out.println(marriage_before_death("28 JAN 2019","28 FEB 2019"));
+		System.out.println(marriage_before_death("28 JAN 2018","28 JAN 2019"));
+		System.out.println(marriage_before_death("28 JAN 2019","18 JAN 2019"));
+		System.out.println(marriage_before_death("28 FEB 2019","28 JAN 2019"));
+		System.out.println(marriage_before_death("28 JAN 2019","28 JAN 2018"));
 	}
 
 }
