@@ -9,17 +9,17 @@ public class checkdate_US01 {
 		// TODO Auto-generated method stub
 		LocalDate localDate = LocalDate.now();
 		String now = localDate.toString();
-		System.out.println(checkmonth("JAN","FEB"));
+		//System.out.println(checkmonth("JAN","FEB"));
 		//System.out.println(now);
-		//System.out.println(checkdate_us01("13 MAR 2019"));
+		//System.out.println(checkdate_us01("18 JAN 2019"));
 	}
 	
 	public checkdate_US01() {
 		System.out.println("create!");
 	}
 	
-	//public static boolean checkdate_us01(String date){
-	public boolean checkdate_us01(String date){
+	public static boolean checkdate_us01(String date){
+	//public boolean checkdate_us01(String date){
 		String[] indate = date.split(" ");
 		LocalDate localDate = LocalDate.now();
 		String now = localDate.toString();
@@ -28,21 +28,33 @@ public class checkdate_US01 {
 		//System.out.println("y:"+checkyear(nowdate[0] , indate[2]));
 		//System.out.println("m:"+checkmonth(nowdate[1] , indate[1]));
 		//System.out.println("d:"+checkday(nowdate[2] , indate[0]));
-		
-		if(checkyear(nowdate[0] , indate[2])) {
-			if(checkmonth2(nowdate[1] , indate[1])) {
-				if(checkday(nowdate[2] , indate[0])) {
+			
+		if(!checkyear(nowdate[0] , indate[2])) {
+			return false;
+		} else if (checkyeareq(nowdate[0] , indate[2])) {
+			if(!checkmonth2(nowdate[1] , indate[1])) {
+				return false;
+			} else if (checkmontheq(nowdate[1] , indate[1])) {
+				if(!checkday(nowdate[2] , indate[0])) {
+					return false;
+				} else {
 					return true;
 				}
+			} else {
+				return true;
 			}
+		} else {
+			return true;
 		}
-		return false;
-		
 	}
 	
 	public static boolean checkday(String nowday , String inday){
 		if(stoi(inday) > stoi(nowday)) return false;
 		else return true;
+	}
+	public static boolean checkdayeq(String nowday , String inday){
+		if(stoi(inday) == stoi(nowday)) return true;
+		else return false;
 	}
 	
 	public static boolean checkmonth2(String nowmonth , String inmonth){
@@ -53,6 +65,15 @@ public class checkdate_US01 {
 		if(in == -1) return false;
 		if(in > stoi(nowmonth)) return false;
 		else return true;
+	}
+	public static boolean checkmontheq(String nowmonth , String inmonth){
+		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
+		int in = inarridx(month , inmonth);
+		//System.out.println("in"+in);
+		//System.out.println("now:"+nowmonth);
+		if(in == -1) return false;
+		if(in == stoi(nowmonth)) return true;
+		else return false;
 	}
 	
 	public static boolean checkmonth(String premonth , String aftmonth){
@@ -71,6 +92,11 @@ public class checkdate_US01 {
 	public static boolean checkyear(String nowyear , String inyear){
 		if(stoi(inyear) > stoi(nowyear)) return false;
 		else return true;
+	}
+	
+	public static boolean checkyeareq(String nowyear , String inyear){
+		if(stoi(inyear) == stoi(nowyear)) return true;
+		else return false;
 	}
 	
 	public static int stoi(String input) {
