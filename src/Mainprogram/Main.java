@@ -126,6 +126,15 @@ public class Main {
         famTable.setSort(0); 
         famTable.printTable(writeTable, 0);
         famTable.printTable();
+        
+        //(LH)Debug messages print out
+        System.out.println();
+        US06 us06 = new US06();
+        us06.Divorce_Before_Death();
+        System.out.println("--------------------------------------------------------------");
+        US08 us08 = new US08();
+        us08.Birth_Before_Marriage_Of_Parents();
+        System.out.println("--------------------------------------------------------------");
     }
     
     public static void Testing(String pathname)throws IOException{
