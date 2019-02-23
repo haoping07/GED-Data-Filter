@@ -130,10 +130,10 @@ public class Main {
         //(LH)Debug messages print out
         System.out.println();
         US06 us06 = new US06();
-        us06.Divorce_Before_Death();
+        us06.Divorce_Before_Death(allPeople, allFamilies);
         System.out.println("--------------------------------------------------------------");
         US08 us08 = new US08();
-        us08.Birth_Before_Marriage_Of_Parents();
+        us08.Birth_Before_Marriage_Of_Parents(allPeople, allFamilies);
         System.out.println("--------------------------------------------------------------");
     }
     
