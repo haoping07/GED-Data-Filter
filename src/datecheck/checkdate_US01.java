@@ -7,11 +7,24 @@ public class checkdate_US01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LocalDate localDate = LocalDate.now();
-		String now = localDate.toString();
-		//System.out.println(checkmonth("JAN","FEB"));
-		System.out.println("now:" + now);
-		System.out.println(checkdate_us01("15 MAY 1995"));
+		System.out.println("Date today");
+		String[] nowarr = LocalDate.now().toString().split("-");
+		nowarr[1] = mapmonth(nowarr[1]);
+		System.out.println(nowarr[2] + " " + nowarr[1] + " " + nowarr[0]);
+		System.out.println(checkdate_US01.checkdate_us01(nowarr[2] + " " + nowarr[1] + " " + nowarr[0]));
+		System.out.println("Yesterday");
+		System.out.println(checkdate_US01.checkdate_us01("23 FEB 2019"));
+		System.out.println("Last month");
+		System.out.println(checkdate_US01.checkdate_us01("17 JAN 2019"));
+		System.out.println("Next month");
+		System.out.println(checkdate_US01.checkdate_us01("17 MAR 2019"));
+		System.out.println("Next Year");
+		System.out.println(checkdate_US01.checkdate_us01("17 FEB 2020"));
+	}
+	private static String mapmonth(String string) {
+		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
+		int a = checkdate_US01.stoi(string);
+		return month[a];
 	}
 	
 	public checkdate_US01() {

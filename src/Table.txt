@@ -22,4 +22,4 @@ ________________________________________________________________________________
 | @F2@ | NA          | NA         | @I2@      | John /Ko/     | @I3@   | Lisa /Ko/      | [@I1@ , @I4@ ]|
 | @F3@ | 17 SEP 1980 | NA         | @I4@      | Ben /Ko/      | @I5@   | Elsa /Roberts/ | [@I6@ ]       |
 | @F4@ | NA          | NA         | @I8@      | Bob /Ln/      | @I6@   | Annie /Ln/     | [@I9@ ]       |
-| @F5@ | 02 JAN 2020 | 1 JAN 2010 | @I7@      | Jack /Watson/ | @I6@   | Annie /Ln/     | [@I10@ ]      |
+| @F5@ | 02 JAN 2020 | 1 JAN 2020 | @I7@      | Jack /Watson/ | @I6@   | Annie /Ln/     | [@I10@ ]      |
