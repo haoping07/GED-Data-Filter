@@ -10,8 +10,8 @@ public class checkdate_US01 {
 		LocalDate localDate = LocalDate.now();
 		String now = localDate.toString();
 		//System.out.println(checkmonth("JAN","FEB"));
-		//System.out.println(now);
-		//System.out.println(checkdate_us01("18 JAN 2019"));
+		System.out.println("now:" + now);
+		System.out.println(checkdate_us01("15 MAY 1995"));
 	}
 	
 	public checkdate_US01() {

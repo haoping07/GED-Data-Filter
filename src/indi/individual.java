@@ -25,6 +25,13 @@ public class individual {
 		
 		//LS: Test method of US01
 		//System.out.println(checkdate1("13 FEB 2019"));
+		//LS: Test method of us07
+		individual test = new individual("@US00@");
+		test.update("BIRT", "15 MAY 1995");
+		System.out.println("age of test:" + test.age);
+		individual test2 = new individual("@US01@");
+		test2.update("BIRT", "15 MAY 1000");
+		System.out.println("age of test2: " + test2.age);
 	}
 	
 	public individual(String id) {
@@ -56,7 +63,7 @@ public class individual {
 		    	if(this.Birthday != "") {
 		    		break;
 		    	}
-		    	if(checkdate1(content)) {
+		    	if(!checkdate1(content)) {
 		    		System.out.println("Birthday can not after current date");
 		    	}
 		    	if(checkdate(content , this.Deathday)) {
@@ -124,8 +131,7 @@ public class individual {
 	}
 	
 	public static boolean checkdate1(String date) {
-		checkdate_US01 c1 = new checkdate_US01();
-		if(c1.checkdate_us01(date)) {
+		if(checkdate_US01.checkdate_us01(date)) {
 			return true;
 		}
 		else return false;
