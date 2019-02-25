@@ -1,6 +1,11 @@
 //Auther:Song Xu
 package datecheck;
 
+import java.util.ArrayList;
+
+import fam.Family;
+import indi.individual;
+
 public class US02 {
 	public static void main(String[] args) {
 		System.out.println(birth_before_marriage("28 JAN 2019","28 JAN 2019"));
@@ -14,7 +19,32 @@ public class US02 {
 		System.out.println(birth_before_marriage("28 JAN 2019","28 FEB 2019"));
 		
 	}
+	
+	public static void birth_before_marrage(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
+		for(Family fam:allFamilies) {
+			String hus_bir="",wif_bir="";
+			for(individual indi:allPeople) {
+				if(indi.id.equals(fam.husband)) {
+					hus_bir=indi.Birthday;
+				}
+				
+				if(indi.id.equals(fam.wife)) {
+					wif_bir=indi.Birthday;
+				}
+			}
+			
+			if(!valid_date(hus_bir)||!valid_date(wif_bir)||!valid_date(fam.marrDate)) {
+				System.out.println("missing information");
+				continue;
+			}
+			
+			System.out.println(birth_before_marriage(hus_bir,fam.marrDate));
+			System.out.println(birth_before_marriage(wif_bir,fam.marrDate));
+
+		}
+	}
 	public static boolean birth_before_marriage(String birth_date,String marriage_date){
+	
 		String[] birth=birth_date.split(" ");
 		String[] marriage=marriage_date.split(" ");
 
@@ -33,5 +63,9 @@ public class US02 {
 		}
 		return false;
 	}
+	
+	public static boolean valid_date(String date) {
+    	return date.split(" ").length==3;
+    }
 
 }

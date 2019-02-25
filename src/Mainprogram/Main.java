@@ -141,6 +141,9 @@ public class Main {
         US05 us05 = new US05();
         us05.Marriage_Before_Death(allPeople, allFamilies);
         System.out.println("--------------------------------------------------------------");
+        US03.birth_before_death(allPeople);
+        System.out.println("--------------------------------------------------------------");
+        US02.birth_before_marrage(allPeople,allFamilies);
         
         
     }

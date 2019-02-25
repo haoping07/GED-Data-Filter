@@ -1,7 +1,11 @@
 //Author: Song Xu
 package datecheck;
 
+import java.util.ArrayList;
+import indi.individual;
+
 public class US03 {
+	
 	public static void main(String[] args) {
 		System.out.println(birth_before_death("28 JAN 2019","28 JAN 2019"));
 		System.out.println(birth_before_death("17 JAN 2019","28 JAN 2019"));
@@ -14,6 +18,18 @@ public class US03 {
 		System.out.println(birth_before_death("28 JAN 2019","28 FEB 2019"));
 		
 	}
+	
+	public static void birth_before_death(ArrayList<individual> allPeople) {
+		for(individual indi:allPeople) {
+			if(indi.isdead) {
+				System.out.println(birth_before_death(indi.Birthday,indi.Deathday));
+			}
+			else {
+				System.out.println(indi.name+ "is alive");
+			}
+		}
+	}
+	
     public static boolean birth_before_death(String birth_date,String death_date){
         String[] birth=birth_date.split(" ");
         String[] death=death_date.split(" ");
@@ -31,6 +47,11 @@ public class US03 {
 			}
 		}
         return false;
+    }
+    
+    
+    public static boolean valid_date(String date) {
+    	return date.split(" ").length==3;
     }
 }
 
