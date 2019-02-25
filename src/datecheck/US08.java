@@ -10,7 +10,7 @@ public class US08 {
 		for (int i = 0; i < allPeople.size(); i++) {
 			if (!allPeople.get(i).children.isEmpty()) {
 				ArrayList<String> parent_Married_Date_List = Get_Marry_Date(allPeople.get(i).children, allFamilies);
-				if (parent_Married_Date_List == null) System.out.println("Debug messages(US08)[WARNING]: " + "No parent marry date found!(Lack of GED data?) ::" + allPeople.get(i).id);
+				if (parent_Married_Date_List.isEmpty()) System.out.println("Debug messages(US08)[WARNING]: " + "No parent marry date found!(Lack of GED data?) ::" + allPeople.get(i).id);
 				else {
 					String birth_date = allPeople.get(i).Birthday;
 					if (birth_date.isEmpty()) System.out.println("Debug messages(US08)[WARNING]: " + "Birth date not found!(Lack of GED data?) ::" + allPeople.get(i).id);
@@ -19,13 +19,13 @@ public class US08 {
 						boolean check = true;
 						for (int j = 0; j < parent_Married_Date_List.size(); j++) {
 							check = US06.DateCheck(parent_Married_Date_List.get(j), birth_date);
-						}
-						//If birth date after parent's marry date, legal!
-						if (check) System.out.println("Debug messages(US08)[GOOD]: " + "Birth date after parent's marry date! ::" + allPeople.get(i).id);
-						//If birth date after parent's marry date, illegal!
-						else {
-							 System.out.println("Debug messages(US08)[**ILLEGAL**]: " + "Birth date after parent's marry date! ::" +
-							 allPeople.get(i).id);
+							//If birth date after parent's marry date, legal!
+							if (check) System.out.println("Debug messages(US08)[GOOD]: " + "Birth date after parent's marry date! ::" + allPeople.get(i).id);
+							//If birth date after parent's marry date, illegal!
+							else {
+								 System.out.println("Debug messages(US08)[**ILLEGAL**]: " + "Birth date after parent's marry date! ::" +
+								 allPeople.get(i).id);
+							}
 						}
 					}
 				}
@@ -43,7 +43,6 @@ public class US08 {
 					if (!allFamilies.get(j).marrDate.isEmpty()) {
 						marryDateList.add(allFamilies.get(j).marrDate);
 					} 
-					else return null;
 				}
 			}
 		}

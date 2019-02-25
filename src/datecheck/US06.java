@@ -12,7 +12,7 @@ public class US06 {
 			//If that person have spouse
 			if (!allPeople.get(i).spouse.isEmpty()) {
 				ArrayList<String> divorceDateList = Get_Divorce_Date(allPeople.get(i).spouse, allFamilies);
-				if (divorceDateList == null) System.out.println("Debug messages(US06)[GOOD]: " + "No divorce date detected! ::" + allPeople.get(i).id); // very wired!!! GJ
+				if (divorceDateList.isEmpty()) System.out.println("Debug messages(US06)[GOOD]: " + "No divorce date detected! ::" + allPeople.get(i).id);
 				else {
 					//Get the person's death date in allPeople (if not dead)
 					String death_date = allPeople.get(i).Deathday;
@@ -20,14 +20,14 @@ public class US06 {
 					else {
 						boolean check = true;
 						for (int j = 0; j < divorceDateList.size(); j++) {
-							check = DateCheck(divorceDateList.get(j), death_date); // check will be overwritten by some elements. This is wrong! GJ
-						}
-						//If divorce date before death date, legal!
-						if (check) System.out.println("Debug messages(US06)[GOOD]: " + "Divorce date before Death date! ::" + allPeople.get(i).id);
-						//If divorce date after death date, illegal!
-						else {
-							 System.out.println("Debug messages(US06)[**ILLEGAL**]: " + "Divorce date after Death date! ::" +
-							 allPeople.get(i).id);
+							check = DateCheck(divorceDateList.get(j), death_date);
+							//If divorce date before death date, legal!
+							if (check) System.out.println("Debug messages(US06)[GOOD]: " + "Divorce date before Death date! ::" + allPeople.get(i).id);
+							//If divorce date after death date, illegal!
+							else {
+								System.out.println("Debug messages(US06)[**ILLEGAL**]: " + "Divorce date after Death date! ::" +
+								allPeople.get(i).id);
+							}
 						}
 					}
 				}
@@ -44,8 +44,7 @@ public class US06 {
 				if (famIDList.get(i) == allFamilies.get(j).familyID) {
 					if (!allFamilies.get(j).divoDate.isEmpty()) {
 						divorceDateList.add(allFamilies.get(j).divoDate);
-					} 
-					else return null;	// looks wired!!! need to check(GJ)				
+					} 		
 				}
 			}
 		}
