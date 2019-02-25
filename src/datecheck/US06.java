@@ -12,7 +12,7 @@ public class US06 {
 			//If that person have spouse
 			if (!allPeople.get(i).spouse.isEmpty()) {
 				ArrayList<String> divorceDateList = Get_Divorce_Date(allPeople.get(i).spouse, allFamilies);
-				if (divorceDateList == null) System.out.println("Debug messages(US06)[GOOD]: " + "No divorce date detected! ::" + allPeople.get(i).id);
+				if (divorceDateList == null) System.out.println("Debug messages(US06)[GOOD]: " + "No divorce date detected! ::" + allPeople.get(i).id); // very wired!!! GJ
 				else {
 					//Get the person's death date in allPeople (if not dead)
 					String death_date = allPeople.get(i).Deathday;
@@ -20,7 +20,7 @@ public class US06 {
 					else {
 						boolean check = true;
 						for (int j = 0; j < divorceDateList.size(); j++) {
-							check = DateCheck(divorceDateList.get(j), death_date);
+							check = DateCheck(divorceDateList.get(j), death_date); // check will be overwritten by some elements. This is wrong! GJ
 						}
 						//If divorce date before death date, legal!
 						if (check) System.out.println("Debug messages(US06)[GOOD]: " + "Divorce date before Death date! ::" + allPeople.get(i).id);
@@ -45,7 +45,7 @@ public class US06 {
 					if (!allFamilies.get(j).divoDate.isEmpty()) {
 						divorceDateList.add(allFamilies.get(j).divoDate);
 					} 
-					else return null;					
+					else return null;	// looks wired!!! need to check(GJ)				
 				}
 			}
 		}

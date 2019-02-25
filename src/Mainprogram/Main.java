@@ -135,6 +135,14 @@ public class Main {
         US08 us08 = new US08();
         us08.Birth_Before_Marriage_Of_Parents(allPeople, allFamilies);
         System.out.println("--------------------------------------------------------------");
+        US04 us04 = new US04();
+        us04.Marriage_Before_Divorce(allPeople, allFamilies);
+        System.out.println("--------------------------------------------------------------");
+        US05 us05 = new US05();
+        us05.Marriage_Before_Death(allPeople, allFamilies);
+        System.out.println("--------------------------------------------------------------");
+        
+        
     }
     
     public static void Testing(String pathname)throws IOException{
@@ -254,23 +262,6 @@ public class Main {
     	
     }
     
-    // check marriage before death
-    public static void checkMarBefDeath(ArrayList<individual> people , ArrayList<Family> families) {
-    	String hus,wif; // husID and wifeID
-    	int hIndex,wIndex;
-    	for(int x = 0 ; x < families.size() ; x++) {
-    		hus = families.get(x).husband;
-    		wif = families.get(x).wife;
-    		hIndex = searchbyId(people,hus);
-    		wIndex = searchbyId(people,wif);
-    		if(!US05.marriage_before_death(families.get(x).marrDate,people.get(hIndex).Deathday)) {
-    			System.out.println(families.get(x).familyID + " : " + "husband marriage date is before than his death");
-    		}
-    		if(!US05.marriage_before_death(families.get(x).marrDate,people.get(wIndex).Deathday)) {
-    			System.out.println(families.get(x).familyID + " : " + "wife marriage date is before than her death");
-    		}
-    	}
-    }
     
     public static int searchbyId(ArrayList<individual> people , String target) {
     	for(int x = 0 ; x < people.size() ; x++) {
