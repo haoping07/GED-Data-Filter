@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="@I9" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="@I9"/>
+			<item value="@F"/>
+			<item value="FAM"/>
+			<item value="FAMC"/>
+			<item value="I9"/>
+			<item value="I09"/>
+			<item value="INDI"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="339" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-30|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="414" key="DIALOG_HEIGHT"/>
+		<item value="824" key="DIALOG_X_ORIGIN"/>
+		<item value="144" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
