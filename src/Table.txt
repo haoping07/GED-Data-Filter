@@ -1,18 +1,18 @@
 Individuals
-_________________________________________________________________________________________________
-| ID    | Name           | Gender| Birthday   | Age| Alive| Death       | Child  | Spouse        |
-|================================================================================================|
-| @I1@  | Jack /Ko/      | F     | 1 MAR 1950 | 69 | true | NA          | [@F2@ ]| [@F1@ ]       |
-| @I10@ | Jenny /Watson/ | F     | 1 JUL 2005 | 14 | true | NA          | [@F5@ ]| []            |
-| @I11@ | Ben /River/    | M     | 1 MAR 1950 | 30 | false| 17 SEP 1980 | []     | [@F1@ ]       |
-| @I2@  | John /Ko/      | M     | 1 FEB 1930 | 59 | false| 1 APR 1989  | []     | [@F2@ ]       |
-| @I3@  | Lisa /Ko/      | F     | 1 JAN 1920 | 70 | false| 2 MAR 1990  | []     | [@F2@ ]       |
-| @I4@  | Ben /Ko/       | M     | 1 APR 1953 | 66 | true | NA          | [@F2@ ]| [@F3@ ]       |
-| @I5@  | Elsa /Roberts/ | F     | 1 JUN 1951 | 68 | true | NA          | []     | [@F3@ ]       |
-| @I6@  | Annie /Ln/     | F     | 1 AUG 1983 | 36 | true | NA          | [@F3@ ]| [@F4@ , @F5@ ]|
-| @I7@  | Jack /Watson/  | M     | 1 OCT 1983 | 31 | false| 2 JAN 2014  | []     | [@F5@ ]       |
-| @I8@  | Bob /Ln/       | M     | 1 JAN 1984 | 35 | true | NA          | []     | [@F4@ ]       |
-| @I9@  | Lofy /Pan/     | M     | 7 SEP 2006 | 13 | true | NA          | [@F4@ ]| []            |
+__________________________________________________________________________________________________
+| ID    | Name           | Gender| Birthday   | Age | Alive| Death       | Child  | Spouse        |
+|=================================================================================================|
+| @I1@  | Jack /Ko/      | F     | 1 MAR 2500 | -481| true | NA          | [@F2@ ]| [@F1@ ]       |
+| @I10@ | Jenny /Watson/ | F     | 1 JUL 2005 | 14  | true | NA          | [@F5@ ]| []            |
+| @I11@ | Ben /River/    | M     | 1 MAR 1950 | 30  | false| 17 SEP 1980 | []     | [@F1@ ]       |
+| @I2@  | John /Ko/      | M     | 1 FEB 1930 | 59  | false| 1 APR 1989  | []     | [@F2@ ]       |
+| @I3@  | Lisa /Ko/      | F     | 1 JAN 1920 | 70  | false| 2 MAR 1990  | []     | [@F2@ ]       |
+| @I4@  | Ben /Ko/       | M     | 1 APR 1953 | 66  | true | NA          | [@F2@ ]| [@F3@ ]       |
+| @I5@  | Elsa /Roberts/ | F     | 1 JUN 1951 | 68  | true | NA          | []     | [@F3@ ]       |
+| @I6@  | Annie /Ln/     | F     | 1 AUG 1983 | 36  | true | NA          | [@F3@ ]| [@F4@ , @F5@ ]|
+| @I7@  | Jack /Watson/  | M     | 1 OCT 1983 | 31  | false| 2 JAN 2014  | []     | [@F5@ ]       |
+| @I8@  | Bob /Ln/       | M     | 1 JAN 1984 | 35  | true | NA          | []     | [@F4@ ]       |
+| @I9@  | Lofy /Pan/     | M     | 7 SEP 2006 | 13  | true | NA          | [@F4@ ]| []            |
 
 Families
 ________________________________________________________________________________________________________
