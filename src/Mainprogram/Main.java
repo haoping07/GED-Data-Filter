@@ -10,6 +10,7 @@ import indi.individual;
 import fam.Family;
 import dnl.utils.text.table.*;
 import datecheck.*;
+import Mainprogram.output_format;
 
 public class Main {
 	
@@ -147,6 +148,14 @@ public class Main {
         
         
     }
+    
+    public static output_format main_output() throws IOException{
+        Testing("MyFamily.ged");
+        updatemerrage(allPeople , allFamilies);
+        output_format out = new output_format(allPeople , allFamilies);
+        return out;
+    }
+   
     
     public static void Testing(String pathname)throws IOException{
         File filename = new File(pathname);
