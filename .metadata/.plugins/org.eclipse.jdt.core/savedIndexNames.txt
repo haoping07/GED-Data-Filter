@@ -10,7 +10,6 @@ INDEX VERSION 1.131+C:\Users\howar\Desktop\Courese\CS555\final project\git clone
 4004041680.index
 1295843201.index
 4015608760.index
-1067094681.index
 2966587874.index
 3660919767.index
 883484521.index
