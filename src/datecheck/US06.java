@@ -21,8 +21,8 @@ public class US06
 				ArrayList<String> divorceDateList = Get_Divorce_Date(allPeople.get(i).spouse, allFamilies);
 				if (divorceDateList.isEmpty()) 
 				{
-					System.out.println(
-							"Debug messages(US06)[GOOD]: " + "No divorce date detected! ::" + allPeople.get(i).id);
+					//System.out.println(
+					//		"Debug messages(US06)[GOOD]: " + "No divorce date detected! ::" + allPeople.get(i).id);
 					resultCheck.add(true);
 				} 
 				else 
@@ -31,8 +31,8 @@ public class US06
 					String death_date = allPeople.get(i).Deathday;
 					if (death_date.isEmpty()) 
 					{
-						System.out.println(
-								"Debug messages(US06)[GOOD]: " + "The person is alive! ::" + allPeople.get(i).id);
+					//	System.out.println(
+					//			"Debug messages(US06)[GOOD]: " + "The person is alive! ::" + allPeople.get(i).id);
 						resultCheck.add(true);
 					} 
 					else 
@@ -44,15 +44,18 @@ public class US06
 							// If divorce date before death date, legal!
 							if (check) 
 							{
-								System.out.println("Debug messages(US06)[GOOD]: " + "Divorce date before Death date! ::"
-										+ allPeople.get(i).id);
+							//	System.out.println("Debug messages(US06)[GOOD]: " + "Divorce date before Death date! ::"
+							//			+ allPeople.get(i).id);
 								resultCheck.add(true);
 							}
 							// If divorce date after death date, illegal!
 							else 
 							{
-								System.out.println("Debug messages(US06)[**ILLEGAL**]: "
-										+ "Divorce date after Death date! ::" + allPeople.get(i).id);
+							//	System.out.println("Debug messages(US06)[**ILLEGAL**]: "
+							//			+ "Divorce date after Death date! ::" + allPeople.get(i).id);
+								System.out.println("ERROR(US06): Person::" + allPeople.get(i).id +
+											" Divorce date " + "( " + divorceDateList.get(j) + ")" + " after Death date " + 
+											"( " + death_date + ")" + "!" );
 								resultCheck.add(false);
 							}
 						}
@@ -61,7 +64,7 @@ public class US06
 			} 
 			else 
 			{
-				System.out.println("Debug messages(US06)[GOOD]: " + "The person is single! ::" + allPeople.get(i).id);
+				//System.out.println("Debug messages(US06)[GOOD]: " + "The person is single! ::" + allPeople.get(i).id);
 				resultCheck.add(true);
 			}
 		}
