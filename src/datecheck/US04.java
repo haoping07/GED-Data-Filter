@@ -2,10 +2,10 @@
 package datecheck;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+//import java.util.HashMap;
 
 import fam.Family;
-import indi.individual;
+//import indi.individual;
 
 //import datecheck.checkdate_US01;
 
