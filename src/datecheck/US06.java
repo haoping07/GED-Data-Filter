@@ -7,7 +7,6 @@ import java.util.HashMap;
 import fam.Family;
 import indi.individual;
 
-<<<<<<< HEAD
 public class US06 
 {
 	public ArrayList<Boolean> Divorce_Before_Death(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) 
@@ -19,17 +18,6 @@ public class US06
 			// If that person have spouse
 			if (!allPeople.get(i).spouse.isEmpty()) 
 			{
-=======
-public class US06 {
-	public US06(){
-		
-	}
-	
-	public void Divorce_Before_Death(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
-		for (int i = 0; i < allPeople.size(); i++) {
-			//If that person have spouse
-			if (!allPeople.get(i).spouse.isEmpty()) {
->>>>>>> cf0655cbb5e450e1e41722d2992da4c7e0999196
 				ArrayList<String> divorceDateList = Get_Divorce_Date(allPeople.get(i).spouse, allFamilies);
 				if (divorceDateList.isEmpty()) 
 				{
