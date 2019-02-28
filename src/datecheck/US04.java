@@ -22,7 +22,7 @@ public class US04 {
 				}
 			}
 			catch(IllegalArgumentException ex) {
-				System.out.println("ANOMALY: FAMILY: US05: "
+				System.out.println("ANOMALY: FAMILY: US04: "
 					    + fam.familyID + " " +ex.getMessage());
 			}
 		}

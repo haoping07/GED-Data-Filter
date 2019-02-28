@@ -44,17 +44,6 @@ public class test_us01{
 	@AfterEach
 	void tearDown() throws Exception {
 	}
-
-//	@Test
-//	void test() throws IOException {
-//		System.out.println("in test" + person.id);
-//		try {
-//			Assertions.assertTrue(checkdate_US01.checkdate_us01(person.Birthday));
-//			//Assertions.assertTrue(false);
-//		}catch(AssertionError e) {
-//			fail();
-//		}
-//	}
 	
 	@TestFactory
 	Stream<DynamicTest> dynamicTestsFromIntStream() {
@@ -75,7 +64,6 @@ public class test_us01{
 		try {
 				writer.write(people.get(x).id + " fails user story 01\n");
 		} catch (IOException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 		}
 	}

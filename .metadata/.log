@@ -2726,3 +2726,61 @@ Caused by: org.eclipse.jgit.errors.CorruptObjectException: name contains '\'
 	at org.eclipse.jgit.dircache.DirCacheEntry.checkPath(DirCacheEntry.java:766)
 	at org.eclipse.jgit.dircache.DirCacheEntry.<init>(DirCacheEntry.java:196)
 	... 15 more
+
+!ENTRY org.eclipse.egit.core 4 0 2019-02-28 16:25:07.930
+!MESSAGE Failed to load index for repository Repository[C:\Users\howar\Desktop\Courese\CS555\final project\git clone\cs555teamproj2019spring\.git]
+!STACK 0
+org.eclipse.jgit.errors.CorruptObjectException: Invalid path: src\us01_output.txt
+	at org.eclipse.jgit.dircache.DirCacheEntry.<init>(DirCacheEntry.java:199)
+	at org.eclipse.jgit.dircache.DirCache.readFrom(DirCache.java:511)
+	at org.eclipse.jgit.dircache.DirCache.read(DirCache.java:436)
+	at org.eclipse.jgit.dircache.DirCache.read(DirCache.java:222)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.refreshIndexDelta(IndexDiffCacheEntry.java:330)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$0(IndexDiffCacheEntry.java:324)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$1.onIndexChanged(IndexDiffCacheEntry.java:106)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:81)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:1)
+	at org.eclipse.jgit.events.ListenerList.dispatch(ListenerList.java:133)
+	at org.eclipse.jgit.lib.Repository.fireEvent(Repository.java:195)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.notifyIndexChanged(FileRepository.java:573)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.detectIndexChanges(FileRepository.java:564)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.scanForRepoChanges(FileRepository.java:545)
+	at org.eclipse.egit.ui.Activator$RepositoryChangeScanner.run(Activator.java:978)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: org.eclipse.jgit.errors.CorruptObjectException: name contains '\'
+	at org.eclipse.jgit.lib.ObjectChecker.scanPathSegment(ObjectChecker.java:706)
+	at org.eclipse.jgit.lib.ObjectChecker.checkPathSegment(ObjectChecker.java:799)
+	at org.eclipse.jgit.lib.ObjectChecker.checkPath(ObjectChecker.java:781)
+	at org.eclipse.jgit.util.SystemReader.checkPath(SystemReader.java:404)
+	at org.eclipse.jgit.dircache.DirCacheEntry.checkPath(DirCacheEntry.java:766)
+	at org.eclipse.jgit.dircache.DirCacheEntry.<init>(DirCacheEntry.java:196)
+	... 15 more
+
+!ENTRY org.eclipse.egit.core 4 0 2019-02-28 16:30:07.992
+!MESSAGE Failed to load index for repository Repository[C:\Users\howar\Desktop\Courese\CS555\final project\git clone\cs555teamproj2019spring\.git]
+!STACK 0
+org.eclipse.jgit.errors.CorruptObjectException: Invalid path: src\us01_output.txt
+	at org.eclipse.jgit.dircache.DirCacheEntry.<init>(DirCacheEntry.java:199)
+	at org.eclipse.jgit.dircache.DirCache.readFrom(DirCache.java:511)
+	at org.eclipse.jgit.dircache.DirCache.read(DirCache.java:436)
+	at org.eclipse.jgit.dircache.DirCache.read(DirCache.java:222)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.refreshIndexDelta(IndexDiffCacheEntry.java:330)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$0(IndexDiffCacheEntry.java:324)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$1.onIndexChanged(IndexDiffCacheEntry.java:106)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:81)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:1)
+	at org.eclipse.jgit.events.ListenerList.dispatch(ListenerList.java:133)
+	at org.eclipse.jgit.lib.Repository.fireEvent(Repository.java:195)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.notifyIndexChanged(FileRepository.java:573)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.detectIndexChanges(FileRepository.java:564)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.scanForRepoChanges(FileRepository.java:545)
+	at org.eclipse.egit.ui.Activator$RepositoryChangeScanner.run(Activator.java:978)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:60)
+Caused by: org.eclipse.jgit.errors.CorruptObjectException: name contains '\'
+	at org.eclipse.jgit.lib.ObjectChecker.scanPathSegment(ObjectChecker.java:706)
+	at org.eclipse.jgit.lib.ObjectChecker.checkPathSegment(ObjectChecker.java:799)
+	at org.eclipse.jgit.lib.ObjectChecker.checkPath(ObjectChecker.java:781)
+	at org.eclipse.jgit.util.SystemReader.checkPath(SystemReader.java:404)
+	at org.eclipse.jgit.dircache.DirCacheEntry.checkPath(DirCacheEntry.java:766)
+	at org.eclipse.jgit.dircache.DirCacheEntry.<init>(DirCacheEntry.java:196)
+	... 15 more
