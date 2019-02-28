@@ -1,7 +1,14 @@
 //Lo Shih Hao
 package datecheck;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import indi.individual;
 
 public class checkdate_US01 {
 
@@ -127,5 +134,30 @@ public class checkdate_US01 {
 		}
 		return -1;
 	}
+	
+	public static void run_us01_test(ArrayList<individual> people) throws IOException {
+		for(int x = 0 ; x < people.size() ; x++) {
+			test(people.get(x));
+		}
+	}
+	
+	@Test
+	static void test(individual person) throws IOException {
+		try {
+			Assertions.assertTrue(checkdate_US01.checkdate_us01(person.Birthday));
+			//Assertions.assertTrue(false);
+		}catch(AssertionError e) {
+			fail(person);
+		}
+	}
+	
+	public static void fail(individual person) throws IOException {
+		final String dir = System.getProperty("user.dir");
+		System.out.println(dir);
+		FileWriter writer = new FileWriter(dir + "\\us01_output.txt", true);  
+		System.out.println(person.id + " fails user story 01\n");
+		writer.write(person.id + " fails user story 01\n");
+		writer.close();
 
+	}
 }

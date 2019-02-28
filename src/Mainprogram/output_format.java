@@ -17,7 +17,7 @@ public class output_format {
 		Families = fam;
 	}
 	
-	public static ArrayList<individual> People = new ArrayList<individual>();
-	public static ArrayList<Family> Families = new ArrayList<Family>();
+	public ArrayList<individual> People = new ArrayList<individual>();
+	public ArrayList<Family> Families = new ArrayList<Family>();
 
 }

@@ -40,8 +40,8 @@ public class individual {
 		sex = "";
 		Birthday = "";
 		Deathday = "";
-		children = new ArrayList<>();;
-		spouse = new ArrayList<>();;
+		children = new ArrayList<>();
+		spouse = new ArrayList<>();
 		isdead = false;
 		age = 0;
 	}
