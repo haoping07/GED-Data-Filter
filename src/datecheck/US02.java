@@ -22,24 +22,33 @@ public class US02 {
 	
 	public static void birth_before_marrage(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
 		for(Family fam:allFamilies) {
-			String hus_bir="",wif_bir="";
+			individual hus = null,wif = null;
 			for(individual indi:allPeople) {
 				if(indi.id.equals(fam.husband)) {
-					hus_bir=indi.Birthday;
+					hus=indi;
 				}
 				
 				if(indi.id.equals(fam.wife)) {
-					wif_bir=indi.Birthday;
+					wif=indi;
 				}
 			}
 			
-			if(!valid_date(hus_bir)||!valid_date(wif_bir)||!valid_date(fam.marrDate)) {
-				System.out.println("missing information");
+			if(!valid_date(hus.Birthday)||!valid_date(wif.Birthday)||!valid_date(fam.marrDate)) {
+				System.out.println("Warning(US02)[**MISSING**]: " + "MISSING MARRIAGE DATE ::" +
+						fam.familyID);
 				continue;
 			}
 			
-			System.out.println(birth_before_marriage(hus_bir,fam.marrDate));
-			System.out.println(birth_before_marriage(wif_bir,fam.marrDate));
+			if(!(birth_before_marriage(hus.Birthday,fam.marrDate))) {
+				System.out.println("Debug messages(US02)[**ILLEGAL**]: "
+						+ "Birth date NOT before Marriage date " + " INDI ID:: " +hus.id +" FAM ID:: "
+						+ fam.familyID);
+			}
+			if(!(birth_before_marriage(wif.Birthday,fam.marrDate))) {
+				System.out.println("Debug messages(US02)[**ILLEGAL**]: "
+						+ "Birth date NOT before Marriage date " + " INDI ID:: " +wif.id +" FAM ID:: "
+						+ fam.familyID);
+			}
 
 		}
 	}

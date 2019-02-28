@@ -22,10 +22,11 @@ public class US03 {
 	public static void birth_before_death(ArrayList<individual> allPeople) {
 		for(individual indi:allPeople) {
 			if(indi.isdead) {
-				System.out.println(birth_before_death(indi.Birthday,indi.Deathday));
-			}
-			else {
-				System.out.println(indi.name+ "is alive");
+				if(!birth_before_death(indi.Birthday,indi.Deathday)){
+					System.out.println("Error(US03)[**ILLEGAL**]: " + "Birth date after Death date! ::" +
+						indi.id);
+				}
+				
 			}
 		}
 	}
@@ -46,6 +47,7 @@ public class US03 {
 				}
 			}
 		}
+        
         return false;
     }
     

@@ -137,7 +137,7 @@ public class Main {
         us08.Birth_Before_Marriage_Of_Parents(allPeople, allFamilies);
         System.out.println("--------------------------------------------------------------");
         US04 us04 = new US04();
-        us04.Marriage_Before_Divorce(allPeople, allFamilies);
+        //us04.Marriage_Before_Divorce(allFamilies);
         System.out.println("--------------------------------------------------------------");
         US05 us05 = new US05();
         us05.Marriage_Before_Death(allPeople, allFamilies);
@@ -149,12 +149,12 @@ public class Main {
         checkdate_US01.run_us01_test(allPeople);  
     }
     
-    public static output_format main_output() throws IOException{
-        Testing("MyFamily.ged");
-        updatemerrage(allPeople , allFamilies);
-        output_format out = new output_format(allPeople , allFamilies);
-        return out;
-    }
+//    public static output_format main_output() throws IOException{
+//        Testing("MyFamily.ged");
+//        updatemerrage(allPeople , allFamilies);
+//        output_format out = new output_format(allPeople , allFamilies);
+//        return out;
+//    }
    
     
     public static void Testing(String pathname)throws IOException{

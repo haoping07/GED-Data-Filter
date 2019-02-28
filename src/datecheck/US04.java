@@ -10,53 +10,34 @@ import indi.individual;
 //import datecheck.checkdate_US01;
 
 public class US04 {
-	public US04() {
-        System.out.println("create!");
-    }
 	
-	public void Marriage_Before_Divorce(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
-		for (int i = 0; i < allPeople.size(); i++) {
-			//If that person have spouse
-			if (!allPeople.get(i).spouse.isEmpty()) {
-				HashMap<String,String> md_map = Get_Marriage_Divorce(allPeople.get(i).spouse,allFamilies);
-				for(HashMap.Entry<String,String> entry : md_map.entrySet()) {
-					if(!DateCheck(entry.getKey(),entry.getValue())) {
-						System.out.println("Debug messages(US04)[**ILLEGAL**] " 
-					+ "marriage date NOT before divorce date :: "+allPeople.get(i).id);
-					}
-					else {
-						System.out.println("Debug messages(US04)[GOOD] " 
-								+ "marriage date before divorce date :: "+allPeople.get(i).id);
-					}
-				}
-			} 
-			else System.out.println("Debug messages(US04)[GOOD]: " + "The person is single! ::" + allPeople.get(i).id);
-		}
-	}
-	
-	public HashMap<String,String> Get_Marriage_Divorce(ArrayList<String> famIDList, ArrayList<Family> allFamilies) {
-		HashMap<String,String> md_map = new HashMap<> ();
-		for (int i = 0; i < famIDList.size(); i++) {
-			for (int j = 0; j < allFamilies.size(); j++) {
-				if (famIDList.get(i) == allFamilies.get(j).familyID) {
-					md_map.put(allFamilies.get(j).marrDate,allFamilies.get(j).divoDate);
-					//if marrDate repeat, then only the last one will be stored in the hashmap!!! maybe error!!!!
+	public void Marriage_Before_Divorce(ArrayList<Family> allFamilies ) {
+		for(int i = 0; i<allFamilies.size();i++) {
+			Family fam = allFamilies.get(i);	
+			try {
+				if(!dateCheck(fam.marrDate,fam.divoDate)) {
+					System.out.println("ERROR: FAMILY: US04: "
+				    +fam.familyID + " Divorced: " + fam.divoDate
+				    +" Marriaged: " + fam.marrDate);
 				}
 			}
+			catch(IllegalArgumentException ex) {
+				System.out.println("ANOMALY: FAMILY: US05: "
+					    + fam.familyID + " " +ex.getMessage());
+			}
 		}
-		return md_map; // key is the marriage date, value is the divorce date
 	}
-	
 	
 	
 // The following is all for DateCheck function
 	// if marriageDate > divorceDate, return false
-    public static boolean DateCheck(String marriageDate, String divorceDate){
-    	if(divorceDate.isEmpty()) { // if no divorceDate, return true(dont need to check marriage date)
+    public static boolean dateCheck(String marriageDate, String divorceDate){
+    	if (marriageDate.isEmpty()) {
+			throw new IllegalArgumentException("Marriage Date Is EMPTY!");
+		}
+    	
+    	if(divorceDate.isEmpty()) { // if no divorceDate, return true
     		return true;
-    	}
-    	else if(marriageDate.isEmpty()) { // if it has divorceDate but no marriage date, return false
-    		return false;
     	}
     	
         String[] md=marriageDate.split(" ");
