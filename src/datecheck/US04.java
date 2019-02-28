@@ -134,16 +134,16 @@ public class US04 {
         return -1;
     }
 
-//    public static void main(String[] args) {
-//        System.out.println(marriage_before_divorce("29 JAN 2018","28 MAY 2018"));
+    public static void main(String[] args) {
+        System.out.println(DateCheck("29 JAN 2018","28 MAY 2018"));
 //        System.out.println(marriage_before_divorce("17 JAN 2019","28 JAN 2019"));
 //        System.out.println(marriage_before_divorce("28 JAN 2019","28 FEB 2019"));
 //        System.out.println(marriage_before_divorce("28 JAN 2018","28 JAN 2019"));
 //        System.out.println(marriage_before_divorce("28 JAN 2019","18 JAN 2019"));
 //        System.out.println(marriage_before_divorce("28 FEB 2019","28 JAN 2019"));
 //        System.out.println(marriage_before_divorce("28 JAN 2019","28 JAN 2018"));
-//
-//
-//    }
+
+
+    }
 
 }
