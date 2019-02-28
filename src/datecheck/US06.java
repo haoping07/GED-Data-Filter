@@ -7,6 +7,10 @@ import fam.Family;
 import indi.individual;
 
 public class US06 {
+	public US06(){
+		
+	}
+	
 	public void Divorce_Before_Death(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
 		for (int i = 0; i < allPeople.size(); i++) {
 			//If that person have spouse
