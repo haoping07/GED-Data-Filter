@@ -19,8 +19,8 @@ public class US08
 				ArrayList<String> parent_Married_Date_List = Get_Marry_Date(allPeople.get(i).children, allFamilies);
 				if (parent_Married_Date_List.isEmpty())
 				{
-					System.out.println("Debug messages(US08)[WARNING]: "
-							+ "No parent marry date found!(Lack of GED data?) ::" + allPeople.get(i).id);
+					System.out.println("WARNING(US08): Person::" + allPeople.get(i).id +
+							"'s parent was Married but don't have Married Date? (Lack of GED data?)");
 					resultCheck.add(true);
 				}
 				else 
@@ -28,8 +28,8 @@ public class US08
 					String birth_date = allPeople.get(i).Birthday;
 					if (birth_date.isEmpty())
 					{
-						System.out.println("Debug messages(US08)[WARNING]: "
-								+ "Birth date not found!(Lack of GED data?) ::" + allPeople.get(i).id);
+						System.out.println("WARNING(US08): Person::" + allPeople.get(i).id +
+								" don't have Birth Date? (Lack of GED data?)");
 						resultCheck.add(true);
 					}
 
@@ -44,15 +44,16 @@ public class US08
 							// If birth date after parent's marry date, legal!
 							if (check)
 							{
-								System.out.println("Debug messages(US08)[GOOD]: "
-										+ "Birth date after parent's marry date! ::" + allPeople.get(i).id);
+							//	System.out.println("Debug messages(US08)[GOOD]: "
+							//			+ "Birth date after parent's marry date! ::" + allPeople.get(i).id);
 								resultCheck.add(true);
 							}
 							// If birth date after parent's marry date, illegal!
 							else 
 							{
-								System.out.println("Debug messages(US08)[**ILLEGAL**]: "
-										+ "Birth date after parent's marry date! ::" + allPeople.get(i).id);
+								System.out.println("ERROR(US08): Person::" + allPeople.get(i).id +
+										" Birth date " + "( " + birth_date + ")" + " before parent's Married Date " + 
+										"( " + parent_Married_Date_List.get(j) + ")" + "!");
 								resultCheck.add(false);
 							}
 						}
@@ -61,8 +62,8 @@ public class US08
 			} 
 			else
 			{
-				System.out.println("Debug messages(US08)[WARNING]: "
-						+ "The person don't have parent! (Lack of GED data?) ::" + allPeople.get(i).id);
+				System.out.println("WARNING(US08): Person::" + allPeople.get(i).id +
+						" don't have parent? (Lack of GED data?)");
 				resultCheck.add(true);
 			}
 
