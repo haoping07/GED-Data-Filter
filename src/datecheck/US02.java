@@ -20,7 +20,7 @@ public class US02 {
 		
 	}
 	
-	public static void birth_before_marrage(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
+	public static void birth_before_marriage(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
 		for(Family fam:allFamilies) {
 			individual hus = null,wif = null;
 			for(individual indi:allPeople) {

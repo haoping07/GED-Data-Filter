@@ -144,7 +144,7 @@ public class Main {
         System.out.println("--------------------------------------------------------------");
         US03.birth_before_death(allPeople);
         System.out.println("--------------------------------------------------------------");
-        US02.birth_before_marrage(allPeople,allFamilies);
+        US02.birth_before_marriage(allPeople,allFamilies);
         System.out.println("--------------------------------------------------------------");
         checkdate_US01.run_us01_test(allPeople);  
     }
