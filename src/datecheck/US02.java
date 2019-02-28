@@ -34,7 +34,7 @@ public class US02 {
 			}
 			
 			if(!valid_date(hus.Birthday)||!valid_date(wif.Birthday)||!valid_date(fam.marrDate)) {
-				System.out.println("Warning(US02)[**MISSING**]: " + "MISSING MARRIAGE DATE ::" +
+				System.out.println("Warning(US02)[**MISSING**]: " + "MISSING MARRIAGE DATE ::FamilyID:" +
 						fam.familyID);
 				continue;
 			}
