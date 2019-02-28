@@ -149,12 +149,12 @@ public class Main {
         checkdate_US01.run_us01_test(allPeople);  
     }
     
-//    public static output_format main_output() throws IOException{
-//        Testing("MyFamily.ged");
-//        updatemerrage(allPeople , allFamilies);
-//        output_format out = new output_format(allPeople , allFamilies);
-//        return out;
-//    }
+    public static output_format main_output() throws IOException{
+        Testing("MyFamily.ged");
+        updatemerrage(allPeople , allFamilies);
+        output_format out = new output_format(allPeople , allFamilies);
+        return out;
+    }
    
     
     public static void Testing(String pathname)throws IOException{
