@@ -8,53 +8,77 @@ import fam.Family;
 import indi.individual;
 
 public class US05 {
-	public US05() {
-		System.out.println("create!");
-	}
 	
 	public void Marriage_Before_Death(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
-		for (int i = 0; i < allPeople.size(); i++) {
-			//If that person have spouse
-			if (!allPeople.get(i).spouse.isEmpty()) {
-				HashMap<String,String> mf_map = Get_Marriage_FamilyID(allPeople.get(i).spouse,allFamilies);
-				String deathDate = allPeople.get(i).Deathday;
-				for(HashMap.Entry<String,String> entry : mf_map.entrySet()) {
-					if(!DateCheck(entry.getKey(),deathDate)) {
-						System.out.println("Debug messages(US05)[**ILLEGAL**]: "
-						+ "Marriage date NOT before death date " + " INDI ID:: " +allPeople.get(i).id +" FAM ID:: "
-						+ entry.getValue());
-					}
-					else {
-						System.out.println("Debug messages(US05)[GOOD]: "
-						+ "Marriage date before death date " + " INDI ID:: " +allPeople.get(i).id +" FAM ID:: "
-						+ entry.getValue());
+		for(int i = 0; i<allFamilies.size(); i++) {
+			String husID = allFamilies.get(i).husband;
+			String wifeID = allFamilies.get(i).wife;
+			String famID = allFamilies.get(i).familyID;
+			String marrDate = allFamilies.get(i).marrDate;
+			individual hus = searchByID(allPeople,husID);
+			individual wife = searchByID(allPeople,wifeID);
+			if(hus==null) {
+				System.out.println("ANOMALY: FAMILY: US05: "
+					    + famID + " Married: " + marrDate
+					    + " No husband");
+			}
+			else {
+				try {
+					if(!dateCheck(marrDate,hus.Deathday)) {
+						System.out.println("ERROR: FAMILY: US05: "
+							    +famID + " Married: " + marrDate
+							    +" after husband's ( " + husID 
+							    +" ) death on " + hus.Deathday);
 					}
 				}
-			} 
+				catch(IllegalArgumentException ex) {
+					System.out.println("ANOMALY: FAMILY: US05: "
+						    + famID + " " +ex.getMessage());
+				}
+			}
+			if(wife==null) {
+				System.out.println("ANOMALY: FAMILY: US05: "
+					    + famID + " Married: " + marrDate
+					    + " No wife");
+			}
 			else {
-				System.out.println("Debug messages(US05)[GOOD]: " + "The person is single! ::" + allPeople.get(i).id);
-			} 
+				try {
+					if(!dateCheck(marrDate,wife.Deathday)) {
+						System.out.println("ERROR: FAMILY: US05: "
+							    +famID + " Married: " + marrDate
+							    +" after wife's ( " + wifeID 
+							    +" ) death on " + wife.Deathday);
+					}
+				}
+				catch(IllegalArgumentException ex) {
+					System.out.println("ANOMALY: FAMILY: US05: "
+						    + famID + " " +ex.getMessage());
+				}
+			}
+			
 		}
 	}
 	
-	public HashMap<String,String> Get_Marriage_FamilyID(ArrayList<String> famIDList, ArrayList<Family> allFamilies) {
-		HashMap<String,String> mf_map = new HashMap<> ();
-		for (int i = 0; i < famIDList.size(); i++) {
-			for (int j = 0; j < allFamilies.size(); j++) {
-				if (famIDList.get(i) == allFamilies.get(j).familyID) {
-					mf_map.put(allFamilies.get(j).marrDate,allFamilies.get(j).familyID);
-					//if marrDate repeat, then only the last one will be stored in the hashmap!!! maybe error!!!!
-				}
-			}
-		}
-		return mf_map; // key is the marriage date, value is the familyID
+	private individual searchByID(ArrayList<individual> allPeople, String ID) {
+		for(int x = 0 ; x < allPeople.size() ; x++) {
+    		if(ID.equals(allPeople.get(x).id)) {    		
+    			return allPeople.get(x);
+    		}
+    	}
+    	
+    	return null;
 	}
 	
 	// The following is all for DateCheck function
 		// if marriageDate > deathDate, return false
-	public static boolean DateCheck(String marriageDate, String deathDate){
-		if (deathDate.isEmpty() || marriageDate.isEmpty()) // no marriage or no death return true
+	public static boolean dateCheck(String marriageDate, String deathDate){
+		if (marriageDate.isEmpty()) {
+			throw new IllegalArgumentException("Marriage Date Is EMPTY!");
+		}
+		
+		if (deathDate.isEmpty()) {
 			return true;
+		} //  no death return true
 		
 		String[] md=marriageDate.split(" ");
         String[] dd=deathDate.split(" ");
@@ -131,13 +155,13 @@ public class US05 {
     }
 
 //    public static void main(String[] args) {
-//        System.out.println(marriage_before_death("29 JAN 2018","28 MAY 2018"));
-//        System.out.println(marriage_before_death("17 JAN 2019","28 JAN 2019"));
-//        System.out.println(marriage_before_death("28 JAN 2019","28 FEB 2019"));
-//        System.out.println(marriage_before_death("28 JAN 2018","28 JAN 2019"));
-//        System.out.println(marriage_before_death("28 JAN 2019","18 JAN 2019"));
-//        System.out.println(marriage_before_death("28 FEB 2019","28 JAN 2019"));
-//        System.out.println(marriage_before_death("28 JAN 2019","28 JAN 2018"));
+//        System.out.println(dateCheck("29 JAN 2020","28 MAY 2018"));
+////        System.out.println(marriage_before_death("17 JAN 2019","28 JAN 2019"));
+////        System.out.println(marriage_before_death("28 JAN 2019","28 FEB 2019"));
+////        System.out.println(marriage_before_death("28 JAN 2018","28 JAN 2019"));
+////        System.out.println(marriage_before_death("28 JAN 2019","18 JAN 2019"));
+////        System.out.println(marriage_before_death("28 FEB 2019","28 JAN 2019"));
+////        System.out.println(marriage_before_death("28 JAN 2019","28 JAN 2018"));
 //    }
 
 }
