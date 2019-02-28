@@ -1,82 +1,83 @@
 package test_file;
 
-import java.io.BufferedWriter;
-import java.io.Console;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
-import java.io.Writer;
-import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestFactory;
 
-import Mainprogram.*;
 import datecheck.checkdate_US01;
-import fam.Family;
 import indi.individual;
+import Mainprogram.*;
 
-class test_us01 {
-	public static ArrayList<individual> allPeople = null;
-	public static ArrayList<Family> allFamilies = null;
-	public static output_format in = null;
+public class test_us01{
+	public static ArrayList<individual> people = null;
+	public static FileWriter writer = null;
+	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		in = Main.main_output();
-		allPeople = in.People;
-		allFamilies = in.Families;
-        System.out.println("individual");
-        System.out.println("age|Birt|Dith|id|isdead|name|sex|spouse|children");
-        for(int i = 0 ; i < allPeople.size() ; i++) {   
-            System.out.print(allPeople.get(i).age + " | ");
-            System.out.print(allPeople.get(i).Birthday + " | "); 
-            System.out.print(allPeople.get(i).Deathday + " | ");
-            System.out.print(allPeople.get(i).id + " | ");
-            System.out.print(allPeople.get(i).isdead +" | ");
-            System.out.print(allPeople.get(i).name +" | ");
-            System.out.print(allPeople.get(i).sex +" | ");
-            System.out.print(allPeople.get(i).spouse +" | ");
-            System.out.print(allPeople.get(i).children);
-            System.out.println(" ");
-            }
+		output_format in = Main.main_output();
+		people = in.People;
+		System.out.println("Test start!");
+		final String dir = System.getProperty("user.dir");
+		writer = new FileWriter(dir + "\\us01_output.txt", true);     
 	}
 
 	@AfterAll
 	static void tearDownAfterClass() throws Exception {
+		writer.close();
 	}
 
 	@BeforeEach
 	void setUp() throws Exception {
-		System.out.println("before");
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void test() throws IOException {
-		System.out.println("Date today");
-		String[] nowarr = LocalDate.now().toString().split("-");
-		nowarr[1] = mapmonth(nowarr[1]);
-		System.out.println(nowarr[2] + " " + nowarr[1] + " " + nowarr[0]);
-		for(int x = 0 ; x < allPeople.size() ; x++) {
-			System.out.println(x);
-			Assertions.assertTrue(checkdate_US01.checkdate_us01(allPeople.get(x).Birthday));
-		}
+//	@Test
+//	void test() throws IOException {
+//		System.out.println("in test" + person.id);
+//		try {
+//			Assertions.assertTrue(checkdate_US01.checkdate_us01(person.Birthday));
+//			//Assertions.assertTrue(false);
+//		}catch(AssertionError e) {
+//			fail();
+//		}
+//	}
+	
+	@TestFactory
+	Stream<DynamicTest> dynamicTestsFromIntStream() {
+	    return IntStream.iterate(0, n -> n + 1).limit(people.size())
+	      .mapToObj(n -> DynamicTest.dynamicTest("test" + n,
+	        () ->{
+	        	try {
+	        		Assertions.assertTrue(checkdate_US01.checkdate_us01(people.get(n).Birthday));	
+	        	}catch(AssertionError e) {
+	        		fail(n);
+	        	}
+	        	
+	        }));
 	}
-	private String mapmonth(String string) {
-		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
-		int a = checkdate_US01.stoi(string);
-		return month[a];
+	
+	public void fail(int x) {
+		System.out.println(people.get(x).id + " fails user story 01\n");
+		try {
+				writer.write(people.get(x).id + " fails user story 01\n");
+		} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+		}
 	}
 
 }

@@ -6,6 +6,9 @@ import fam.Family;
 import indi.individual;
 
 public class US08 {
+	public US08() {
+		
+	}
 	public void Birth_Before_Marriage_Of_Parents(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
 		for (int i = 0; i < allPeople.size(); i++) {
 			if (!allPeople.get(i).children.isEmpty()) {
