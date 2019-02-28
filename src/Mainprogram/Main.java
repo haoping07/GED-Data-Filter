@@ -146,7 +146,6 @@ public class Main {
         System.out.println("--------------------------------------------------------------");
         US02.birth_before_marriage(allPeople,allFamilies);
         System.out.println("--------------------------------------------------------------");
-        checkdate_US01.run_us01_test(allPeople);  
     }
     
     public static output_format main_output() throws IOException{
