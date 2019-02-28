@@ -153,7 +153,6 @@ public class checkdate_US01 {
 	
 	public static void fail(individual person) throws IOException {
 		final String dir = System.getProperty("user.dir");
-		System.out.println(dir);
 		FileWriter writer = new FileWriter(dir + "\\us01_output.txt", true);  
 		System.out.println(person.id + " fails user story 01\n");
 		writer.write(person.id + " fails user story 01\n");
