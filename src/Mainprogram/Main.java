@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import indi.individual;
+import sprint2.US11;
 import fam.Family;
 import dnl.utils.text.table.*;
 import datecheck.*;
@@ -145,6 +146,8 @@ public class Main {
         US03.birth_before_death(allPeople);
         System.out.println("--------------------------------------------------------------");
         US02.birth_before_marriage(allPeople,allFamilies);
+        System.out.println("--------------------------------------------------------------");
+        US11.NoBigamy(allPeople,allFamilies);
         System.out.println("--------------------------------------------------------------");
     }
     
