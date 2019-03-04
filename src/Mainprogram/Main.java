@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import indi.individual;
-import sprint2.US11;
+import sprint2.*;
 import fam.Family;
 import dnl.utils.text.table.*;
 import datecheck.*;
@@ -149,6 +149,11 @@ public class Main {
         System.out.println("--------------------------------------------------------------");
         US11.NoBigamy(allPeople,allFamilies);
         System.out.println("--------------------------------------------------------------");
+        US12 us12 = new US12();
+        us12.checkParentsAgeAll(allPeople, allFamilies);
+        System.out.println("--------------------------------------------------------------");
+        US16 us16 = new US16();
+        us16.checkMaleNameAll(allPeople, allFamilies);
     }
     
     public static output_format main_output() throws IOException{
