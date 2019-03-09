@@ -129,29 +129,52 @@ public class Main {
         famTable.printTable(writeTable, 0);
         famTable.printTable();
         
-        //(LH)Debug messages print out
+        //Debug messages print out
         System.out.println();
-        US06 us06 = new US06();
-        us06.Divorce_Before_Death(allPeople, allFamilies);
         System.out.println("--------------------------------------------------------------");
-        US08 us08 = new US08();
-        us08.Birth_Before_Marriage_Of_Parents(allPeople, allFamilies);
+        System.out.println("Sprint 1");
         System.out.println("--------------------------------------------------------------");
+        
+        US02.birth_before_marriage(allPeople,allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US03.birth_before_death(allPeople);
+        System.out.println("-----------------------------");  
+        
         US04 us04 = new US04();
         us04.Marriage_Before_Divorce(allFamilies);
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("-----------------------------");  
+        
         US05 us05 = new US05();
         us05.Marriage_Before_Death(allPeople, allFamilies);
+        System.out.println("-----------------------------");  
+        
+        US06 us06 = new US06();
+        us06.Divorce_Before_Death(allPeople, allFamilies);
+        System.out.println("-----------------------------");  
+        
+        US08 us08 = new US08();
+        us08.Birth_Before_Marriage_Of_Parents(allPeople, allFamilies);
+        System.out.println();
         System.out.println("--------------------------------------------------------------");
-        US03.birth_before_death(allPeople);
-        System.out.println("--------------------------------------------------------------");
-        US02.birth_before_marriage(allPeople,allFamilies);
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("Sprint 2");
+        System.out.println("--------------------------------------------------------------");  
+        
+        US10 us10 = new US10();
+        us10.Marriage_After_14(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
         US11.NoBigamy(allPeople,allFamilies);
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("-----------------------------"); 
+        
         US12 us12 = new US12();
         us12.checkParentsAgeAll(allPeople, allFamilies);
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("-----------------------------"); 
+        
+        US14 us14 = new US14();
+        us14.Multiple_Births_Smaller_5(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
         US16 us16 = new US16();
         us16.checkMaleNameAll(allPeople, allFamilies);
     }
