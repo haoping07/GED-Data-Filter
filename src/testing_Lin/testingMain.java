@@ -1,3 +1,5 @@
+//Author: Hao-Ping Lin
+//This file is the custom GED file handler
 package testing_Lin;
 
 import java.io.BufferedReader;
