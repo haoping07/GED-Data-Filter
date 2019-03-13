@@ -56,7 +56,7 @@ public class US09 {
 	}
 
 
-	public boolean checkfather(String child, String father) {
+	public static boolean checkfather(String child, String father) {
 		// TODO Auto-generated method stub
 		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
 		String[] childarr = child.split(" ");
@@ -73,10 +73,10 @@ public class US09 {
 				return false;
 			}
 			else if(childyear == fatheryear) {
-				if(childmonth > fathermonth) {
+				if(childmonth > fathermonth+9) {
 					return false;
 				}
-				else if(childmonth == fathermonth) {
+				else if(childmonth == fathermonth+9) {
 					if(childday <= fatherday) {
 						return true;
 					}
