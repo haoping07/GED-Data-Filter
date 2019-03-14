@@ -54,18 +54,31 @@ public class US13 {
 		//[d , m , y]
 		int[] s1i = {stoi(s1[0]) , map_month(s1[1]) , stoi(s1[2])};
 		int[] s2i = {stoi(s2[0]) , map_month(s2[1]) , stoi(s2[2])};
+		//System.out.println(s1i[0] + ","+s1i[1]+","+s1i[2]);
+		//System.out.println(s2i[0] + ","+s2i[1]+","+s2i[2]);
 		if(s1i[2] != s2i[2]) {
+			//System.out.println("yeq");
 			return true;
 		}
 		else {
 			if(Math.abs(s1i[1]-s2i[1]) >= 8) {
+				//System.out.println("m>8");
 				return true;
 			}
 			else {
-				if(Math.abs(s1i[0]-s2i[0]) < 2 && Math.abs(s1i[1]-s2i[1]) == 0) {
-					return true;
+				if(s1i[1] == s2i[1]) {
+					//System.out.println("meq");
+					if(Math.abs(s1i[0]-s2i[0]) < 2) {
+						//System.out.println("d<2");
+						return true;
+					}
+					else {
+						//System.out.println("del");
+						return false;
+					}
 				}
 				else {
+					//System.out.println("mel");
 					return false;
 				}
 			}
