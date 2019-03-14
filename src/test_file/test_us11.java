@@ -15,8 +15,6 @@ import Mainprogram.Main;
 import fam.Family;
 import indi.individual;
 import sprint2.US11;
-import sprint2.US15;
-
 class test_us11 {
 
 	@BeforeAll
