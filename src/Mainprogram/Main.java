@@ -134,19 +134,19 @@ public class Main {
         
         US11.NoBigamy(allPeople,allFamilies);
         System.out.println("-----------------------------"); 
-        /*
+        
         US12 us12 = new US12();
         us12.checkParentsAgeAll(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
-        */
+        
         US14 us14 = new US14();
         us14.Multiple_Births_Smaller_5(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
-        /*
+        
         US16 us16 = new US16();
         us16.checkMaleNameAll(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
-        */
+        
         US09 us09 = new US09();
         us09.Birth_before_death_of_parents(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
