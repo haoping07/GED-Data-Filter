@@ -15,6 +15,7 @@ import Mainprogram.Main;
 import fam.Family;
 import indi.individual;
 import sprint2.US11;
+import sprint2.US15;
 class test_us11 {
 
 	@BeforeAll
@@ -40,8 +41,14 @@ class test_us11 {
 		ArrayList<Family> allFamilies = Main.allFamilies;
 		ArrayList<individual> allPeople = Main.allPeople;
 		ArrayList<Boolean> outputs=US11.NoBigamy(allPeople,allFamilies);
-		for(Boolean b:outputs) {
-			assertTrue(b);
+		boolean[] expect= {true,true,true,true,true,true,true,true,true,true,true,true,true,true,false};
+		for(int i=0;i<expect.length;i++) {
+			if(expect[i]) {
+				assertTrue(outputs.get(i));
+			}
+			else {
+				assertFalse(outputs.get(i));
+			}
 		}
 	}
 

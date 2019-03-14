@@ -79,8 +79,12 @@ public class US11 {
 	}
 	
 	public static boolean NoBigamy(Family fam1,Family fam2,individual indi) {
-		return (indi.isdead && remarriageAfterDeath(fam2.marrDate,indi.Deathday))
+		boolean result= (indi.isdead && remarriageAfterDeath(fam2.marrDate,indi.Deathday))
 				||(fam1.isDivored && remarriageAfterDivored(fam2.marrDate,fam1.divoDate)) ;
+		if(!result) {
+			System.out.println("Error(US11): indi "+indi.id + "is bigamy in family "+fam1.familyID+ " and family "+fam2.familyID);
+		}
+		return result;
 	}
 	public static boolean compare(String date1,String date2) {
 		return US02.birth_before_marriage(date1, date2);
