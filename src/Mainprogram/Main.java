@@ -145,6 +145,15 @@ public class Main {
         
         US16 us16 = new US16();
         us16.checkMaleNameAll(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US09 us09 = new US09();
+        us09.Birth_before_death_of_parents(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US13 us13 = new US13();
+        us13.sibiling_space(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
     }
     
     public static output_format main_output() throws IOException{

@@ -31,6 +31,8 @@ class test_us09 {
 		father1.update("DEAT", "3 MAY 2019");
 		//father2: dead before MAR
 		father2.update("DEAT", "3 FEB 2019");
+		//mother: dead before c7 birth but after c8 birth
+		mother.update("DEAT" , "3 FEB 2019");
 		
 		//c1: birth after 9 month of death of father1
 		c1.update("BIRT", "3 APR 2020");
@@ -44,9 +46,9 @@ class test_us09 {
 		c5.update("BIRT", "3 JAN 2020");
 		//c6: birth after 9 month of death of father2, but in same year
 		c6.update("BIRT", "3 DEC 2019");
-		//c7: birth within 0 ~ 9 month of death of father2
+		//c7: birth within 0 ~ 9 month of death of father2, after mother death
 		c7.update("BIRT", "3 JUL 2019");
-		//c8: birth before father2 dead
+		//c8: birth before father2 dead, before mother death
 		c8.update("BIRT" , "3 JAN 2019");
 		
 	}
@@ -94,6 +96,14 @@ class test_us09 {
 	@Test
 	void test8() {
 		Assertions.assertTrue(US09.checkfather(c8.Birthday,father2.Deathday));
+	}
+	@Test
+	void test9() {
+		Assertions.assertFalse(US09.checkmother(c7.Birthday,mother.Deathday));
+	}
+	@Test
+	void test10() {
+		Assertions.assertTrue(US09.checkmother(c8.Birthday,mother.Deathday));
 	}
 
 }

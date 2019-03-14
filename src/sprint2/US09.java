@@ -12,6 +12,10 @@ public class US09 {
 
 	}
 	
+	public US09() {
+		
+	}
+	
 	public void Birth_before_death_of_parents(ArrayList<individual> people , ArrayList<Family> families) {
 		individual person = null;
 		Family thisfamily = null;
@@ -20,6 +24,7 @@ public class US09 {
 		
 		for(int x = 0 ; x < people.size() ; x++) {
 			person = people.get(x);
+			if(person.children.size() == 0) continue;
 			thisfamily = get_family_by_id(families , person.children.get(0));
 			if(thisfamily == null) {
 				System.out.println("Debug messages(US09)[WARNING]: No parent family is found for person " + person.id);
@@ -119,7 +124,7 @@ public class US09 {
 		
 	}
 	
-	public boolean checkmother(String child, String mother) {
+	public static boolean checkmother(String child, String mother) {
 		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
 		String[] childarr = child.split(" ");
 		String[] motherarr = mother.split(" ");
