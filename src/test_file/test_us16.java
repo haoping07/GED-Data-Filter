@@ -41,13 +41,13 @@ class test_us16 {
 		
 		individual c1 = new individual("c1ID");
 		c1.name = "Niuniu /Guo/";
-		c1.sex = "F";
+		c1.sex = "F ";
 		individual c2 =new individual("c2ID");
 		c2.name = "Goudan /Guo/";
-		c2.sex = "M";
+		c2.sex = "M ";
 		individual c3 =new individual("c3ID");
 		c3.name = "Gang /Guo/";
-		c3.sex = "M";
+		c3.sex = "M ";
 		ArrayList<individual> allPeople = new ArrayList<>();
 		allPeople.add(husband);
 		allPeople.add(c1);
@@ -80,13 +80,13 @@ class test_us16 {
 		
 		individual c1 = new individual("c1ID");
 		c1.name = "Niuniu /Guo/";
-		c1.sex = "F";
+		c1.sex = "F ";
 		individual c2 =new individual("c2ID");
 		c2.name = "Goudan /Guo/";
-		c2.sex = "M";
+		c2.sex = "M ";
 		individual c3 =new individual("c3ID");
 		c3.name = "Gang /Li/";
-		c3.sex = "M";
+		c3.sex = "M ";
 		ArrayList<individual> allPeople = new ArrayList<>();
 		allPeople.add(husband);
 		allPeople.add(c1);
@@ -119,13 +119,13 @@ class test_us16 {
     		
    		individual c1 = new individual("c1ID");
    		c1.name = "Niuniu /Guo/";
-   		c1.sex = "F";
+   		c1.sex = "F ";
      	individual c2 =new individual("c2ID");
    		c2.name = "Goudan /Guo/";
-   		c2.sex = "M";
+   		c2.sex = "M ";
    		individual c3 =new individual("c3ID");
      	c3.name = "Gang /Li/";
-   		c3.sex = "M";
+   		c3.sex = "M ";
    		ArrayList<individual> allPeople = new ArrayList<>();
    		allPeople.add(husband);
      	allPeople.add(c1);
