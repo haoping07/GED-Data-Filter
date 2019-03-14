@@ -37,7 +37,11 @@ public class US16 {
 		
 		for(individual child : childList) {
 			int status = 0; 
-			if(child.sex.equals("M ")) {
+			if(child.sex == "" || child.name == "") {
+				System.out.println("ABNROMAL(US16): FamilyID[" + fam.familyID + "]"
+						+ child.id + " missing information");
+			}
+			else if(child.sex.equals("M ")) {
 				String childName = child.name;
 				String childFamilyName = child.name.split("/")[1];
 				

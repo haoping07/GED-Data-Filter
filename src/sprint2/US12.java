@@ -26,6 +26,7 @@ public class US12 {
 			wife = searchByID(allPeople,fam.wife);
 		}
 		
+		
 		for(String id : fam.children) {
 			childList.add(searchByID(allPeople,id));
 		}
@@ -34,7 +35,8 @@ public class US12 {
 		
 		
 		for(individual child : childList) {
-			int[] status = new int[2]; 
+			
+			int[] status = new int[2];
 			if(husband.age - child.age >=80) {
 				System.out.println("ERROR(US12): FamilyID[" + fam.familyID + "]"
 						+ " husband[" + husband.id +"] age[" + husband.age + "]"
