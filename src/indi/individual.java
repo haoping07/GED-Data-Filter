@@ -1,6 +1,4 @@
 package indi;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.time.LocalDate;
 //import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -112,24 +110,12 @@ public class individual {
 		}
 		if(!Checkage()) {
 			System.out.println("Debug messages(US07) [**ILLEGAL**]: Over then 150 years old ::" + this.id);
-			try {
-				this.fail_us07();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
 		}
 	}	
 	
 	public boolean Checkage() {
 		if(this.age > 150) return false;
 		else return true;
-	}
-	
-	private void fail_us07() throws IOException {
-			final String dir = System.getProperty("user.dir");
-			FileWriter writer = new FileWriter(dir + "\\us07_output.txt", true);  
-			writer.write("Debug messages(US07) [**ILLEGAL**]: Over then 150 years old ::" + this.id + "\n");
-			writer.close();
 	}
 
 	public int stoi(String input) {

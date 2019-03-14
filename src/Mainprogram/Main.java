@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import indi.individual;
-import sprint2.US11;
+import sprint2.*;
 import fam.Family;
 import dnl.utils.text.table.*;
 import datecheck.*;
@@ -24,38 +24,6 @@ public class Main {
         //checkMarBefDeath(allPeople, allFamilies);
         //Testing("proj02test.ged");
         
-        /*
-        //LS: test script of individual
-        System.out.println("individual");
-        System.out.println("age|Birt|Dith|id|isdead|name|sex|spouse|children");
-        for(int i = 0 ; i < allPeople.size() ; i++) {   
-            System.out.print(allPeople.get(i).age + " | ");
-            System.out.print(allPeople.get(i).Birthday + " | "); 
-            System.out.print(allPeople.get(i).Deathday + " | ");
-            System.out.print(allPeople.get(i).id + " | ");
-            System.out.print(allPeople.get(i).isdead +" | ");
-            System.out.print(allPeople.get(i).name +" | ");
-            System.out.print(allPeople.get(i).sex +" | ");
-            System.out.print(allPeople.get(i).spouse +" | ");
-            System.out.print(allPeople.get(i).children);
-            System.out.println(" ");
-        }
-        
-        //LS: test script of family
-        System.out.println("family");
-        System.out.println("div|fid|husb|isdiv|marrdate|wife|children");
-        for(int i = 0 ; i < allFamilies.size() ; i++) {
-        	System.out.print(allFamilies.get(i).divoDate + " | ");
-        	System.out.print(allFamilies.get(i).familyID + " | ");
-        	System.out.print(allFamilies.get(i).husband + " | "); 
-        	System.out.print(allFamilies.get(i).isDivored + " | ");
-        	System.out.print(allFamilies.get(i).marrDate + " | ");
-        	System.out.print(allFamilies.get(i).wife + " | ");
-        	System.out.print(allFamilies.get(i).children + " | ");
-        	System.out.println(" "); 
-        }
-        */
-
         String[] indiTitle = { 
         		"ID", 
         		"Name", 
@@ -129,26 +97,63 @@ public class Main {
         famTable.printTable(writeTable, 0);
         famTable.printTable();
         
-        //(LH)Debug messages print out
+        //Debug messages print out
         System.out.println();
-        US06 us06 = new US06();
-        us06.Divorce_Before_Death(allPeople, allFamilies);
         System.out.println("--------------------------------------------------------------");
-        US08 us08 = new US08();
-        us08.Birth_Before_Marriage_Of_Parents(allPeople, allFamilies);
+        System.out.println("Sprint 1");
         System.out.println("--------------------------------------------------------------");
+        
+        US02.birth_before_marriage(allPeople,allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US03.birth_before_death(allPeople);
+        System.out.println("-----------------------------");  
+        
         US04 us04 = new US04();
         us04.Marriage_Before_Divorce(allFamilies);
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("-----------------------------");  
+        
         US05 us05 = new US05();
         us05.Marriage_Before_Death(allPeople, allFamilies);
+        System.out.println("-----------------------------");  
+        
+        US06 us06 = new US06();
+        us06.Divorce_Before_Death(allPeople, allFamilies);
+        System.out.println("-----------------------------");  
+        
+        US08 us08 = new US08();
+        us08.Birth_Before_Marriage_Of_Parents(allPeople, allFamilies);
+        System.out.println();
         System.out.println("--------------------------------------------------------------");
-        US03.birth_before_death(allPeople);
-        System.out.println("--------------------------------------------------------------");
-        US02.birth_before_marriage(allPeople,allFamilies);
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("Sprint 2");
+        System.out.println("--------------------------------------------------------------");  
+        
+        US10 us10 = new US10();
+        us10.Marriage_After_14(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
         US11.NoBigamy(allPeople,allFamilies);
-        System.out.println("--------------------------------------------------------------");
+        System.out.println("-----------------------------"); 
+        
+        US12 us12 = new US12();
+        us12.checkParentsAgeAll(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US14 us14 = new US14();
+        us14.Multiple_Births_Smaller_5(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US16 us16 = new US16();
+        us16.checkMaleNameAll(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US09 us09 = new US09();
+        us09.Birth_before_death_of_parents(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US13 us13 = new US13();
+        us13.sibiling_space(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
     }
     
     public static output_format main_output() throws IOException{
