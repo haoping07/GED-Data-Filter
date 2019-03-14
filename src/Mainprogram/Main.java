@@ -142,17 +142,20 @@ public class Main {
         US14 us14 = new US14();
         us14.Multiple_Births_Smaller_5(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
-        
+        /*
         US16 us16 = new US16();
         us16.checkMaleNameAll(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
-        
+        */
         US09 us09 = new US09();
         us09.Birth_before_death_of_parents(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
         
         US13 us13 = new US13();
         us13.sibiling_space(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US15.sibilings(allFamilies);
         System.out.println("-----------------------------"); 
     }
     
