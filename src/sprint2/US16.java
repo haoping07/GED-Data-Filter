@@ -37,11 +37,12 @@ public class US16 {
 		
 		for(individual child : childList) {
 			int status = 0; 
-			if(child.sex.equals("M")) {
+			if(child.sex.equals("M ")) {
+				String childName = child.name;
 				String childFamilyName = child.name.split("/")[1];
 				
 				if(!familyName.equals(childFamilyName)) {
-					System.out.println("ERROR(US12): FamilyID[" + fam.familyID + "]"
+					System.out.println("ERROR(US16): FamilyID[" + fam.familyID + "]"
 							+ " husband[" + husband.id +"] lastName[" + familyName + "]"
 							+ " is not same with child [" + child.id+"]"
 							+ " lastName[" + childFamilyName+"]");
