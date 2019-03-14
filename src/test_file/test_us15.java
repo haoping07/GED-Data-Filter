@@ -45,8 +45,14 @@ class test_us15 {
 		ArrayList<Family> allFamilies = new ArrayList<Family>();
 		Main.main(new String[] {});
 		allFamilies=Main.allFamilies;
-		for(Family fam:allFamilies) {
-			assertTrue(US15.sibilings(fam));
+		boolean[] expect= {true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,false};
+		for(int i=0;i<allFamilies.size();i++) {
+			if(expect[i]) {
+				assertTrue(US15.sibilings(allFamilies.get(i)));
+			}
+			else {
+				assertFalse(US15.sibilings(allFamilies.get(i)));
+			}
 		}
 	}
 
