@@ -2,6 +2,8 @@
 
 package sprint2;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import datecheck.US02;
 import fam.Family;
@@ -25,10 +27,7 @@ public class US11 {
 			}
 			for(int j=0;j<i;j++) {
 				Family fam2=families.get(j);
-				if(!US02.valid_date(fam2.marrDate)) {
-					continue;
-				}
-				if(fam2.isDivored&&!US02.valid_date(fam2.divoDate)) {
+				if(!US02.valid_date(fam2.marrDate)||fam2.isDivored&&!US02.valid_date(fam2.divoDate)) {
 					continue;
 				}
 				
@@ -44,26 +43,10 @@ public class US11 {
 						}
 					}
 					if(compare(fam1.marrDate,fam2.marrDate)) {
-						if(wif1.isdead&&remarriageAfterDeath(fam2.marrDate,wif1.Deathday)) {
-							results.add(true);
-						}
-						else if(fam1.isDivored&&remarriageAfterDivored(fam2.marrDate,fam1.divoDate)) {
-							results.add(true);
-						}
-						else {
-							results.add(false);
-						}
+						results.add(NoBigamy(fam2,fam1,wif1));
 					}
 					else {
-						if(wif2.isdead&&remarriageAfterDeath(fam1.marrDate,wif2.Deathday)) {
-							results.add(true);
-						}
-						else if(fam2.isDivored&&remarriageAfterDivored(fam1.marrDate,fam2.divoDate)) {
-							results.add(true);
-						}
-						else {
-							results.add(false);
-						}
+						results.add(NoBigamy(fam1,fam2,wif2));
 					}
 					
 					
@@ -80,26 +63,10 @@ public class US11 {
 						}
 					}
 					if(compare(fam1.marrDate,fam2.marrDate)) {
-						if(hus1.isdead&&remarriageAfterDeath(fam2.marrDate,hus1.Deathday)) {
-							results.add(true);
-						}
-						else if(fam1.isDivored&&remarriageAfterDivored(fam2.marrDate,fam1.divoDate)) {
-							results.add(true);
-						}
-						else {
-							results.add(false);
-						}
+						results.add(NoBigamy(fam1,fam2,hus1));
 					}
 					else {
-						if(hus2.isdead&&remarriageAfterDeath(fam1.marrDate,hus2.Deathday)) {
-							results.add(true);
-						}
-						else if(fam2.isDivored&&remarriageAfterDivored(fam1.marrDate,fam2.divoDate)) {
-							results.add(true);
-						}
-						else {
-							results.add(false);
-						}
+						results.add(NoBigamy(fam2,fam1,hus2));
 					}
 				}
 				else {
@@ -111,6 +78,10 @@ public class US11 {
 		return results;
 	}
 	
+	public static boolean NoBigamy(Family fam1,Family fam2,individual indi) {
+		return (indi.isdead && remarriageAfterDeath(fam2.marrDate,indi.Deathday))
+				||(fam1.isDivored && remarriageAfterDivored(fam2.marrDate,fam1.divoDate)) ;
+	}
 	public static boolean compare(String date1,String date2) {
 		return US02.birth_before_marriage(date1, date2);
 	}
