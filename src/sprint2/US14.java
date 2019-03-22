@@ -42,7 +42,7 @@ public class US14 {
 				else
 				{
 					DEBUG[i] = 2;	//Msg #2(Error): "Multiple births > 5"
-					System.out.println("Error(US14)[#2]: Family " + allFamilies.get(i).familyID + " sibling greater than 5 at the same time!");
+					System.out.println("Error(US14)[#2]: Family " + allFamilies.get(i).familyID + " sibling is greater than 5 at the same time!");
 					continue;
 				}
 			}
