@@ -14,19 +14,19 @@ public class checkdate_US01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Date today");
-		String[] nowarr = LocalDate.now().toString().split("-");
-		nowarr[1] = mapmonth(nowarr[1]);
-		System.out.println(nowarr[2] + " " + nowarr[1] + " " + nowarr[0]);
-		System.out.println(checkdate_US01.checkdate_us01(nowarr[2] + " " + nowarr[1] + " " + nowarr[0]));
-		System.out.println("Yesterday");
-		System.out.println(checkdate_US01.checkdate_us01("23 FEB 2019"));
-		System.out.println("Last month");
-		System.out.println(checkdate_US01.checkdate_us01("17 JAN 2019"));
-		System.out.println("Next month");
-		System.out.println(checkdate_US01.checkdate_us01("17 MAR 2019"));
-		System.out.println("Next Year");
-		System.out.println(checkdate_US01.checkdate_us01("17 FEB 2020"));
+//		System.out.println("Date today");
+//		String[] nowarr = LocalDate.now().toString().split("-");
+//		nowarr[1] = mapmonth(nowarr[1]);
+//		System.out.println(nowarr[2] + " " + nowarr[1] + " " + nowarr[0]);
+//		System.out.println(checkdate_US01.checkdate_us01(nowarr[2] + " " + nowarr[1] + " " + nowarr[0]));
+//		System.out.println("Yesterday");
+//		System.out.println(checkdate_US01.checkdate_us01("23 FEB 2019"));
+//		System.out.println("Last month");
+//		System.out.println(checkdate_US01.checkdate_us01("17 JAN 2019"));
+//		System.out.println("Next month");
+//		System.out.println(checkdate_US01.checkdate_us01("17 MAR 2019"));
+//		System.out.println("Next Year");
+//		System.out.println(checkdate_US01.checkdate_us01("17 FEB 2020"));
 	}
 	private static String mapmonth(String string) {
 		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
@@ -133,30 +133,5 @@ public class checkdate_US01 {
 			if(arr[x].equals(value)) return x;
 		}
 		return -1;
-	}
-	
-	public static void run_us01_test(ArrayList<individual> people) throws IOException {
-		for(int x = 0 ; x < people.size() ; x++) {
-			test(people.get(x));
-		}
-	}
-	
-	@Test
-	static void test(individual person) throws IOException {
-		try {
-			Assertions.assertTrue(checkdate_US01.checkdate_us01(person.Birthday));
-			//Assertions.assertTrue(false);
-		}catch(AssertionError e) {
-			fail(person);
-		}
-	}
-	
-	public static void fail(individual person) throws IOException {
-		final String dir = System.getProperty("user.dir");
-		FileWriter writer = new FileWriter(dir + "\\us01_output.txt", true);  
-		System.out.println(person.id + " fails user story 01\n");
-		writer.write(person.id + " fails user story 01\n");
-		writer.close();
-
 	}
 }

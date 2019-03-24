@@ -4,29 +4,35 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestFactory;
 
+import Mainprogram.Main;
+import Mainprogram.output_format;
+import datecheck.checkdate_US01;
 import indi.individual;
 
 class test_us07 {
-	public static individual person = null;
+	public static ArrayList<individual> people = null;
 	public static FileWriter writer = null;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		System.out.println("Test start!");
+		output_format in = Main.main_output();
+		people = in.People;
 		final String dir = System.getProperty("user.dir");
 		writer = new FileWriter(dir + "\\us07_output.txt", true);     
-	}
-	
-	public static void setperson(individual from_other_file) {
-		person = from_other_file;
 	}
 
 	@AfterAll
@@ -42,21 +48,24 @@ class test_us07 {
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void test() throws IOException {
-		System.out.println("in test" + person.id);
-		try {
-			Assertions.assertTrue(person.Checkage());
-			//Assertions.assertTrue(false);
-		}catch(AssertionError e) {
-			fail();
-		}
+	@TestFactory
+	Stream<DynamicTest> dynamicTestsFromIntStream() {
+	    return IntStream.iterate(0, n -> n + 1).limit(people.size())
+	      .mapToObj(n -> DynamicTest.dynamicTest("test" + n,
+	        () ->{
+	        	try {
+	        		Assertions.assertTrue(people.get(n).Checkage());	
+	        	}catch(AssertionError e) {
+	        		fail(n);
+	        	}
+	        	
+	        }));
 	}
 	
-	public void fail() {
-		System.out.println(" fails user story 07\n");
+	public void fail(int x) {
+		System.out.println(people.get(x).id + " fails user story 07\n");
 		try {
-				writer.write(" fails user story 07\n");
+				writer.write(people.get(x).id + " fails user story 07\n");
 		} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

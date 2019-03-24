@@ -2,10 +2,10 @@
 package datecheck;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+//import java.util.HashMap;
 
 import fam.Family;
-import indi.individual;
+//import indi.individual;
 
 //import datecheck.checkdate_US01;
 
@@ -22,7 +22,7 @@ public class US04 {
 				}
 			}
 			catch(IllegalArgumentException ex) {
-				System.out.println("ANOMALY: FAMILY: US05: "
+				System.out.println("ANOMALY: FAMILY: US04: "
 					    + fam.familyID + " " +ex.getMessage());
 			}
 		}

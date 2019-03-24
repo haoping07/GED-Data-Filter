@@ -1,6 +1,4 @@
 package indi;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.time.LocalDate;
 //import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -66,8 +64,7 @@ public class individual {
 		    		break;
 		    	}
 		    	if(!checkdate1(content)) {
-		    		System.out.println("Birthday can not after current date");
-					System.out.println(this.id + "fails US01");
+		    		System.out.println("Debug messages(US01) [**ILLEGAL**]: Birth after current date ::" + this.id);
 		    	}
 		    	if(checkdate(content , this.Deathday)) {
 		    		this.Birthday = content;
@@ -112,29 +109,15 @@ public class individual {
 			this.age = stoi(nowyear[0]) - stoi(bdate[bdate.length-1]);
 		}
 		if(!Checkage()) {
-			System.out.println(this.id + "Age is larger then 150!");
-			System.out.println(this.id + "fails US07");
-			try {
-				this.fail_us07();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			System.out.println("Debug messages(US07) [**ILLEGAL**]: Over then 150 years old ::" + this.id);
 		}
-	}
+	}	
 	
-	private void fail_us07() throws IOException {
-			final String dir = System.getProperty("user.dir");
-			FileWriter writer = new FileWriter(dir + "\\us07_output.txt", true);  
-			System.out.println(this.id + " fails user story 07\n");
-			writer.write(this.id + " fails user story 07\n");
-			writer.close();
-	}
-
 	public boolean Checkage() {
 		if(this.age > 150) return false;
 		else return true;
 	}
-	
+
 	public int stoi(String input) {
 		int out = 0;
 		for(int x = 0 ; x < input.length() ; x++) {

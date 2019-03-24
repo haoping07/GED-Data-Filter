@@ -7,5 +7,7 @@
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="fam.Family"/>
 <fullyQualifiedTypeName name="datecheck.checkdate_US01"/>
+<fullyQualifiedTypeName name="indi.individual"/>
+<fullyQualifiedTypeName name="sprint2.US09"/>
 <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
 </qualifiedTypeNameHistroy>

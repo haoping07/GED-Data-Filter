@@ -20,7 +20,7 @@ public class US02 {
 		
 	}
 	
-	public static void birth_before_marrage(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
+	public static void birth_before_marriage(ArrayList<individual> allPeople, ArrayList<Family> allFamilies) {
 		for(Family fam:allFamilies) {
 			individual hus = null,wif = null;
 			for(individual indi:allPeople) {
@@ -34,7 +34,7 @@ public class US02 {
 			}
 			
 			if(!valid_date(hus.Birthday)||!valid_date(wif.Birthday)||!valid_date(fam.marrDate)) {
-				System.out.println("Warning(US02)[**MISSING**]: " + "MISSING MARRIAGE DATE ::" +
+				System.out.println("Warning(US02)[**MISSING**]: " + "MISSING MARRIAGE DATE ::FamilyID:" +
 						fam.familyID);
 				continue;
 			}
