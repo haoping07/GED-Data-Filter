@@ -25,7 +25,7 @@ public class test_us24
 		US24 unit_test_24 = new US24();
 
 		// Read custom GED file
-		ObjectSet customGED = testingMain.startHere("US10_GED.ged");
+		ObjectSet customGED = testingMain.startHere("US23_GED.ged");
 
 		// Get the Debug code of US24
 		int[] DEBUG = new int[customGED.allFamiliesR.size()];

@@ -24,7 +24,7 @@ public class test_us23
 		US23 unit_test_23 = new US23();
 
 		// Read custom GED file
-		ObjectSet customGED = testingMain.startHere("US10_GED.ged");
+		ObjectSet customGED = testingMain.startHere("US23_GED.ged");
 
 		// Get the Debug code of US23
 		int[] DEBUG = new int[customGED.allPeopleR.size()];
