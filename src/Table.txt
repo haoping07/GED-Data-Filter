@@ -24,7 +24,7 @@ ________________________________________________________________________________
 | @I27@ | One /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ ]       | []                    |
 | @I28@ | Two /Wang/        | F     | 4 FEB 1968  | 51  | true | NA          | [@F9@ ]       | []                    |
 | @I29@ | Three /Wang/      | F     | 6 OCT 1963  | 56  | true | NA          | [@F9@ ]       | []                    |
-| @I3@  | Lisa /Ko/         | F     | 1 JAN 1920  | 70  | false| 2 MAR 1990  | []            | [@F2@ ]               |
+| @I3@  | Lisa /Ko/         | F     | 1 JAN 1920  | -20 | false| 2 MAR 1900  | []            | [@F2@ ]               |
 | @I30@ | Own /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ ]       | []                    |
 | @I31@ | Sen /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ ]       | []                    |
 | @I32@ | Twin /Wang/       | F     | 4 FEB 1968  | 51  | true | NA          | [@F9@ ]       | []                    |
