@@ -9,7 +9,7 @@ A system that filter GED data according to User Stroy
 ## Usage
 
 * Import the entire repo to IntelliJ IDEA or Eclipse
-* Add all files in ./src/lib into project classpath
+* Add all files in `./src/lib` into project classpath
 * Run main.java or JUnit test file in ./src/test_file
 
 ## Project Structure
