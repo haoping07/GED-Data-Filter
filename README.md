@@ -1,6 +1,6 @@
 # CS555 Team Project 2019 Spring
 
-A system that filter GED data according to User Stroy
+A system that filters GED data according to User Stroy
 
 ## Status
 
