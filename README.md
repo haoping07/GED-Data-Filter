@@ -4,7 +4,7 @@ A system that filter GED data according to User Stroy
 
 ## Status
 
-[![Build Status](https://travis-ci.org/Shih-Hao-Lo/cs555teamproj2019spring.svg?branch=master)](https://travis-ci.org/Shih-Hao-Lo/cs555teamproj2019spring)
+[![Build Status](https://travis-ci.org/Shih-Hao-Lo/cs555teamproj2019spring.svg?branch=java-branch-ci-test)](https://travis-ci.org/Shih-Hao-Lo/cs555teamproj2019spring)
 
 ## Usage
 
