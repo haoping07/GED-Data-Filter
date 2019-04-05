@@ -27,9 +27,9 @@ A system that filters GED data according to User Stroy
 * GEDCOM file:<br>
   `./src/MyFamily.ged` <br>
   This file contains GED data, required by main.java <br>
-* Filtered GED file: <br>
-  `./src/MyFamily.ged-out.ged` <br>
-  This file is created by running main.java, contains GED data that filtered by User Stories. <br>
+* Formatted GED data: <br>
+  `./src/Table.txt` <br>
+  This file contains formatted GED data from `./src/MyFamily.ged`. <br>
   
 * Output of input test file: (Unknown) <br>
   proj02test.ged-out.ged  (Unknown) <br>
