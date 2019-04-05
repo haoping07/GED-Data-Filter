@@ -8,6 +8,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import indi.individual;
 import sprint2.*;
+import sprint3.*;
 import fam.Family;
 import dnl.utils.text.table.*;
 import datecheck.*;
@@ -159,6 +160,20 @@ public class Main {
         
         US11.NoBigamy(allPeople,allFamilies);
         System.out.println("-----------------------------"); 
+        
+        System.out.println();
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("Sprint 3");
+        System.out.println("--------------------------------------------------------------"); 
+        
+        US23 us23 = new US23();
+        us23.Unique_name_and_birth_date(allPeople);
+        System.out.println("-----------------------------"); 
+        
+        US24 us24 = new US24();
+        us24.Unique_families_by_spouses(allFamilies);
+        System.out.println("-----------------------------"); 
+        
     }
     
     public static output_format main_output() throws IOException{
