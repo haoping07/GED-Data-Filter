@@ -20,7 +20,7 @@ A system that filters GED data according to User Stroy
 * User Stories source code: <br>
   `./src/Mainprogram/sprint2` <br>
   `./src/Mainprogram/sprint3` <br>
-  These folders contain User Stories listed in Sprint plan<br>
+  These folders contain User Stories code listed in Sprint plan<br>
 * User Story JUnit test source code: <br>
   `./src/test_file/` <br>
   This folder contains each User Story's JUnit test source code <br>
