@@ -29,3 +29,9 @@ A system that filter GED data according to User Stroy
   
 * Output of input test file: (Unknown) <br>
   proj02test.ged-out.ged  (Unknown) <br>
+
+## Group members:
+* Shih-Hao Lo
+* Hao-Ping Lin
+* Song Xu
+* Jiacheng Guo
