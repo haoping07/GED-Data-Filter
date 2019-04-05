@@ -16,8 +16,7 @@ A system that filter GED data according to User Stroy
 
 * Main system source code: <br>
   ./src/Mainprogram/main.java <br>
-  This file is GED file handler, it extracts string in GED file and applys User Stories to the GED data <br>
- <br>
+  This file is GED file handler, it extracts string in GED file and applys User Stories to the GED data <br><br>
 * User Story JUnit test source code: <br>
   ./src/test_file/ <br>
   This folder contains each User Story's JUnit test source code <br>
