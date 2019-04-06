@@ -180,7 +180,7 @@ public class Main {
         US21.CorrectGender(allPeople,allFamilies);
         System.out.println("-----------------------------"); 
         
-        US22.Unique(allPeople,allFamilies);
+        US22.UniqueId(allPeople,allFamilies);
         System.out.println("-----------------------------"); 
     }
     
