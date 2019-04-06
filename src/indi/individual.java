@@ -93,8 +93,8 @@ public class individual {
 	}
 	
 	public void calage(){
-		if(Birthday == "") {
-			age = 0;
+		if(this.Birthday == "") {
+			this.age = 0;
 			return;
 		}
 		String[] bdate = this.Birthday.split(" ");

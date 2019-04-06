@@ -8,6 +8,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import indi.individual;
 import sprint2.*;
+import sprint3.*;
 import fam.Family;
 import dnl.utils.text.table.*;
 import datecheck.*;
@@ -111,8 +112,7 @@ public class Main {
         
         US04 us04 = new US04();
         us04.Marriage_Before_Divorce(allFamilies);
-        System.out.println("-----------------------------");  
-        
+        System.out.println("--------------------------------------------------------------");
         US05 us05 = new US05();
         us05.Marriage_Before_Death(allPeople, allFamilies);
         System.out.println("-----------------------------");  
@@ -127,39 +127,56 @@ public class Main {
         System.out.println("--------------------------------------------------------------");
         System.out.println("Sprint 2");
         System.out.println("--------------------------------------------------------------");  
+                
+        US09 us09 = new US09();
+        us09.Birth_before_death_of_parents(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
         
         US10 us10 = new US10();
         us10.Marriage_After_14(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
         
         US11.NoBigamy(allPeople,allFamilies);
-        System.out.println("-----------------------------"); 
+        System.out.println("-----------------------------");  
         
         US12 us12 = new US12();
         us12.checkParentsAgeAll(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+                
+        US13 us13 = new US13();
+        us13.sibiling_space(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
         
         US14 us14 = new US14();
         us14.Multiple_Births_Smaller_5(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
+                
+        US15.sibilings(allFamilies);
+        System.out.println("-----------------------------"); 
         
         US16 us16 = new US16();
         us16.checkMaleNameAll(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
+
+        System.out.println();
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("Sprint 3");
+        System.out.println("--------------------------------------------------------------"); 
         
-        US09 us09 = new US09();
-        us09.Birth_before_death_of_parents(allPeople, allFamilies);
+        US23 us23 = new US23();
+        us23.Unique_name_and_birth_date(allPeople);
         System.out.println("-----------------------------"); 
         
-        US13 us13 = new US13();
-        us13.sibiling_space(allPeople, allFamilies);
+        US24 us24 = new US24();
+        us24.Unique_families_by_spouses(allFamilies);
         System.out.println("-----------------------------"); 
         
-        US15.sibilings(allFamilies);
+        US25.unique_first_name(allFamilies, allPeople);
         System.out.println("-----------------------------"); 
         
-        US11.NoBigamy(allPeople,allFamilies);
+        US27.age_calculate(allPeople);
         System.out.println("-----------------------------"); 
+        
     }
     
     public static output_format main_output() throws IOException{
