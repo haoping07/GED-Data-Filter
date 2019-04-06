@@ -61,8 +61,6 @@ class test_us21 {
 
 	@Test
 	void test() {
-		//Should fail: "Howard" is not unique in same family
-		//Assertions.assertFalse(US25.check_unique(People));
 		Assertions.assertEquals(result, US21.CorrectGender(indis,fams));
 	}
 
