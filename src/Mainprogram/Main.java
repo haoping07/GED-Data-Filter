@@ -177,6 +177,11 @@ public class Main {
         US27.age_calculate(allPeople);
         System.out.println("-----------------------------"); 
         
+        US21.CorrectGender(allPeople,allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US22.Unique(allPeople,allFamilies);
+        System.out.println("-----------------------------"); 
     }
     
     public static output_format main_output() throws IOException{
