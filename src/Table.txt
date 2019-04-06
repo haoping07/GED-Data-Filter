@@ -1,115 +1,62 @@
 Individuals
-_____________________________________________________________________________________________________________________________________________________________________________________________
-| ID    | Name              | Gender| Birthday    | Age | Alive| Death       | Child                                     | Spouse                                                            |
-|============================================================================================================================================================================================|
-| @I1@  | Jack /Ko/         | F     | 1 MAR 2500  | -481| true | NA          | [@F2@ , @F2@ , @F2@ ]                     | [@F1@ , @F1@ , @F1@ ]                                             |
-| @I1@  | Jack /Ko/         | F     | 1 MAR 2500  | -481| true | NA          | []                                        | []                                                                |
-| @I10@ | Jenny /Watson/    | F     | 1 JUL 2005  | 14  | true | NA          | [@F5@ , @F5@ , @F5@ ]                     | [@F7@ , @F7@ , @F7@ ]                                             |
-| @I10@ | Jenny /Watson/    | F     | 1 JUL 2005  | 14  | true | NA          | []                                        | []                                                                |
-| @I11@ | Ben /River/       | M     | 1 MAR 1950  | 30  | false| 17 SEP 1980 | []                                        | [@F1@ , @F1@ , @F1@ ]                                             |
-| @I11@ | Ben /River/       | M     | 1 MAR 1950  | 30  | false| 17 SEP 1980 | []                                        | []                                                                |
-| @I12@ | Quillen /Crowder/ | M     | 5 MAR 1950  | 69  | true | NA          | []                                        | [@F6@ , @F6@ , @F6@ ]                                             |
-| @I12@ | Quillen /Crowder/ | M     | 5 MAR 1950  | 69  | true | NA          | []                                        | []                                                                |
-| @I13@ | Alice /Hassildor/ | F     | 1 FEB 1951  | 68  | true | NA          | []                                        | [@F6@ , @F6@ , @F6@ ]                                             |
-| @I13@ | Alice /Hassildor/ | F     | 1 FEB 1951  | 68  | true | NA          | []                                        | []                                                                |
-| @I14@ | Rourke /Crowder/  | M     | 1 MAR 1999  | 20  | true | NA          | [@F6@ , @F6@ , @F6@ ]                     | []                                                                |
-| @I14@ | Rourke /Crowder/  | M     | 1 MAR 1999  | 20  | true | NA          | []                                        | []                                                                |
-| @I15@ | Gildur /Crowder/  | M     | 1 APR 1999  | 20  | true | NA          | [@F6@ , @F6@ , @F6@ ]                     | []                                                                |
-| @I15@ | Gildur /Crowder/  | M     | 1 APR 1999  | 20  | true | NA          | []                                        | []                                                                |
-| @I16@ | Wesley /Wong/     | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ , @F7@ , @F7@ ]                     | []                                                                |
-| @I16@ | Wesley /Wong/     | M     | 1 NOV 2019  | 0   | true | NA          | []                                        | []                                                                |
-| @I17@ | Howard /Lo/       | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ , @F7@ , @F7@ ]                     | []                                                                |
-| @I17@ | Howard /Lo/       | M     | 1 NOV 2019  | 0   | true | NA          | []                                        | []                                                                |
-| @I18@ | Hank /Chen/       | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ , @F7@ , @F7@ ]                     | []                                                                |
-| @I18@ | Hank /Chen/       | M     | 1 NOV 2019  | 0   | true | NA          | []                                        | []                                                                |
-| @I19@ | Poshing /Chen/    | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ , @F7@ , @F7@ ]                     | []                                                                |
-| @I19@ | Poshing /Chen/    | M     | 1 NOV 2019  | 0   | true | NA          | []                                        | []                                                                |
-| @I2@  | John /Ko/         | M     | 1 FEB 1930  | 59  | false| 1 APR 1989  | []                                        | [@F2@ , @F2@ , @F2@ ]                                             |
-| @I2@  | John /Ko/         | M     | 1 FEB 1930  | 59  | false| 1 APR 1989  | []                                        | []                                                                |
-| @I20@ | Lara /Croft/      | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ , @F7@ , @F7@ ]                     | []                                                                |
-| @I20@ | Lara /Croft/      | M     | 1 NOV 2019  | 0   | true | NA          | []                                        | []                                                                |
-| @I21@ | Mac /Donald/      | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ , @F7@ , @F7@ ]                     | []                                                                |
-| @I21@ | Mac /Donald/      | M     | 1 NOV 2019  | 0   | true | NA          | []                                        | []                                                                |
-| @I22@ | Ping /Wang/       | M     | 2 SEP 1994  | 25  | true | NA          | [@F8@ , @F8@ , @F8@ , @F8@ , @F8@ , @F8@ ]| []                                                                |
-| @I22@ | Ping /Wang/       | M     | 2 SEP 1994  | 25  | true | NA          | []                                        | []                                                                |
-| @I23@ | Gang /Wang/       | M     | 3 MAY 1966  | 53  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | [@F8@ , @F8@ , @F8@ , @F8@ , @F8@ , @F8@ ]                        |
-| @I23@ | Gang /Wang/       | M     | 3 MAY 1966  | 53  | true | NA          | []                                        | []                                                                |
-| @I24@ | Lin /Liu/         | F     | 3 MAR 1946  | 73  | true | NA          | []                                        | [@F8@ , @F10@ , @F8@ , @F8@ , @F10@ , @F8@ , @F8@ , @F10@ , @F8@ ]|
-| @I24@ | Lin /Liu/         | F     | 3 MAR 1946  | 73  | true | NA          | []                                        | []                                                                |
-| @I25@ | Ton /Wang/        | M     | NA          | 0   | true | NA          | []                                        | [@F9@ , @F9@ , @F9@ ]                                             |
-| @I25@ | Ton /Wang/        | M     | NA          | 0   | true | NA          | []                                        | []                                                                |
-| @I26@ | XIn /Chen/        | F     | 2 APR 1946  | 73  | true | NA          | []                                        | [@F9@ , @F9@ , @F9@ ]                                             |
-| @I26@ | XIn /Chen/        | F     | 2 APR 1946  | 73  | true | NA          | []                                        | []                                                                |
-| @I27@ | One /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I27@ | One /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | []                                        | []                                                                |
-| @I28@ | Two /Wang/        | F     | 4 FEB 1968  | 51  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I28@ | Two /Wang/        | F     | 4 FEB 1968  | 51  | true | NA          | []                                        | []                                                                |
-| @I29@ | Three /Wang/      | F     | 6 OCT 1963  | 56  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I29@ | Three /Wang/      | F     | 6 OCT 1963  | 56  | true | NA          | []                                        | []                                                                |
-| @I3@  | Lisa /Ko/         | F     | 1 JAN 1920  | 70  | false| 2 MAR 1990  | []                                        | [@F2@ , @F2@ , @F2@ ]                                             |
-| @I3@  | Lisa /Ko/         | F     | 1 JAN 1920  | 70  | false| 2 MAR 1990  | []                                        | []                                                                |
-| @I30@ | Own /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I30@ | Own /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | []                                        | []                                                                |
-| @I31@ | Sen /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I31@ | Sen /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | []                                        | []                                                                |
-| @I32@ | Twin /Wang/       | F     | 4 FEB 1968  | 51  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I32@ | Twin /Wang/       | F     | 4 FEB 1968  | 51  | true | NA          | []                                        | []                                                                |
-| @I33@ | Twloo /Wang/      | F     | 4 FEB 1968  | 51  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I33@ | Twloo /Wang/      | F     | 4 FEB 1968  | 51  | true | NA          | []                                        | []                                                                |
-| @I34@ | Four /Wang/       | M     | 28 JUL 1971 | 48  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I34@ | Four /Wang/       | M     | 28 JUL 1971 | 48  | true | NA          | []                                        | []                                                                |
-| @I35@ | Five /Wang/       | M     | 28 JUL 1971 | 48  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I35@ | Five /Wang/       | M     | 28 JUL 1971 | 48  | true | NA          | []                                        | []                                                                |
-| @I36@ | Six /Wang/        | M     | 28 JUL 1971 | 48  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I36@ | Six /Wang/        | M     | 28 JUL 1971 | 48  | true | NA          | []                                        | []                                                                |
-| @I37@ | Seven /Wang/      | M     | 28 JUL 1971 | 48  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I37@ | Seven /Wang/      | M     | 28 JUL 1971 | 48  | true | NA          | []                                        | []                                                                |
-| @I38@ | Eight /Wang/      | F     | 1 SEP 1974  | 45  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I38@ | Eight /Wang/      | F     | 1 SEP 1974  | 45  | true | NA          | []                                        | []                                                                |
-| @I39@ | Ham /Wang/        | F     | 1 SEP 1974  | 45  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I39@ | Ham /Wang/        | F     | 1 SEP 1974  | 45  | true | NA          | []                                        | []                                                                |
-| @I4@  | Ben /Ko/          | M     | 1 APR 1953  | 66  | true | NA          | [@F2@ , @F2@ , @F2@ ]                     | [@F3@ , @F3@ , @F3@ ]                                             |
-| @I4@  | Ben /Ko/          | M     | 1 APR 1953  | 66  | true | NA          | []                                        | []                                                                |
-| @I40@ | Daggum /Wang/     | F     | 1 SEP 1974  | 45  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I40@ | Daggum /Wang/     | F     | 1 SEP 1974  | 45  | true | NA          | []                                        | []                                                                |
-| @I41@ | Ten /Wang/        | F     | 1 SEP 1974  | 45  | true | NA          | [@F9@ , @F9@ , @F9@ ]                     | []                                                                |
-| @I41@ | Ten /Wang/        | F     | 1 SEP 1974  | 45  | true | NA          | []                                        | []                                                                |
-| @I42@ | Lin /Luo/         | M     | 7 JUL 1964  | 55  | true | NA          | []                                        | [@F10@ , @F10@ , @F10@ ]                                          |
-| @I42@ | Lin /Luo/         | M     | 7 JUL 1964  | 55  | true | NA          | []                                        | []                                                                |
-| @I5@  | Elsa /Roberts/    | F     | 1 JUN 1951  | 68  | true | NA          | []                                        | [@F3@ , @F3@ , @F3@ ]                                             |
-| @I5@  | Elsa /Roberts/    | F     | 1 JUN 1951  | 68  | true | NA          | []                                        | []                                                                |
-| @I6@  | Annie /Ln/        | F     | 1 AUG 1983  | 36  | true | NA          | [@F3@ , @F3@ , @F3@ ]                     | [@F4@ , @F5@ , @F4@ , @F5@ , @F4@ , @F5@ ]                        |
-| @I6@  | Annie /Ln/        | F     | 1 AUG 1983  | 36  | true | NA          | []                                        | []                                                                |
-| @I7@  | Jack /Watson/     | M     | 1 OCT 1983  | 31  | false| 2 JAN 2014  | []                                        | [@F5@ , @F5@ , @F5@ ]                                             |
-| @I7@  | Jack /Watson/     | M     | 1 OCT 1983  | 31  | false| 2 JAN 2014  | []                                        | []                                                                |
-| @I8@  | Bob /Ln/          | M     | 1 JAN 1084  | 935 | true | NA          | []                                        | [@F4@ , @F4@ , @F4@ ]                                             |
-| @I8@  | Bob /Ln/          | M     | 1 JAN 1084  | 935 | true | NA          | []                                        | []                                                                |
-| @I9@  | Lofy /Pan/        | M     | 7 SEP 2006  | 13  | true | NA          | [@F4@ , @F4@ , @F4@ ]                     | [@F7@ , @F7@ , @F7@ ]                                             |
-| @I9@  | Lofy /Pan/        | M     | 7 SEP 2006  | 13  | true | NA          | []                                        | []                                                                |
+_____________________________________________________________________________________________________________________
+| ID    | Name              | Gender| Birthday    | Age | Alive| Death       | Child         | Spouse                |
+|====================================================================================================================|
+| @I1@  | Jack /Ko/         | F     | 1 MAR 2500  | -481| true | NA          | [@F2@ ]       | [@F1@ ]               |
+| @I10@ | Jenny /Watson/    | F     | 1 JUL 2005  | 14  | true | NA          | [@F5@ ]       | [@F7@ ]               |
+| @I11@ | Ben /River/       | M     | 1 MAR 1950  | 30  | false| 17 SEP 1980 | []            | [@F1@ ]               |
+| @I12@ | Quillen /Crowder/ | M     | 5 MAR 1950  | 69  | true | NA          | []            | [@F6@ ]               |
+| @I13@ | Alice /Hassildor/ | F     | 1 FEB 1951  | 68  | true | NA          | []            | [@F6@ ]               |
+| @I14@ | Rourke /Crowder/  | M     | 1 MAR 1999  | 20  | true | NA          | [@F6@ ]       | []                    |
+| @I15@ | Gildur /Crowder/  | M     | 1 APR 1999  | 20  | true | NA          | [@F6@ ]       | []                    |
+| @I16@ | Wesley /Wong/     | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ ]       | []                    |
+| @I17@ | Howard /Lo/       | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ ]       | []                    |
+| @I18@ | Hank /Chen/       | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ ]       | []                    |
+| @I19@ | Poshing /Chen/    | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ ]       | []                    |
+| @I2@  | John /Ko/         | M     | 1 FEB 1930  | 59  | false| 1 APR 1989  | []            | [@F2@ ]               |
+| @I20@ | Lara /Croft/      | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ ]       | []                    |
+| @I21@ | Mac /Donald/      | M     | 1 NOV 2019  | 0   | true | NA          | [@F7@ ]       | []                    |
+| @I22@ | Ping /Wang/       | M     | 2 SEP 1994  | 25  | true | NA          | [@F8@ , @F8@ ]| []                    |
+| @I23@ | Gang /Wang/       | M     | 3 MAY 1966  | 53  | true | NA          | [@F9@ ]       | [@F8@ , @F8@ ]        |
+| @I24@ | Lin /Liu/         | F     | 3 MAR 1946  | 73  | true | NA          | []            | [@F8@ , @F10@ , @F8@ ]|
+| @I25@ | Ton /Wang/        | M     | NA          | 0   | true | NA          | []            | [@F9@ ]               |
+| @I26@ | XIn /Chen/        | F     | 2 APR 1946  | 73  | true | NA          | []            | [@F9@ ]               |
+| @I27@ | One /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ ]       | []                    |
+| @I28@ | Two /Wang/        | F     | 4 FEB 1968  | 51  | true | NA          | [@F9@ ]       | []                    |
+| @I29@ | Three /Wang/      | F     | 6 OCT 1963  | 56  | true | NA          | [@F9@ ]       | []                    |
+| @I3@  | Lisa /Ko/         | F     | 1 JAN 1920  | 70  | false| 2 MAR 1990  | []            | [@F2@ ]               |
+| @I30@ | Own /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ ]       | []                    |
+| @I31@ | Sen /Wang/        | M     | 5 MAR 1961  | 58  | true | NA          | [@F9@ ]       | []                    |
+| @I32@ | Twin /Wang/       | F     | 4 FEB 1968  | 51  | true | NA          | [@F9@ ]       | []                    |
+| @I33@ | Twloo /Wang/      | F     | 4 FEB 1968  | 51  | true | NA          | [@F9@ ]       | []                    |
+| @I34@ | Four /Wang/       | M     | 28 JUL 1971 | 48  | true | NA          | [@F9@ ]       | []                    |
+| @I35@ | Five /Wang/       | M     | 28 JUL 1971 | 48  | true | NA          | [@F9@ ]       | []                    |
+| @I36@ | Six /Wang/        | M     | 28 JUL 1971 | 48  | true | NA          | [@F9@ ]       | []                    |
+| @I37@ | Seven /Wang/      | M     | 28 JUL 1971 | 48  | true | NA          | [@F9@ ]       | []                    |
+| @I38@ | Eight /Wang/      | F     | 1 SEP 1974  | 45  | true | NA          | [@F9@ ]       | []                    |
+| @I39@ | Ham /Wang/        | F     | 1 SEP 1974  | 45  | true | NA          | [@F9@ ]       | []                    |
+| @I4@  | Ben /Ko/          | M     | 1 APR 1953  | 66  | true | NA          | [@F2@ ]       | [@F3@ ]               |
+| @I40@ | Daggum /Wang/     | F     | 1 SEP 1974  | 45  | true | NA          | [@F9@ ]       | []                    |
+| @I41@ | Ten /Wang/        | F     | 1 SEP 1974  | 45  | true | NA          | [@F9@ ]       | []                    |
+| @I42@ | Lin /Luo/         | M     | 7 JUL 1964  | 55  | true | NA          | []            | [@F10@ ]              |
+| @I5@  | Elsa /Roberts/    | F     | 1 JUN 1951  | 68  | true | NA          | []            | [@F3@ ]               |
+| @I6@  | Annie /Ln/        | F     | 1 AUG 1983  | 36  | true | NA          | [@F3@ ]       | [@F4@ , @F5@ ]        |
+| @I7@  | Jack /Watson/     | M     | 1 OCT 1983  | 31  | false| 2 JAN 2014  | []            | [@F5@ ]               |
+| @I8@  | Bob /Ln/          | M     | 1 JAN 1084  | 935 | true | NA          | []            | [@F4@ ]               |
+| @I9@  | Lofy /Pan/        | M     | 7 SEP 2006  | 13  | true | NA          | [@F4@ ]       | [@F7@ ]               |
 
 Families
 __________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 | ID    | Married     | Divorced   | Husband ID| Husband Name      | Wife ID| Wife Name         | Children                                                                                                                        |
 |=================================================================================================================================================================================================================================|
 | @F1@  | NA          | NA         | @I11@     | Ben /River/       | @I1@   | Jack /Ko/         | []                                                                                                                              |
-| @F1@  | NA          | NA         | @I11@     | Ben /River/       | @I1@   | Jack /Ko/         | []                                                                                                                              |
-| @F10@ | 2 FEB 1992  | NA         | @I42@     | Lin /Luo/         | @I24@  | Lin /Liu/         | []                                                                                                                              |
 | @F10@ | 2 FEB 1992  | NA         | @I42@     | Lin /Luo/         | @I24@  | Lin /Liu/         | []                                                                                                                              |
 | @F2@  | NA          | NA         | @I2@      | John /Ko/         | @I3@   | Lisa /Ko/         | [@I1@ , @I4@ ]                                                                                                                  |
-| @F2@  | NA          | NA         | @I2@      | John /Ko/         | @I3@   | Lisa /Ko/         | [@I1@ , @I4@ ]                                                                                                                  |
-| @F3@  | 17 SEP 1980 | NA         | @I4@      | Ben /Ko/          | @I5@   | Elsa /Roberts/    | [@I6@ ]                                                                                                                         |
 | @F3@  | 17 SEP 1980 | NA         | @I4@      | Ben /Ko/          | @I5@   | Elsa /Roberts/    | [@I6@ ]                                                                                                                         |
 | @F4@  | NA          | NA         | @I8@      | Bob /Ln/          | @I6@   | Annie /Ln/        | [@I9@ ]                                                                                                                         |
-| @F4@  | NA          | NA         | @I8@      | Bob /Ln/          | @I6@   | Annie /Ln/        | [@I9@ ]                                                                                                                         |
-| @F5@  | 02 JAN 2020 | 1 JAN 2020 | @I7@      | Jack /Watson/     | @I6@   | Annie /Ln/        | [@I10@ ]                                                                                                                        |
 | @F5@  | 02 JAN 2020 | 1 JAN 2020 | @I7@      | Jack /Watson/     | @I6@   | Annie /Ln/        | [@I10@ ]                                                                                                                        |
 | @F6@  | 02 JAN 1998 | NA         | @I12@     | Quillen /Crowder/ | @I13@  | Alice /Hassildor/ | [@I14@ , @I15@ ]                                                                                                                |
-| @F6@  | 02 JAN 1998 | NA         | @I12@     | Quillen /Crowder/ | @I13@  | Alice /Hassildor/ | [@I14@ , @I15@ ]                                                                                                                |
-| @F7@  | 02 JAN 2019 | 1 DEC 2019 | @I9@      | Lofy /Pan/        | @I10@  | Jenny /Watson/    | [@I16@ , @I17@ , @I18@ , @I19@ , @I20@ , @I21@ ]                                                                                |
 | @F7@  | 02 JAN 2019 | 1 DEC 2019 | @I9@      | Lofy /Pan/        | @I10@  | Jenny /Watson/    | [@I16@ , @I17@ , @I18@ , @I19@ , @I20@ , @I21@ ]                                                                                |
 | @F8@  | 3 MAR 1992  | NA         | @I23@     | Gang /Wang/       | @I24@  | Lin /Liu/         | [@I22@ ]                                                                                                                        |
 | @F8@  | NA          | NA         | @I23@     | Gang /Wang/       | @I24@  | Lin /Liu/         | [@I22@ ]                                                                                                                        |
-| @F8@  | 3 MAR 1992  | NA         | @I23@     | Gang /Wang/       | @I24@  | Lin /Liu/         | [@I22@ ]                                                                                                                        |
-| @F8@  | NA          | NA         | @I23@     | Gang /Wang/       | @I24@  | Lin /Liu/         | [@I22@ ]                                                                                                                        |
-| @F9@  | NA          | NA         | @I25@     | Ton /Wang/        | @I26@  | XIn /Chen/        | [@I23@ , @I27@ , @I28@ , @I29@ , @I30@ , @I31@ , @I32@ , @I33@ , @I34@ , @I35@ , @I36@ , @I37@ , @I38@ , @I39@ , @I40@ , @I41@ ]|
 | @F9@  | NA          | NA         | @I25@     | Ton /Wang/        | @I26@  | XIn /Chen/        | [@I23@ , @I27@ , @I28@ , @I29@ , @I30@ , @I31@ , @I32@ , @I33@ , @I34@ , @I35@ , @I36@ , @I37@ , @I38@ , @I39@ , @I40@ , @I41@ ]|
