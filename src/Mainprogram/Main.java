@@ -165,8 +165,12 @@ public class Main {
         
         US17 us17 = new US17();
         us17.us17Func(allFamilies);
-        
         System.out.println("--------------------------------------------------------------"); 
+        
+        US18 us18 = new US18();
+        us18.us18Func(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
         US23 us23 = new US23();
         us23.Unique_name_and_birth_date(allPeople);
         System.out.println("-----------------------------"); 

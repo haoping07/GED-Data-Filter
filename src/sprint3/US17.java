@@ -30,9 +30,11 @@ public class US17 {
 		
 	}
 	
-	public boolean NoMarriageToChild(Family fam) {
-		if(hm.get(fam.wife).contains(fam.husband) ||
-				hm.get(fam.husband).contains(fam.wife)) {
+	public boolean noMarriageToChild(Family fam) {
+		if(hm.containsKey(fam.wife) && hm.get(fam.wife).contains(fam.husband)) {
+			return false;
+		}
+		else if(hm.containsKey(fam.husband) && hm.get(fam.husband).contains(fam.wife)) {
 			return false;
 		}
 		else {
@@ -43,7 +45,7 @@ public class US17 {
 	public void us17Func(ArrayList<Family> allFamilies) {
 		findOwnChild(allFamilies);
 		for(Family fam : allFamilies) {
-			if(!NoMarriageToChild(fam)) {
+			if(!noMarriageToChild(fam)) {
 				System.out.println("ERROR(US17): FamilyID[ " + fam.familyID +"]"
 						+ " parent marries with his/her child");
 			}
