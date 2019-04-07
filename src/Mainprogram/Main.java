@@ -181,11 +181,11 @@ public class Main {
         US27.age_calculate(allPeople);
         System.out.println("-----------------------------"); 
         
-//        US21.CorrectGender(allPeople,allFamilies);
-//        System.out.println("-----------------------------"); 
-//        
-//        US22.UniqueId(allPeople,allFamilies);
-//        System.out.println("-----------------------------"); 
+        US21.CorrectGender(allPeople,allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US22.UniqueId(allPeople,allFamilies);
+        System.out.println("-----------------------------"); 
         
     }
     
