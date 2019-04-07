@@ -33,7 +33,7 @@ class test_us17 {
 	}
 
 	@Test
-	void testNoMarriageToChildTrue1() {
+	void testNoMarriageToChildTrue() {
 		US17 us17 = new US17();
 		// family information
 		Family fam = new Family("famID");
