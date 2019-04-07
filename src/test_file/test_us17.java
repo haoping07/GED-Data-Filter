@@ -45,7 +45,7 @@ class test_us17 {
 		ArrayList<Family> allFamilies = new ArrayList<>();
 		allFamilies.add(fam);
 		us17.findOwnChild(allFamilies);
-		assertTrue(us17.NoMarriageToChild(fam));
+		assertTrue(us17.noMarriageToChild(fam));
 	}
 	
 	@Test
@@ -69,8 +69,8 @@ class test_us17 {
 		allFamilies.add(fam1);
 		allFamilies.add(fam2);
 		us17.findOwnChild(allFamilies);
-		assertTrue(us17.NoMarriageToChild(fam1));
-		assertFalse(us17.NoMarriageToChild(fam2));
+		assertTrue(us17.noMarriageToChild(fam1));
+		assertFalse(us17.noMarriageToChild(fam2));
 	}
 	
 	
