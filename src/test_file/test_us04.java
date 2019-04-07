@@ -1,7 +1,6 @@
 package test_file;
 
 import java.util.ArrayList;
-import datecheck.US04;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,6 +9,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import sprint1.US04;
 
 class test_us04 {
 

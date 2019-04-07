@@ -15,8 +15,8 @@ import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
 
-import datecheck.checkdate_US01;
 import indi.individual;
+import sprint1.checkdate_US01;
 import Mainprogram.*;
 
 public class test_us01{

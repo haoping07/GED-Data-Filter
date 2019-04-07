@@ -2,7 +2,8 @@ package indi;
 import java.time.LocalDate;
 //import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import datecheck.checkdate_US01;
+
+import sprint1.checkdate_US01;
 
 public class individual {
 

@@ -1,5 +1,5 @@
 //Author: Song Xu
-package datecheck;
+package sprint1;
 
 import java.util.ArrayList;
 import indi.individual;
