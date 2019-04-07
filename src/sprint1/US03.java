@@ -34,15 +34,15 @@ public class US03 {
     public static boolean birth_before_death(String birth_date,String death_date){
         String[] birth=birth_date.split(" ");
         String[] death=death_date.split(" ");
-        if(checkdate_US01.checkyear(death[2], birth[2])) {
-			if(!checkdate_US01.checkyeareq(death[2], birth[2])) {
+        if(US01.checkyear(death[2], birth[2])) {
+			if(!US01.checkyeareq(death[2], birth[2])) {
 				return true;
 			}
-			if(checkdate_US01.checkmonth(death[1], birth[1])) {
-				if(!checkdate_US01.checkmontheq(death[1], birth[1])) {
+			if(US01.checkmonth(death[1], birth[1])) {
+				if(!US01.checkmontheq(death[1], birth[1])) {
 					return true;
 				}
-				if(checkdate_US01.checkday(death[0], birth[0])) {
+				if(US01.checkday(death[0], birth[0])) {
 					return true;
 				}
 			}

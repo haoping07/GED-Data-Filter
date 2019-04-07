@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
 
 import indi.individual;
-import sprint1.checkdate_US01;
+import sprint1.US01;
 import Mainprogram.*;
 
 public class test_us01{
@@ -51,7 +51,7 @@ public class test_us01{
 	      .mapToObj(n -> DynamicTest.dynamicTest("test" + n,
 	        () ->{
 	        	try {
-	        		Assertions.assertTrue(checkdate_US01.checkdate_us01(people.get(n).Birthday));	
+	        		Assertions.assertTrue(US01.checkdate_us01(people.get(n).Birthday));	
 	        	}catch(AssertionError e) {
 	        		fail(n);
 	        	}

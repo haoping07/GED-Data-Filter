@@ -167,8 +167,8 @@ public class Main {
         us17.us17Func(allFamilies);
         System.out.println("--------------------------------------------------------------"); 
         
-        //US18 us18 = new US18();
-        //us18.us18Func(allPeople, allFamilies);
+        US18 us18 = new US18();
+        us18.us18Func(allPeople, allFamilies);
         System.out.println("-----------------------------"); 
         
         US21.CorrectGender(allPeople,allFamilies);
