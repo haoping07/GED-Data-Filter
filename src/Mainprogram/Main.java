@@ -176,7 +176,6 @@ public class Main {
         
         US27.age_calculate(allPeople);
         System.out.println("-----------------------------"); 
-        
     }
     
     public static output_format main_output() throws IOException{

@@ -34,7 +34,7 @@ public class US25 {
 		for(int x = 0 ; x < allFamilies.size() ; x++) {
 			fam.clear();
 			tmp.clear();
-			tmp = allFamilies.get(x).children;
+			tmp = (ArrayList<String>) allFamilies.get(x).children.clone();
 			for(int y = 0 ; y < tmp.size() ; y++) {
 				itmp = searchbyId(allPeople , tmp.get(y));
 				fam.add(itmp);
