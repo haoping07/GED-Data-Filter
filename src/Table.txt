@@ -41,6 +41,8 @@ ________________________________________________________________________________
 | @I42@ | Lin /Luo/         | M     | 7 JUL 1964  | 55  | true | NA          | []            | [@F10@ ]              |
 | @I43@ | Frigg /Goddess/   | F     | 1 JAN 1911  | 108 | true | NA          | []            | []                    |
 | @I44@ | Frigg /Goddess/   | F     | 1 JAN 1911  | 108 | true | NA          | []            | []                    |
+| @I45@ | Jiacheng /Guo/    | M     | 1 FEB 1930  | 59  | false| 1 APR 1989  | [@F13@ ]      | [@F13@ ]              |
+| @I46@ | Yi /Li/           | F     | 1 FEB 1930  | 59  | false| 1 APR 1989  | []            | [@F13@ ]              |
 | @I5@  | Elsa /Roberts/    | F     | 1 JUN 1951  | 68  | true | NA          | []            | [@F3@ ]               |
 | @I6@  | Annie /Ln/        | F     | 1 AUG 1983  | 36  | true | NA          | [@F3@ ]       | [@F4@ , @F5@ ]        |
 | @I7@  | Jack /Watson/     | M     | 1 OCT 1983  | 31  | false| 2 JAN 2014  | []            | [@F5@ ]               |
@@ -55,6 +57,7 @@ ________________________________________________________________________________
 | @F10@ | 2 FEB 1992  | NA         | @I42@     | Lin /Luo/         | @I24@  | Lin /Liu/         | []                                                                                                                              |
 | @F11@ | 20 MAR 1990 | NA         | @I40@     | Daggum /Wang/     | @I41@  | Ten /Wang/        | []                                                                                                                              |
 | @F12@ | 20 MAR 1990 | NA         | @I40@     | Daggum /Wang/     | @I41@  | Ten /Wang/        | []                                                                                                                              |
+| @F13@ | 02 JAN 1998 | NA         | @I45@     | Jiacheng /Guo/    | @I46@  | Yi /Li/           | [@I45@ ]                                                                                                                        |
 | @F2@  | NA          | NA         | @I2@      | John /Ko/         | @I3@   | Lisa /Ko/         | [@I1@ , @I4@ ]                                                                                                                  |
 | @F3@  | 17 SEP 1980 | NA         | @I4@      | Ben /Ko/          | @I5@   | Elsa /Roberts/    | [@I6@ ]                                                                                                                         |
 | @F4@  | NA          | NA         | @I8@      | Bob /Ln/          | @I6@   | Annie /Ln/        | [@I9@ ]                                                                                                                         |

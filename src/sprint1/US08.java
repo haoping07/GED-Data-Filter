@@ -1,6 +1,6 @@
 //Hao-Ping Lin 10437296 (LH)
 //User Stroy 08 - Birth before marriage of parents
-package datecheck;
+package sprint1;
 
 import java.util.ArrayList;
 import fam.Family;

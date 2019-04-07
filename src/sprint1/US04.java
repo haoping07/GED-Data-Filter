@@ -1,5 +1,5 @@
 // GJ write
-package datecheck;
+package sprint1;
 
 import java.util.ArrayList;
 //import java.util.HashMap;
@@ -22,7 +22,7 @@ public class US04 {
 				}
 			}
 			catch(IllegalArgumentException ex) {
-				System.out.println("ANOMALY: FAMILY: US04: "
+				System.out.println("WARNING: FAMILY: US04: "
 					    + fam.familyID + " " +ex.getMessage());
 			}
 		}

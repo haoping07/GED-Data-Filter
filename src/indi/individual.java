@@ -2,7 +2,8 @@ package indi;
 import java.time.LocalDate;
 //import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import datecheck.checkdate_US01;
+
+import sprint1.US01;
 
 public class individual {
 
@@ -64,7 +65,7 @@ public class individual {
 		    		break;
 		    	}
 		    	if(!checkdate1(content)) {
-		    		System.out.println("Debug messages(US01) [**ILLEGAL**]: Birth after current date ::" + this.id);
+		    		System.out.println("ERROR(US01): Birth after current date ::" + this.id);
 		    	}
 		    	if(checkdate(content , this.Deathday)) {
 		    		this.Birthday = content;
@@ -109,7 +110,7 @@ public class individual {
 			this.age = stoi(nowyear[0]) - stoi(bdate[bdate.length-1]);
 		}
 		if(!Checkage()) {
-			System.out.println("Debug messages(US07) [**ILLEGAL**]: Over then 150 years old ::" + this.id);
+			System.out.println("ERROR(US07): Over then 150 years old ::" + this.id);
 		}
 	}	
 	
@@ -131,7 +132,7 @@ public class individual {
 	}
 	
 	public static boolean checkdate1(String date) {
-		if(checkdate_US01.checkdate_us01(date)) {
+		if(US01.checkdate_us01(date)) {
 			return true;
 		}
 		else return false;
