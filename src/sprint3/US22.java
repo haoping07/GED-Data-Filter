@@ -19,14 +19,12 @@ public class US22 {
 				result.add(false);
 				//find duplicate indi id
 				System.out.println("Error message(US22): find duplicate individual id "+indis[i]);
-				System.out.println("Debug message(US22): "+indis[i]+" "+indis[indis.length-1]);
 				
 			}
 			if(i>0&&indis[i].equals(indis[i-1])) {
 				result.add(false);
 				//find duplicate indi id
 				System.out.println("Error message(US22): find duplicate individual id "+indis[i]);
-				System.out.println("Debug message(US22): "+indis[i]+" "+indis[i-1]);
 			}
 			else {
 				result.add(true);
@@ -41,12 +39,10 @@ public class US22 {
 				result.add(false);
 				//find duplicate fam id
 				System.out.println("Error message(US22): find duplicate individual id "+fams[i]);
-				System.out.println("Debug message(US22): "+fams[i]+" "+fams[fams.length-1]);
 			}
 			if(i>0&&fams[i].equals(fams[i-1])) {
 				result.add(false);
 				System.out.println("Error message(US22): find duplicate family id: "+fams[i]);
-				System.out.println("Debug message(US22): "+fams[i]+" "+fams[i-1]);
 				//find duplicate fam id
 			}
 			else {

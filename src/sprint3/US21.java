@@ -22,7 +22,6 @@ public class US21 {
 			else {
 				result.add(false);
 				System.out.println("Error message(US21): husband "+fam.husband+" in family "+fam.familyID+" is in wrong gender");
-				System.out.println("Debug message(US21): husband: "+hus);
 			}
 			if(wif.contains("F")) {
 				result.add(true);
@@ -30,7 +29,6 @@ public class US21 {
 			else {
 				result.add(false);
 				System.out.println("Error message(US21): wife "+fam.wife+" in family "+fam.familyID+" is in wrong gender");
-				System.out.println("Debug message(US21): wife: "+wif);
 			}
 		}
 		return result;

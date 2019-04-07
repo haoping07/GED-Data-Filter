@@ -125,6 +125,7 @@ public class Main {
         us08.Birth_Before_Marriage_Of_Parents(allPeople, allFamilies);
         System.out.println();
         System.out.println("--------------------------------------------------------------");
+        
         System.out.println("Sprint 2");
         System.out.println("--------------------------------------------------------------");  
                 
@@ -159,14 +160,23 @@ public class Main {
         System.out.println("-----------------------------"); 
 
         System.out.println();
-        System.out.println("--------------------------------------------------------------");
         System.out.println("Sprint 3");
         System.out.println("--------------------------------------------------------------"); 
         
         US17 us17 = new US17();
         us17.us17Func(allFamilies);
-        
         System.out.println("--------------------------------------------------------------"); 
+        
+        US18 us18 = new US18();
+        us18.us18Func(allPeople, allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US21.CorrectGender(allPeople,allFamilies);
+        System.out.println("-----------------------------"); 
+        
+        US22.UniqueId(allPeople,allFamilies);
+        System.out.println("-----------------------------"); 
+        
         US23 us23 = new US23();
         us23.Unique_name_and_birth_date(allPeople);
         System.out.println("-----------------------------"); 
@@ -181,11 +191,6 @@ public class Main {
         US27.age_calculate(allPeople);
         System.out.println("-----------------------------"); 
         
-        US21.CorrectGender(allPeople,allFamilies);
-        System.out.println("-----------------------------"); 
-        
-        US22.UniqueId(allPeople,allFamilies);
-        System.out.println("-----------------------------"); 
         
     }
     
