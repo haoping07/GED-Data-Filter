@@ -42,7 +42,7 @@ public class US25 {
 			fam.add(searchbyId(allPeople , allFamilies.get(x).husband));
 			fam.add(searchbyId(allPeople , allFamilies.get(x).wife));
 			if(!check_unique(fam)) {
-				System.out.println("Debug messages(US25) [**ILLEGAL**]: name \"" + err + "\" is not unique in family " + allFamilies.get(x).familyID);
+				System.out.println("ERROR(US25): name \"" + err + "\" is not unique in family " + allFamilies.get(x).familyID);
 			}
 		}
 	}

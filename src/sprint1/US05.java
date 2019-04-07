@@ -18,7 +18,7 @@ public class US05 {
 			individual hus = searchByID(allPeople,husID);
 			individual wife = searchByID(allPeople,wifeID);
 			if(hus==null) {
-				System.out.println("ANOMALY: FAMILY: US05: "
+				System.out.println("WARNING: FAMILY: US05: "
 					    + famID + " Married: " + marrDate
 					    + " No husband");
 			}
@@ -32,12 +32,12 @@ public class US05 {
 					}
 				}
 				catch(IllegalArgumentException ex) {
-					System.out.println("ANOMALY: FAMILY: US05: "
+					System.out.println("WARNING: FAMILY: US05: "
 						    + famID + " " +ex.getMessage());
 				}
 			}
 			if(wife==null) {
-				System.out.println("ANOMALY: FAMILY: US05: "
+				System.out.println("WARNING: FAMILY: US05: "
 					    + famID + " Married: " + marrDate
 					    + " No wife");
 			}
@@ -51,7 +51,7 @@ public class US05 {
 					}
 				}
 				catch(IllegalArgumentException ex) {
-					System.out.println("ANOMALY: FAMILY: US05: "
+					System.out.println("WARNING: FAMILY: US05: "
 						    + famID + " " +ex.getMessage());
 				}
 			}
