@@ -19,8 +19,8 @@ import org.junit.jupiter.api.TestFactory;
 
 import Mainprogram.Main;
 import Mainprogram.output_format;
-import datecheck.checkdate_US01;
 import indi.individual;
+import sprint1.checkdate_US01;
 
 class test_us07 {
 	public static ArrayList<individual> people = null;

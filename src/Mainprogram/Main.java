@@ -7,11 +7,11 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import indi.individual;
+import sprint1.*;
 import sprint2.*;
 import sprint3.*;
 import fam.Family;
 import dnl.utils.text.table.*;
-import datecheck.*;
 import Mainprogram.output_format;
 
 public class Main {

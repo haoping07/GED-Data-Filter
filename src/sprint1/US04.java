@@ -1,5 +1,5 @@
 // GJ write
-package datecheck;
+package sprint1;
 
 import java.util.ArrayList;
 //import java.util.HashMap;

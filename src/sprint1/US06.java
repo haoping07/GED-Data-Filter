@@ -1,6 +1,6 @@
 //Hao-Ping Lin 10437296 (LH)
 //User Stroy 06 - Divorce before death
-package datecheck;
+package sprint1;
 
 import java.util.ArrayList;
 import java.util.HashMap;

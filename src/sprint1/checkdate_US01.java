@@ -1,5 +1,5 @@
 //Lo Shih Hao
-package datecheck;
+package sprint1;
 
 import java.io.FileWriter;
 import java.io.IOException;
