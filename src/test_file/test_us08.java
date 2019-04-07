@@ -1,4 +1,4 @@
-package testing_Lin;
+package test_file;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,29 +8,32 @@ import java.util.Collection;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.api.function.Executable;
-
+import other_dependencies.ObjectSet;
+import other_dependencies.testingMain;
 import sprint1.*;
 
-class US06_testing {
+class test_us08 {
 
 	@TestFactory
 	public Collection<DynamicTest> TestCase1() throws IOException 
 	{
 		Collection<DynamicTest> dynamicTests = new ArrayList<>();
-		ObjectSet testGED = testingMain.startHere("MyFamily.ged");
-		US06 test = new US06();
-		ArrayList<Boolean> outputList = test.Divorce_Before_Death(testGED.allPeopleR, testGED.allFamiliesR);
+		ObjectSet testGED = testingMain.startHere("US23_GED.ged");
+		US08 test = new US08();
+		ArrayList<Boolean> outputList = test.Birth_Before_Marriage_Of_Parents(testGED.allPeopleR, testGED.allFamiliesR);
 
 		//** The Answer List **//
 		ArrayList<Boolean> answerList = new ArrayList<>();
+		answerList.add(false);
 		answerList.add(true);
 		answerList.add(true);
 		answerList.add(true);
 		answerList.add(true);
 		answerList.add(true);
 		answerList.add(true);
-		answerList.add(false);	//Divorce before death (Illegal)
 		answerList.add(true);
+		answerList.add(true);
+		answerList.add(true);	//Birth before marriage of parents (Illegal)
 		answerList.add(true);
 		answerList.add(true);
 		answerList.add(true);

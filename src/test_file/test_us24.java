@@ -10,9 +10,9 @@ import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.api.function.Executable;
 
+import other_dependencies.ObjectSet;
+import other_dependencies.testingMain;
 import sprint3.US24;
-import testing_Lin.ObjectSet;
-import testing_Lin.testingMain;
 
 public class test_us24
 {
