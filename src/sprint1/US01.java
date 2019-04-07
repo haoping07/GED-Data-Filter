@@ -1,16 +1,9 @@
 //Lo Shih Hao
 package sprint1;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import indi.individual;
-
-public class checkdate_US01 {
+public class US01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -30,11 +23,11 @@ public class checkdate_US01 {
 	}
 	private static String mapmonth(String string) {
 		String[] month = {" " , "JAN" , "FEB" , "MAR" , "APR" , "MAY" , "JUN" , "JUL" , "AUG" , "SEP" , "OCT" , "NOV" , "DEC"};
-		int a = checkdate_US01.stoi(string);
+		int a = US01.stoi(string);
 		return month[a];
 	}
 	
-	public checkdate_US01() {
+	public US01() {
 		System.out.println("create!");
 	}
 	
@@ -48,7 +41,7 @@ public class checkdate_US01 {
 		//System.out.println("y:"+checkyear(nowdate[0] , indate[2]));
 		//System.out.println("m:"+checkmonth(nowdate[1] , indate[1]));
 		//System.out.println("d:"+checkday(nowdate[2] , indate[0]));
-			
+		if(date.length() == 0)return false;
 		if(!checkyear(nowdate[0] , indate[2])) {
 			return false;
 		} else if (checkyeareq(nowdate[0] , indate[2])) {

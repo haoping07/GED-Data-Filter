@@ -57,15 +57,15 @@ public class US02 {
 		String[] birth=birth_date.split(" ");
 		String[] marriage=marriage_date.split(" ");
 
-		if(checkdate_US01.checkyear(marriage[2], birth[2])) {
-			if(!checkdate_US01.checkyeareq(marriage[2], birth[2])) {
+		if(US01.checkyear(marriage[2], birth[2])) {
+			if(!US01.checkyeareq(marriage[2], birth[2])) {
 				return true;
 			}
-			if(checkdate_US01.checkmonth(marriage[1], birth[1])) {
-				if(!checkdate_US01.checkmontheq(marriage[1], birth[1])) {
+			if(US01.checkmonth(marriage[1], birth[1])) {
+				if(!US01.checkmontheq(marriage[1], birth[1])) {
 					return true;
 				}
-				if(checkdate_US01.checkday(marriage[0], birth[0])) {
+				if(US01.checkday(marriage[0], birth[0])) {
 					return true;
 				}
 			}
