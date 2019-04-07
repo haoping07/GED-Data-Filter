@@ -48,7 +48,7 @@ public class checkdate_US01 {
 		//System.out.println("y:"+checkyear(nowdate[0] , indate[2]));
 		//System.out.println("m:"+checkmonth(nowdate[1] , indate[1]));
 		//System.out.println("d:"+checkday(nowdate[2] , indate[0]));
-			
+		if(date.length() == 0)return false;
 		if(!checkyear(nowdate[0] , indate[2])) {
 			return false;
 		} else if (checkyeareq(nowdate[0] , indate[2])) {
