@@ -13,7 +13,6 @@ INDEX VERSION 1.131+C:\Users\howar\Desktop\Courese\CS555\final project\final git
 883484521.index
 2966587874.index
 3996102163.index
-1067094681.index
 777921179.index
 4004041680.index
 120582770.index
