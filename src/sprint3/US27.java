@@ -17,7 +17,7 @@ public class US27 {
 		for(int x = 0 ; x < people.size() ; x++) {
 			cur = age(people.get(x));
 			if(cur == -1) System.out.println("Warning(US27) [**ILLEGAL**]: No birthday found for id: " + people.get(x).id);
-			else System.out.println("ERROR(US27): age for " + people.get(x).id +" is " + cur);
+			else System.out.println("Info(US27): age for " + people.get(x).id +" is " + cur);
 		}
 	}
 	
