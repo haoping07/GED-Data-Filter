@@ -13,3 +13,5 @@ src/.classpath
 *.class
 *.txt
 *.class
+*.xmi
+*.log
