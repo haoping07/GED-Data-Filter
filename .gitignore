@@ -5,3 +5,9 @@ src/.classpath
 *.txt
 *.ini
 .metadata/.log
+*.properties
+*.resources
+*.index
+*.txt
+*.dat
+*.class
