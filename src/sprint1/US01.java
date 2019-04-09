@@ -3,7 +3,7 @@ package sprint1;
 
 import java.time.LocalDate;
 
-public class US01 {
+public class US01{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
