@@ -8,9 +8,10 @@ import java.util.Collection;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.api.function.Executable;
+
+import other_dependencies.ObjectSet;
+import other_dependencies.testingMain;
 import sprint2.US10;
-import testing_Lin.ObjectSet;
-import testing_Lin.testingMain;
 
 public class test_us10 {
 	@TestFactory

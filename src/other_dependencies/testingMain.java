@@ -1,6 +1,6 @@
 //Author: Hao-Ping Lin
 //This file is the custom GED file handler
-package testing_Lin;
+package other_dependencies;
 
 import java.io.BufferedReader;
 import java.io.File;
