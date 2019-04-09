@@ -3,3 +3,13 @@
 src/.classpath
 *.txt
 *.txt
+*.ini
+.metadata/.log
+*.properties
+*.resources
+*.index
+*.txt
+*.dat
+*.class
+*.txt
+*.class
