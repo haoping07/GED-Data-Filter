@@ -4,3 +4,4 @@ src/.classpath
 *.txt
 *.txt
 *.ini
+.metadata/.log
