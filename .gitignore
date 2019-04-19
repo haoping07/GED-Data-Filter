@@ -21,3 +21,4 @@ src/.classpath
 *.xmi
 *.log
 .metadata/*
+*.resources
