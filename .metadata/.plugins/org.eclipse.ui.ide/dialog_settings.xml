@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\howar\Desktop\Courese\CS555\final project\final git"/>
 		<item value="C:\Users\howar\Desktop\Courese\CS555\final project\final git\cs555teamproj2019spring"/>
 		<item value="C:\Users\howar\Desktop\Courese\CS555\final project\git clone\cs555teamproj2019spring\src"/>
 	</list>
