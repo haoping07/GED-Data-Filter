@@ -13,3 +13,4 @@ src/.classpath
 *.class
 *.txt
 *.class
+*.log
