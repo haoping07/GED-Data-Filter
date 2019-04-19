@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
-<fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
-<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="fam.Family"/>
-<fullyQualifiedTypeName name="datecheck.checkdate_US01"/>
-<fullyQualifiedTypeName name="sprint2.US09"/>
-<fullyQualifiedTypeName name="sprint3.US25"/>
-<fullyQualifiedTypeName name="sprint3.US27"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="indi.individual"/>
-<fullyQualifiedTypeName name="sprint4.us35"/>
-<fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="fam.Family"/>
+    <fullyQualifiedTypeName name="datecheck.checkdate_US01"/>
+    <fullyQualifiedTypeName name="sprint2.US09"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Assertions"/>
+    <fullyQualifiedTypeName name="sprint3.US25"/>
+    <fullyQualifiedTypeName name="indi.individual"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="sprint3.US27"/>
 </qualifiedTypeNameHistroy>

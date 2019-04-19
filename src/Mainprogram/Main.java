@@ -196,6 +196,9 @@ public class Main {
         System.out.println("Sprint 4");
         System.out.println("--------------------------------------------------------------"); 
         
+        US28.Order_siblings(allPeople, allFamilies);
+        System.out.println("-----------------------------");
+        
         us29.list_deceased(allPeople);
         System.out.println("-----------------------------"); 
         
@@ -207,6 +210,8 @@ public class Main {
         us31.us31Func(allPeople);
         System.out.println("-----------------------------");
         
+        US34.large_differences(allPeople,allFamilies);
+        System.out.println("-----------------------------");
         
         us35.list_recent_birth(allPeople);
         System.out.println("-----------------------------"); 
