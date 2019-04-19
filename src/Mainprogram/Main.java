@@ -10,6 +10,7 @@ import indi.individual;
 import sprint1.*;
 import sprint2.*;
 import sprint3.*;
+import sprint4.*;
 import fam.Family;
 import dnl.utils.text.table.*;
 import Mainprogram.output_format;
@@ -191,7 +192,10 @@ public class Main {
         US27.age_calculate(allPeople);
         System.out.println("-----------------------------"); 
         
+        US28.Order_siblings(allPeople, allFamilies);
+        System.out.println("-----------------------------");
         
+        US34.large_differences(allPeople,allFamilies);
     }
     
     public static output_format main_output() throws IOException{
