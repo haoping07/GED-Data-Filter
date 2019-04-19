@@ -199,6 +199,15 @@ public class Main {
         us29.list_deceased(allPeople);
         System.out.println("-----------------------------"); 
         
+        US30 us30 = new US30();
+        us30.us30Func(allPeople);
+        System.out.println("-----------------------------"); 
+        
+        US31 us31 = new US31();
+        us31.us31Func(allPeople);
+        System.out.println("-----------------------------");
+        
+        
         us35.list_recent_birth(allPeople);
         System.out.println("-----------------------------"); 
     }
