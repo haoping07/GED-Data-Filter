@@ -24,6 +24,15 @@ public class us35 {
 	}
 	
 	public static void list_recent_birth(ArrayList<individual> people) {
+
+		for(int x = 0 ; x < people.size() ; x++) {
+			if(recent(people.get(x).Birthday)) {
+				System.out.println("Info(US35): id " + people.get(x).id + " is born recently.");
+			}
+		}
+	}
+	
+	public static boolean recent(String birthday) {
 		LocalDate localDate = LocalDate.now();
 		String now = localDate.toString();
 		String[] nowarr = now.split("-");
@@ -34,25 +43,22 @@ public class us35 {
 			mon -= 1;
 			day += 30;
 		}
-		for(int x = 0 ; x < people.size() ; x++) {
-			String curdob = people.get(x).Birthday;
-			String[] arrdob = curdob.split(" ");
-			if(arrdob.length <2) continue;
-			if(stoi(arrdob[2]) == yer) {
-				int curm = mapmonth(arrdob[1]);
-				int curd = stoi(arrdob[0]);
-				if(curm == mon+1) {
-					System.out.println("Info(US35): id " + people.get(x).id + " is born recently.");
-					continue;
-				} 
-				else if(curm == mon) {
-					if(curd >= day) {
-						System.out.println("Info(US35): id " + people.get(x).id + " is born recently.");
-						continue;
-					}
+		String curdob = birthday;
+		String[] arrdob = curdob.split(" ");
+		if(arrdob.length <2) return false;
+		if(stoi(arrdob[2]) == yer) {
+			int curm = mapmonth(arrdob[1]);
+			int curd = stoi(arrdob[0]);
+			if(curm == mon+1) {
+				return true;
+			} 
+			else if(curm == mon) {
+				if(curd >= day) {
+					return true;
 				}
 			}
 		}
+		return false;
 	}
 	
 	public static int stoi(String input) {
