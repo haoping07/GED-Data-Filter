@@ -10,6 +10,7 @@ import indi.individual;
 import sprint1.*;
 import sprint2.*;
 import sprint3.*;
+import sprint4.*;
 import fam.Family;
 import dnl.utils.text.table.*;
 import Mainprogram.output_format;
@@ -191,7 +192,15 @@ public class Main {
         US27.age_calculate(allPeople);
         System.out.println("-----------------------------"); 
         
+        System.out.println();
+        System.out.println("Sprint 4");
+        System.out.println("--------------------------------------------------------------"); 
         
+        us29.list_deceased(allPeople);
+        System.out.println("-----------------------------"); 
+        
+        us35.list_recent_birth(allPeople);
+        System.out.println("-----------------------------"); 
     }
     
     public static output_format main_output() throws IOException{
