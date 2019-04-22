@@ -210,6 +210,14 @@ public class Main {
         us31.us31Func(allPeople);
         System.out.println("-----------------------------");
         
+        US32 us32 = new US32();
+        us32.List_multiple_births(allPeople, allFamilies);
+        System.out.println("-----------------------------");
+        
+        US33 us33 = new US33();
+        us33.List_orphans(allPeople, allFamilies);
+        System.out.println("-----------------------------");
+        
         US34.large_differences(allPeople,allFamilies);
         System.out.println("-----------------------------");
         
