@@ -16,3 +16,10 @@ src/.classpath
 *.xmi
 *.log
 .metadata/*
+*.xml
+.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+*.xmi
+*.prefs
+*.resources
+*.index
