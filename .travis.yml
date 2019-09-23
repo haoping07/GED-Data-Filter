@@ -1,8 +1,8 @@
 language: java
 jdk:  
-- oraclejdk9
+- oraclejdk8
 script: "mvn test -B"
 addons:
 apt:
 packages:
-- oracle-java9-installer
+- oracle-java8-installer
