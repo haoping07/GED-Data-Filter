@@ -1,6 +1,6 @@
-# CS555 Team Project 2019 Spring
+# GED Data Filter
 
-A system that filters GED data according to User Stroy
+A system that filters GED data according to User Story using JAVA.
 
 ## Status
 
