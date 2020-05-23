@@ -6,7 +6,7 @@ A system that filters GED data according to User Story using JAVA.
 
 * Import the entire repo to IntelliJ IDEA or Eclipse
 * Add all files in `./src/lib` into project classpath
-* Compile & Run main.java or JUnit test file in ./src/test_file
+* Compile & Run main.java or JUnit test file in `./src/test_file`
 
 ### Project Structure
 
