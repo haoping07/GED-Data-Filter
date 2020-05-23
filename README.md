@@ -2,10 +2,6 @@
 
 A system that filters GED data according to User Story using JAVA.
 
-## Status
-
-[![Build Status](https://travis-ci.org/Shih-Hao-Lo/cs555teamproj2019spring.svg?branch=master)](https://travis-ci.org/Shih-Hao-Lo/cs555teamproj2019spring)
-
 ## Usage
 
 * Import the entire repo to IntelliJ IDEA or Eclipse
