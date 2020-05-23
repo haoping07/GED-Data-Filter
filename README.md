@@ -2,13 +2,13 @@
 
 A system that filters GED data according to User Story using JAVA.
 
-## Usage
+### Setup
 
 * Import the entire repo to IntelliJ IDEA or Eclipse
 * Add all files in `./src/lib` into project classpath
 * Compile & Run main.java or JUnit test file in ./src/test_file
 
-## Project Structure
+### Project Structure
 
 * Main system source code: <br>
   `./src/Mainprogram/main.java` <br>
@@ -30,7 +30,7 @@ A system that filters GED data according to User Story using JAVA.
 * Output of input test file: (Unknown) <br>
   proj02test.ged-out.ged  (Unknown) <br>
 
-## Group members:
+### Group Members:
 * Shih-Hao Lo
 * Hao-Ping Lin
 * Song Xu
