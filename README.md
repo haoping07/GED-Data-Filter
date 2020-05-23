@@ -1,4 +1,4 @@
-# GED Data Filter (Stevens Institute of Technology CS555 Final Project)
+## GED Data Filter (Stevens Institute of Technology CS555 Final Project)
 
 A system that filters GED data according to User Story using JAVA.
 
